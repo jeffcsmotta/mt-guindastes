@@ -1,0 +1,10 @@
+{
+  "name": "MT Guindastes — Peças e Acessórios",
+  "short_name": "MT Peças",
+  "description": "Catálogo de peças e acessórios MT Guindastes com cotação via WhatsApp.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f5f8",
+  "theme_color": "#141414",
+  "lang": "pt-BR"
+}
