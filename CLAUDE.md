@@ -34,6 +34,11 @@ Desenvolvimento e implantação da seção `/pecas` no site institucional da MT 
 
 `[proposta-enviada]` — Proposta comercial gerada com escopo técnico e sugestão de valor (R$ 3.800,00). Aguardando retorno de aprovação do cliente para início do setup.
 
+## Links publicados (GitHub Pages)
+
+- **Vitrine industrial:** https://jeffcsmotta.github.io/mt-guindastes/
+- **Proposta:** https://jeffcsmotta.github.io/mt-guindastes/proposta.html
+
 ## Contatos
 
 - **Sócio / Decisor:** Jefferson Motta
