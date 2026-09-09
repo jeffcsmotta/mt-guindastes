@@ -1,0 +1,253 @@
+{
+  "merchant": {
+    "name": "MT Guindastes",
+    "cnpj": "44.652.208/0001-60",
+    "whatsapp": "5554999972976",
+    "especialista": "Marcelo",
+    "cidade": "Caxias do Sul/RS",
+    "posicionamento": "Revendedora oficial TKA Guindastes em SC e litoral do RS"
+  },
+  "regras_comerciais": {
+    "peca_white_label": "preco_referencia_visivel + WhatsApp com CEP. Pix em avaliacao (descontoPixPercent=0 desliga). Sem pagamento pelo site.",
+    "usado": "preco_visivel + detalhe + WhatsApp com CEP e CNPJ opcional. Sem Pix, sem carrinho somado.",
+    "tka_novo": "sempre sob consulta (preco=0). Sem total, sem carrinho. So cotacao consultiva via WhatsApp.",
+    "carrinho": "opcional e restrito a pecas se um dia habilitado. Nunca soma usado ou TKA novo.",
+    "convencao_preco": "price > 0 = pronta entrega com referencia; price = 0 = sob consulta"
+  },
+  "categorias": [
+    "Garfos Paleteiros",
+    "Acessórios",
+    "Cestos de Fibra",
+    "Cestos Metálicos",
+    "Linha Comercial",
+    "Projetos Especiais",
+    "TKA Novos",
+    "Usados"
+  ],
+  "products": [
+    {
+      "nome": "Garfo Paleteiro",
+      "slug": "garfo-paleteiro",
+      "colecao": "peca",
+      "categoria": "Garfos Paleteiros",
+      "codigo": "GP-MT",
+      "capacidade": "1.5 Ton / 2.5 Ton / 3.0 Ton",
+      "descricao": "Garfo paleteiro ajustável de alta resistência para movimentação e elevação de cargas paletizadas. Base Angra, marca MT Guindastes.",
+      "preco": 1890.0,
+      "tipo_oferta": "pronta_entrega"
+    },
+    {
+      "nome": "Garfo para Bobcat",
+      "slug": "garfo-para-bobcat",
+      "colecao": "peca",
+      "categoria": "Garfos Paleteiros",
+      "codigo": "GP-BOBCAT-MT",
+      "descricao": "Garfo para engate rápido em minicarregadeiras estilo Bobcat. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Garfo para Retroescavadeira",
+      "slug": "garfo-para-retroescavadeira",
+      "colecao": "peca",
+      "categoria": "Garfos Paleteiros",
+      "codigo": "GP-RETRO-MT",
+      "descricao": "Garfo adaptável à concha da retroescavadeira. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Garfo Pega-Tubos Tipo C",
+      "slug": "garfo-pega-tubos-tipo-c",
+      "colecao": "peca",
+      "categoria": "Garfos Paleteiros",
+      "codigo": "GP-TUBOC-MT",
+      "capacidade": "2.0 Ton",
+      "descricao": "Garfo tipo C para içamento de tubos. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Balancim",
+      "slug": "balancim",
+      "colecao": "peca",
+      "categoria": "Acessórios",
+      "codigo": "AC-BALANCIM-MT",
+      "capacidade": "5 Ton",
+      "descricao": "Balancim para içamento equilibrado de cargas longas. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Suporte para Big Bag",
+      "slug": "suporte-para-big-bag",
+      "colecao": "peca",
+      "categoria": "Acessórios",
+      "codigo": "AC-BIGBAG-MT",
+      "capacidade": "1.0 Ton / 1.2 Ton",
+      "descricao": "Suporte em cruz reforçado com ganchos para big bags. Base Angra, marca MT Guindastes.",
+      "preco": 2450.0,
+      "tipo_oferta": "pronta_entrega"
+    },
+    {
+      "nome": "Pega Postes",
+      "slug": "pega-postes",
+      "colecao": "peca",
+      "categoria": "Acessórios",
+      "codigo": "AC-PEGAPOSTE-MT",
+      "descricao": "Garra articulada para postes. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Saca Postes Hidráulico",
+      "slug": "saca-postes-hidraulico",
+      "colecao": "peca",
+      "categoria": "Acessórios",
+      "codigo": "AC-SACAPOSTE-MT",
+      "descricao": "Extrator hidráulico de postes com corrente. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Funil Multiuso",
+      "slug": "funil-multiuso",
+      "colecao": "peca",
+      "categoria": "Acessórios",
+      "codigo": "AC-FUNIL-MT",
+      "descricao": "Funil para ração, grãos, concreto, brita e areia. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Cesto de Fibra — 1 Operador",
+      "slug": "cesto-de-fibra-1-operador",
+      "colecao": "peca",
+      "categoria": "Cestos de Fibra",
+      "codigo": "CF-1OP-MT",
+      "nivelamento": "Bengala/Pêndulo, Mecânico, Hidráulico ou Eletrônico NR12",
+      "operadores": "1 Operador",
+      "descricao": "Cesto aéreo de fibra com isolamento elétrico para 1 operador. Base Angra, marca MT Guindastes.",
+      "preco": 5700.0,
+      "tipo_oferta": "pronta_entrega"
+    },
+    {
+      "nome": "Cesto de Fibra com Lança Frontal — lançamento",
+      "slug": "cesto-fibra-lanca-frontal",
+      "colecao": "peca",
+      "categoria": "Cestos de Fibra",
+      "codigo": "CF-LANCA-MT",
+      "nivelamento": "Mecânico, Hidráulico ou Eletrônico",
+      "operadores": "1 ou 2 Operadores",
+      "descricao": "Lançamento: cesto de fibra com lança frontal. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Cesto de Fibra — 2 Operadores",
+      "slug": "cesto-de-fibra-2-operadores",
+      "colecao": "peca",
+      "categoria": "Cestos de Fibra",
+      "codigo": "CF-2OP-MT",
+      "nivelamento": "Eletrônico NR12, Mecânico, Hidráulico, Bengala/Pêndulo",
+      "operadores": "2 Operadores",
+      "descricao": "Cesto duplo de fibra para 2 operadores. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Cesto Metálico Acoplado",
+      "slug": "cesto-metalico-acoplado",
+      "colecao": "peca",
+      "categoria": "Cestos Metálicos",
+      "codigo": "CM-ACOPLADO-MT",
+      "nivelamento": "Mecânico, Hidráulico ou Eletrônico NR12",
+      "operadores": "1 ou 2 Operadores",
+      "descricao": "Cesto em aço tubular para acoplamento em guindaste. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Cesto Metálico Suspenso",
+      "slug": "cesto-metalico-suspenso",
+      "colecao": "peca",
+      "categoria": "Cestos Metálicos",
+      "codigo": "CM-SUSPENSO-MT",
+      "descricao": "Cesto suspenso por cabos para elevação. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Linha Comercial — Goleiras / Pitocos / Escudos",
+      "slug": "linha-comercial-protecao",
+      "colecao": "peca",
+      "categoria": "Linha Comercial",
+      "codigo": "LC-PROTECAO-MT",
+      "descricao": "Goleiras, pitocos e escudos para estabelecimentos comerciais. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Linha Comercial — Ralos / Canaletas / Tampas / Grelha",
+      "slug": "linha-comercial-drenagem",
+      "colecao": "peca",
+      "categoria": "Linha Comercial",
+      "codigo": "LC-DRENAGEM-MT",
+      "descricao": "Ralos, canaletas, tampas e grelha de pista. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Carrinho de Movimentação Interna 10 Ton",
+      "slug": "carrinho-movimentacao-10ton",
+      "colecao": "peca",
+      "categoria": "Projetos Especiais",
+      "codigo": "PE-CARRINHO-MT",
+      "capacidade": "10 Ton",
+      "descricao": "Carrinho para movimentação interna de cargas pesadas. Projeto sob medida. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Rebocador Hidráulico",
+      "slug": "rebocador-hidraulico",
+      "colecao": "peca",
+      "categoria": "Projetos Especiais",
+      "codigo": "PE-REBOCADOR-MT",
+      "descricao": "Rebocador hidráulico em comboio para logística interna. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Escada Sob Medida",
+      "slug": "escada-sob-medida",
+      "colecao": "peca",
+      "categoria": "Projetos Especiais",
+      "codigo": "PE-ESCADA-MT",
+      "descricao": "Escada e passarela metálica sob medida. Projeto especial. Base Angra, marca MT Guindastes.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "TKA 6.700 — novo",
+      "slug": "tka-6700-novo",
+      "colecao": "tka_novo",
+      "categoria": "TKA Novos",
+      "codigo": "TKA-6.700",
+      "descricao": "Guindaste TKA novo, representante autorizado. Cotação consultiva via WhatsApp com CEP.",
+      "preco": 0.0,
+      "tipo_oferta": "sob_consulta"
+    },
+    {
+      "nome": "Guindaste usado — exemplo",
+      "slug": "guindaste-usado-exemplo",
+      "colecao": "usado",
+      "categoria": "Usados",
+      "ano": 2020,
+      "localizacao": "Caxias do Sul/RS",
+      "descricao": "Modelo de ficha de usado: preço visível, detalhe + WhatsApp com CEP. Substituir por estoque real do pátio.",
+      "preco": 100000.0,
+      "tipo_oferta": "pronta_entrega"
+    }
+  ]
+}

@@ -15,7 +15,20 @@ Desenvolvimento e implantação da seção `/pecas` no site institucional da MT 
 ## Stack
 
 - **Site & CMS:** Framer.
-- **Conversão:** Checkout Pix Expresso + WhatsApp Click-to-Chat.
+- **Conversão:** WhatsApp Click-to-Chat com CEP obrigatório + CNPJ/nome opcionais. Sem pagamento pelo site.
+- **Pix:** em avaliação nas peças white-label. Até decisão, `descontoPixPercent = 0` desliga todo bloco Pix da vitrine e do modal.
+
+## Regra comercial tri-modal (decisão Jeff)
+
+- **Peça white-label MT:** preço de referência visível + WhatsApp com CEP. Pix desligado até avaliação.
+- **Usado:** preço visível + detalhe + WhatsApp com CEP. Sem Pix, sem carrinho somado.
+- **TKA novo (representante autorizado):** sempre sob consulta (`preco = 0`). Sem total, sem carrinho, só cotação consultiva.
+- **Carrinho:** opcional e restrito a peças, se um dia habilitado. Nunca soma usado ou TKA novo.
+- **Convenção de preço:** `price > 0` = pronta entrega com referência; `price = 0` = sob consulta.
+
+## Fonte versionada
+
+- `catalog_mt.json` — catálogo tri-modal (TKA do site + Angra re-marcada MT + ficha de usado). Fonte da verdade no monorepo; Framer CMS como render.
 
 ## Status atual
 
