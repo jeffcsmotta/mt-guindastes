@@ -9,11 +9,11 @@
     <meta name="theme-color" content="#F5511D">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;0,700;0,800;0,900;1,700&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css?v=mt1">
-    <link rel="stylesheet" href="mt-theme.css?v=mt1">
-    <link rel="stylesheet" href="mt-rails.css?v=mt1">
+    <link rel="stylesheet" href="style.css?v=mt2">
+    <link rel="stylesheet" href="mt-theme.css?v=mt2">
+    <link rel="stylesheet" href="mt-rails.css?v=mt2">
 </head>
 <body>
 
@@ -21,24 +21,24 @@
     <header class="site-header" id="site-header">
         <div class="container nav-container">
             <a href="index.html" class="brand-wrapper" aria-label="Página inicial da MT Guindastes">
-                <img src="assets/logo-mt-branco.png" alt="MT Guindastes" class="brand-logo-img" onerror="this.outerHTML='<span class=&quot;brand-fallback&quot;>MT Guindastes</span>'">
+                <img src="assets/logo-mt-branco.svg" alt="MT Guindastes" class="brand-logo-img" onerror="this.outerHTML='<span class=&quot;brand-fallback&quot;>MT Guindastes</span>'">
                 <h1 class="sr-only">MT Guindastes — Peças e Acessórios</h1>
             </a>
 
             <div class="status-pill">
                 <span class="status-dot"></span>
-                <span>Cotação direta no WhatsApp</span>
+                <span>Conectado ao Comercial MT · Cotação Direta</span>
             </div>
 
             <div class="nav-actions">
-                <a href="proposta.html" class="nav-link-btn">Proposta</a>
+                <a href="proposta.html" class="nav-link-btn"><i data-lucide="file-text" style="width:14px;height:14px;"></i> Proposta</a>
 
                 <button type="button" class="cart-clear-btn" id="cart-clear-header" aria-label="Limpar cotação" style="display:none;">
-                    <i data-lucide="trash-2"></i>
+                    <i data-lucide="trash-2" style="width:16px;height:16px;"></i>
                 </button>
 
                 <button type="button" class="btn-cart-trigger" id="btn-cart-nav">
-                    <i data-lucide="clipboard-list" style="width:18px; height:18px;"></i>
+                    <i data-lucide="clipboard-list" style="width:17px; height:17px;"></i>
                     <span class="cart-label">Cotação</span>
                     <span class="cart-total-header" id="cart-total-header">R$ 0,00</span>
                     <span class="cart-count-badge" id="cart-count">0</span>
@@ -52,13 +52,15 @@
         <div class="container">
 
             <div class="section-header">
-                <h2 class="section-title-dark">Peças &amp; Acessórios MT</h2>
+                <div class="section-eyebrow"><i data-lucide="shield-check" style="width:14px;height:14px;"></i> Catálogo Técnico Industrial · Conformidade NR12</div>
+                <h2 class="section-title-dark">Implementos, Peças &amp; Guindastes</h2>
+                <p class="section-subtitle">Consulte especificações, códigos de peça e solicite cotação com cálculo de frete direto com o especialista no WhatsApp.</p>
             </div>
 
             <!-- Search Bar -->
             <div class="search-container">
                 <i data-lucide="search" class="search-icon"></i>
-                <input type="text" id="search-input" class="search-input" placeholder="Buscar peça, código ou capacidade...">
+                <input type="text" id="search-input" class="search-input" placeholder="Buscar por implemento, código técnico (ex: GP-MT) ou capacidade...">
             </div>
 
             <!-- Category Filter Pills -->
@@ -132,22 +134,22 @@
         <div class="cart-header">
             <div class="cart-header-title">
                 <i data-lucide="clipboard-list"></i>
-                <span>Minha Cotação</span>
+                <span>Prancheta de Cotação</span>
             </div>
             <button type="button" class="btn-continue-shopping" id="cart-continue">
                 <i data-lucide="arrow-left" style="width:14px; height:14px;"></i>
-                <span>Continuar vendo peças</span>
+                <span>Voltar ao catálogo</span>
             </button>
         </div>
 
         <div class="cart-body">
             <div class="cart-section">
-                <div class="cart-section-title">PEÇAS SELECIONADAS</div>
+                <div class="cart-section-title">ITENS SELECIONADOS</div>
                 <div id="cart-items-container" class="cart-items-container"></div>
             </div>
 
             <div class="cart-option-group">
-                <label>DADOS PARA O FRETE:</label>
+                <label>DADOS PARA CÁLCULO DE FRETE (DESTINO):</label>
                 <input type="text" id="c-cep" class="input-dark" placeholder="CEP de entrega *" inputmode="numeric" maxlength="9" style="margin-bottom:8px;">
                 <input type="text" id="c-cnpj" class="input-dark" placeholder="CNPJ (opcional)" inputmode="numeric" maxlength="18" style="margin-bottom:8px;">
                 <input type="text" id="c-nome" class="input-dark" placeholder="Seu nome ou empresa (opcional)">
@@ -155,24 +157,24 @@
 
             <div class="cart-summary">
                 <div class="summary-line">
-                    <span>Referência das peças:</span>
+                    <span>Referência dos itens:</span>
                     <span id="cart-subtotal">R$ 0,00</span>
                 </div>
                 <div class="summary-line">
-                    <span>Frete:</span>
-                    <span>a combinar</span>
+                    <span>Frete industrial:</span>
+                    <span>a calcular com destino</span>
                 </div>
                 <div class="summary-line total">
-                    <span>Total no WhatsApp:</span>
+                    <span>Total estimado:</span>
                     <span id="cart-total-price">R$ 0,00</span>
                 </div>
             </div>
 
             <button type="button" class="btn-send-whatsapp" id="cart-send">
                 <i data-lucide="send"></i>
-                <span>Enviar Cotação via WhatsApp</span>
+                <span>Solicitar Cotação via WhatsApp</span>
             </button>
-            <p class="modal-note" style="color:#94A3B8;">TKA novos e usados têm cotação individual, direto no card.</p>
+            <p class="modal-note" style="color:#94A3B8;">Guindastes novos TKA e equipamentos usados contam com cotação consultiva individual.</p>
 
             <div class="onira-signature">
                 <span>Tecnologia por <strong>Onira Labs</strong></span>

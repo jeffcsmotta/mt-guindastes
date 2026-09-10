@@ -141,10 +141,10 @@ function showToast(msg) {
 }
 
 function badgeFor(p) {
-    if (p.cta) return { text: 'Pátio · giro semanal', cls: 'badge-dark' };
-    if (p.colecao === 'tka_novo') return { text: 'TKA novo · sob consulta', cls: 'badge-dark' };
-    if (p.preco > 0) return { text: 'Pronta entrega', cls: 'badge-ready' };
-    return { text: 'Sob consulta', cls: 'badge-consult' };
+    if (p.cta) return { text: 'Pátio · Giro Semanal', cls: 'badge-dark' };
+    if (p.colecao === 'tka_novo') return { text: 'TKA Fábrica · Sob Consulta', cls: 'badge-dark' };
+    if (p.preco > 0) return { text: 'Pronta Entrega', cls: 'badge-ready' };
+    return { text: 'Sob Consulta', cls: 'badge-consult' };
 }
 
 function matchesFilter(p) {
@@ -180,7 +180,7 @@ function cardHtml(p) {
     const specs = (p.specs || []).length
         ? `<div class="ind-specs">${p.specs.map(s => `<span>${s}</span>`).join('')}</div>` : '';
     const price = p.preco > 0
-        ? `<span class="price-label">Referência</span><div class="price-value price-green">R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</div><span class="price-hint">+ frete a combinar</span>`
+        ? `<span class="price-label">Referência Técnica</span><div class="price-value price-green">R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</div><span class="price-hint">+ frete industrial a combinar</span>`
         : `<div class="price-consult">Valor sob consulta</div>`;
     const media = p.img
         ? `<img src="${p.img}" alt="${p.nome}" class="card-img" loading="lazy" onerror="this.remove()">`
@@ -190,8 +190,8 @@ function cardHtml(p) {
         action = `<a class="btn-add-item" style="justify-content:center;text-decoration:none;" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Olá, Marcelo! Vim pelo site da MT e quero saber o que tem no pátio de usados.')}"><i data-lucide="message-circle" style="width:16px;height:16px;"></i> Chamar no WhatsApp</a>`;
     } else {
         const sacola = p.colecao === 'peca'
-            ? `<button type="button" class="btn-add-sacola" onclick="event.stopPropagation(); window.addToQuote('${p.id}')">+ Sacola</button>` : '';
-        action = `<button type="button" class="btn-add-item" onclick="event.stopPropagation(); window.openQuoteModal('${p.id}')"><i data-lucide="clipboard-list" style="width:16px;height:16px;"></i> Solicitar cotação</button>${sacola}`;
+            ? `<button type="button" class="btn-add-sacola" onclick="event.stopPropagation(); window.addToQuote('${p.id}')">+ Cotação</button>` : '';
+        action = `<button type="button" class="btn-add-item" onclick="event.stopPropagation(); window.openQuoteModal('${p.id}')"><i data-lucide="clipboard-list" style="width:16px;height:16px;"></i> Cotar Item</button>${sacola}`;
     }
     return `
         <div class="menu-card ind-card" onclick="window.openQuoteModal('${p.id}')">
@@ -347,16 +347,16 @@ window.closeQuoteModal = function() {
     modalProduct = null;
 };
 
-/* Sacola restrita a peças */
+/* Prancheta de cotação restrita a peças */
 window.addToQuote = function(id) {
     const p = PRODUCTS.find(x => x.id === id);
     if (!p || p.colecao !== 'peca') return;
     if (!cart.find(x => x.id === id)) {
         cart.push({ id: p.id, qty: 1 });
         saveCart(); updateCartUI();
-        showToast(p.nome + ' entrou na sacola.');
+        showToast(p.nome + ' adicionado à cotação.');
     } else {
-        showToast('Item já está na sacola.');
+        showToast('Item já consta na prancheta de cotação.');
     }
 };
 
@@ -384,9 +384,9 @@ function updateCartUI() {
     if (!box) return;
     if (!items.length) {
         box.innerHTML = `<div style="text-align:center; padding:40px 20px; color:#A1A1AA;">
-            <i data-lucide="clipboard-list" style="width:48px; height:48px; margin-bottom:12px; opacity:0.5;"></i>
-            <p style="font-weight:700; color:#FFF; margin-bottom:4px;">Sacola vazia.</p>
-            <p style="font-size:0.85rem;">Adicione peças pelos botões “+ Sacola”.</p></div>`;
+            <i data-lucide="clipboard-list" style="width:48px; height:48px; margin-bottom:12px; opacity:0.4; stroke-width:1.5;"></i>
+            <p style="font-weight:700; color:#FFF; margin-bottom:4px; font-family:var(--font-heading); font-size:1.1rem; text-transform:uppercase;">Nenhum item selecionado.</p>
+            <p style="font-size:0.85rem; color:#94A3B8;">Adicione peças ou implementos pelos botões “+ Cotação”.</p></div>`;
     } else {
         box.innerHTML = items.map(i => `
             <div class="cart-item">
@@ -432,7 +432,7 @@ window.closeClearModal = function() { document.getElementById('confirm-clear').s
 window.confirmClearCart = function() {
     cart = []; saveCart(); updateCartUI();
     window.closeClearModal();
-    showToast('Sacola limpa com sucesso!');
+    showToast('Prancheta de cotação limpa com sucesso!');
 };
 
 function drawerMessage() {
