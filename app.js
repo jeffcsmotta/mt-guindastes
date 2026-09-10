@@ -137,6 +137,7 @@ function renderGrid() {
 function updateCount() { $("quote-count").textContent = state.sacola.length; }
 
 function openDrawer() {
+  closeModal();
   var box = $("drawer-items");
   box.innerHTML = state.sacola.length
     ? state.sacola.map(function (p) {
