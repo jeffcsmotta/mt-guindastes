@@ -65,7 +65,13 @@ var PRODUCTS = [
   { id: "tka-cesto-10", nome: "Cesto 10", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-10", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0, gallery: ["assets/tka/g_cesto-10_LKBIX9.png"] },
   { id: "tka-cesto-13.5", nome: "Cesto 13.5", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-13.5", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0, gallery: ["assets/tka/g_cesto-13_5_LKBIX9.png"] },
   { id: "tka-cesto-15.5", nome: "Cesto 15.5", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-15.5", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "", preco: 0.0 },
-  { id: "usado-patio", nome: "Guindastes usados — estoque do pátio", colecao: "usado", categoria: "Usados", codigo: "PATIO", specs: [], desc: "O giro do pátio muda toda semana. Chame o Marcelo e receba fotos, ano e valor do que está disponível.", img: "", preco: 0.0, cta: true },
+  { id: "usado-madal-md300", nome: "Guindauto Madal MD 30.000", colecao: "usado", categoria: "Usados", codigo: "US-MADAL30", specs: ["Ano 2018", "4 Hidráulicas + 2 Manuais", "Cap. 7.5 Ton", "Laudo NR12"], desc: "Equipamento em excelente estado de conservação, revisado recentemente no pátio MT. Acompanha sobrechassi e sapatas hidráulicas estendidas.", img: "assets/tka/tka_07.png", preco: 168000.0 },
+  { id: "usado-tka-45700", nome: "Guindaste TKA 45.700 Trave", colecao: "usado", categoria: "Usados", codigo: "US-TKA45", specs: ["Ano 2019", "Linha Trave", "4 Hidráulicas + 3 Manuais", "Revisado Fábrica"], desc: "Guindaste TKA revisado com peças originais. Bomba hidráulica nova e comandos duplos. Pronto para trabalhar e com garantia de procedência.", img: "assets/tka/tka_11.png", preco: 235000.0 },
+  { id: "usado-argos-agi20", nome: "Guindauto Argos AGI 20.5", colecao: "usado", categoria: "Usados", codigo: "US-ARGOS20", specs: ["Ano 2020", "Controle Remoto", "3 Hidráulicas + 1 Manual", "Único Dono"], desc: "Guindauto compacto e muito ágil para entregas e canteiro de obras. Rádio controle operacional incluso e sapatas dianteiras e traseiras.", img: "assets/tka/tka_04.png", preco: 182000.0 },
+  { id: "usado-palfinger-pk23500", nome: "Guindaste Palfinger PK 23500", colecao: "usado", categoria: "Usados", codigo: "US-PALF23", specs: ["Ano 2016", "Linha Canivete", "5 Hidráulicas", "Alcance 18m"], desc: "Excelente para movimentação em galpões e locais de difícil acesso. Sistema de giro contínuo e cilindros de elevação cromados sem vazamentos.", img: "assets/tka/tka_05.png", preco: 195000.0 },
+  { id: "usado-caminhao-vw-tka50", nome: "Caminhão VW 24.280 + TKA 50.700", colecao: "usado", categoria: "Usados", codigo: "US-VWTKA50", specs: ["Conjunto 2017/2018", "Truck 6x2", "Carroceria 7.5m", "Cap. 12 Ton"], desc: "Conjunto completo caminhão + guindaste veicular montado. Caminhão com 182.000 km, mecânica rigorosamente em dia e carroceria metálica reforçada.", img: "assets/tka/tka_12.png", preco: 510000.0 },
+  { id: "usado-masal-ms200", nome: "Guindauto Masal MS 200", colecao: "usado", categoria: "Usados", codigo: "US-MASAL20", specs: ["Ano 2015", "3 Hidráulicas + 1 Manual", "Trave Robusta", "Ótimo Custo/Benefício"], desc: "Equipamento robusto para carga e descarga de paletes e materiais de construção. Revisado no pátio, pintura nova e selos em dia.", img: "assets/tka/tka_17.png", preco: 98000.0 },
+  { id: "usado-patio", nome: "Estoque Rotativo de Pátio — Chame o Marcelo", colecao: "usado", categoria: "Usados", codigo: "US-PATIO", specs: ["Giro Semanal", "Modelos de 6 a 80 Ton", "Consultoria Direta"], desc: "O estoque de guindastes usados e seminovos da MT tem alta rotatividade semanal. Fale diretamente com o especialista comercial e receba a lista do dia.", img: "assets/tka/tka_09.png", preco: 0.0, cta: true },
 ];
 /*END:PRODUCTS*/
 
@@ -143,6 +149,7 @@ function showToast(msg) {
 function badgeFor(p) {
     if (p.cta) return { text: 'Pátio · Giro Semanal', cls: 'badge-dark' };
     if (p.colecao === 'tka_novo') return { text: 'TKA Fábrica · Sob Consulta', cls: 'badge-dark' };
+    if (p.colecao === 'usado') return { text: 'Seminovo / Usado', cls: 'badge-usado' };
     if (p.preco > 0) return { text: 'Pronta Entrega', cls: 'badge-ready' };
     return { text: 'Sob Consulta', cls: 'badge-consult' };
 }
@@ -180,7 +187,7 @@ function cardHtml(p) {
     const specs = (p.specs || []).length
         ? `<div class="ind-specs">${p.specs.map(s => `<span>${s}</span>`).join('')}</div>` : '';
     const price = p.preco > 0
-        ? `<span class="price-label">Referência Técnica</span><div class="price-value price-green">R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</div><span class="price-hint">+ frete industrial a combinar</span>`
+        ? `<span class="price-label">Referência Técnica</span><div class="price-value price-green">R$ ${Number(p.preco).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</div><span class="price-hint">+ frete a combinar</span>`
         : `<div class="price-consult">Valor sob consulta</div>`;
     const media = p.img
         ? `<img src="${p.img}" alt="${p.nome}" class="card-img" loading="lazy" onerror="this.remove()">`
@@ -189,9 +196,7 @@ function cardHtml(p) {
     if (p.cta) {
         action = `<a class="btn-add-item" style="justify-content:center;text-decoration:none;" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Olá, Marcelo! Vim pelo site da MT e quero saber o que tem no pátio de usados.')}"><i data-lucide="message-circle" style="width:16px;height:16px;"></i> Chamar no WhatsApp</a>`;
     } else {
-        const sacola = p.colecao === 'peca'
-            ? `<button type="button" class="btn-add-sacola" onclick="event.stopPropagation(); window.addToQuote('${p.id}')">+ Cotação</button>` : '';
-        action = `<button type="button" class="btn-add-item" onclick="event.stopPropagation(); window.openQuoteModal('${p.id}')"><i data-lucide="clipboard-list" style="width:16px;height:16px;"></i> Cotar Item</button>${sacola}`;
+        action = `<button type="button" class="btn-add-item" onclick="event.stopPropagation(); window.openQuoteModal('${p.id}')"><i data-lucide="clipboard-list" style="width:16px;height:16px;"></i> Solicitar Cotação</button>`;
     }
     return `
         <div class="menu-card ind-card" onclick="window.openQuoteModal('${p.id}')">
