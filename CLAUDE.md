@@ -34,10 +34,14 @@ Desenvolvimento e implantação da seção `/pecas` no site institucional da MT 
 
 `[proposta-enviada]` — Proposta comercial gerada com escopo técnico e sugestão de valor (R$ 3.800,00). Aguardando retorno de aprovação do cliente para início do setup.
 
-## Links publicados (GitHub Pages)
+## Links publicados
 
-- **Vitrine industrial:** https://jeffcsmotta.github.io/mt-guindastes/
+- **Produção (Cloudflare Pages):** https://mt-guindastes.pages.dev/
+- **Homologação (GitHub Pages):** https://jeffcsmotta.github.io/mt-guindastes/
 - **Proposta:** https://jeffcsmotta.github.io/mt-guindastes/proposta.html
+
+> Deploy Cloudflare é via `wrangler pages deploy clientes/mt-guindastes`
+> (integração GitHub ainda não vinculada no dashboard).
 
 ## Contatos
 
