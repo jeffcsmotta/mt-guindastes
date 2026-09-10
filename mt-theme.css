@@ -1,0 +1,51 @@
+/* ============ MT GUINDASTES — TEMA INDUSTRIAL (sobre o motor Onira.fly) ============ */
+:root {
+  --primary: #F5511D;
+  --primary-hover: #C93F14;
+  --primary-glow: rgba(245, 81, 29, 0.25);
+}
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* Cabeçalho laranja, logo branca */
+.site-header { background: var(--primary); border-bottom: 3px solid #141414; transition: transform 0.3s ease; }
+.site-header.header-hidden { transform: translateY(-100%); }
+.brand-logo-img { height: 44px; filter: brightness(0) invert(1); }
+.brand-fallback { font-family: var(--font-heading); font-weight: 900; font-size: 1.3rem; color: #fff; }
+.site-header .status-pill { background: rgba(0,0,0,0.25); color: #fff; border: none; }
+.site-header .nav-link-btn { color: #fff; border-color: rgba(255,255,255,0.4); }
+.site-header .btn-cart-trigger { background: #141414; }
+
+/* Pill TKA diferenciado */
+.filter-pill-tka { background: #141414 !important; color: #fff !important; border-color: #141414 !important; font-weight: 800; }
+.filter-pill-tka.active { background: var(--primary) !important; border-color: #141414 !important; }
+
+/* Card industrial: cabeçalho compacto */
+.ind-card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 14px 0; }
+.ind-code { font-family: monospace; font-size: 0.78rem; color: var(--text-muted-dark); background: #F1F5F9; padding: 3px 8px; border-radius: 6px; }
+.card-badge.badge-dark { background: #141414; color: #fff; }
+.card-badge.badge-ready { background: #059669; color: #fff; }
+.card-badge.badge-consult { background: #E2E8F0; color: #475569; }
+.card-noimg { width: 100%; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-family: monospace; font-weight: 700; color: rgba(255,255,255,0.85); background: linear-gradient(135deg, #1c1e24, #3a3f4b); }
+.ind-cat { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary); }
+.ind-specs { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0; }
+.ind-specs span { font-size: 0.72rem; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 6px; padding: 3px 8px; color: #334155; }
+.price-green { color: #059669 !important; }
+.price-hint { font-size: 0.75rem; color: var(--text-muted-dark); }
+.price-consult { font-size: 0.85rem; color: var(--text-muted-dark); margin-top: 6px; }
+.btn-add-sacola { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); border-radius: 10px; font-weight: 800; font-size: 0.82rem; padding: 10px 12px; cursor: pointer; white-space: nowrap; }
+.card-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; }
+.card-bottom .btn-add-item { flex: 1; justify-content: center; }
+
+/* Cotação */
+.quote-label { display: block; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; margin-bottom: 4px; }
+.modal-ref { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 10px 12px; font-size: 0.88rem; margin: 10px 0 4px; }
+.modal-note { font-size: 0.75rem; color: var(--text-muted-dark); text-align: center; padding: 0 18px 16px; }
+.btn-disabled { background: #9CA3AB !important; cursor: not-allowed; opacity: 0.7; }
+
+/* Sinalização de pagamento */
+.pay-signal { background: #fff; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px; margin: 24px 0 40px; text-align: center; }
+.pay-signal-label { font-size: 0.82rem; font-weight: 700; color: #475569; }
+.pay-badges { display: flex; gap: 10px; justify-content: center; margin: 12px 0; flex-wrap: wrap; }
+.pay-badge { border: 1px solid #E2E8F0; background: #F8FAFC; border-radius: 8px; padding: 8px 16px; font-size: 0.82rem; font-weight: 800; }
+.pay-signal-note { font-size: 0.78rem; color: #94A3B8; }

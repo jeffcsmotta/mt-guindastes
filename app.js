@@ -1,12 +1,13 @@
 /**
- * MT Guindastes — Vitrine industrial Onira.fly
- * Regra tri-modal: peca/usado com preço -> WhatsApp com CEP;
- * tka_novo sempre sob consulta. Pagamento só sinalização.
- * Sacola ("Minha Cotação") restrita a peças. Zero window.alert().
+ * MT Guindastes — Peças e Acessórios (Caxias do Sul)
+ * Motor Onira.fly adaptado ao industrial. Regra tri-modal:
+ * peca -> preço de referência + sacola + cotação WhatsApp com CEP;
+ * usado -> preço visível + cotação individual (sem sacola);
+ * tka_novo -> sempre sob consulta, só cotação. Pagamento só sinalização.
  */
 
-var WHATSAPP = "5554999972976";
-var RAZAO = "MT Guindastes";
+const WHATSAPP_PHONE = '5554999972976';
+const CART_KEY = 'mtguindastes_cotacao';
 
 /*GENERATED:PRODUCTS*/
 var PRODUCTS = [
@@ -68,266 +69,391 @@ var PRODUCTS = [
 ];
 /*END:PRODUCTS*/
 
-var CATEGORIES = ["Todos", "Garfos Paleteiros", "Acessórios", "Cestos de Fibra", "Cestos Metálicos", "Linha Comercial", "Projetos Especiais", "TKA Novos", "Usados"];
-var DISP_OPTIONS = ["Todas", "Pronta entrega", "Sob consulta"];
-var LINHA_OPTIONS = ["Todas", "TRAVE", "CANIVETE", "BX"];
+/* Ordem dos pills: TKA diferenciado, Todos (exceto TKA), categorias, Usados */
+const PILL_ORDER = [
+    { id: '__tka', label: 'TKA Novos', special: true },
+    { id: 'todos', label: 'Todos' },
+    { id: 'Acessórios', label: 'Acessórios' },
+    { id: 'Garfos Paleteiros', label: 'Garfos Paleteiros' },
+    { id: 'Cestos de Fibra', label: 'Cestos de Fibra' },
+    { id: 'Cestos Metálicos', label: 'Cestos Metálicos' },
+    { id: 'Linha Comercial', label: 'Linha Comercial' },
+    { id: 'Projetos Especiais', label: 'Projetos Especiais' },
+    { id: 'Usados', label: 'Usados' }
+];
 
-/* ---------- utils ---------- */
-function $(id) { return document.getElementById(id); }
-function brl(v) { return v.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
-function digits(s) { return (s || "").replace(/\D/g, ""); }
-function maskCep(raw) {
-  var d = digits(raw).substring(0, 8);
-  return d.length <= 5 ? d : d.substring(0, 5) + "-" + d.substring(5);
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch (e) { cart = []; }
+let activeCategory = 'todos';
+let searchQuery = '';
+let modalProduct = null;
+
+function brl(v) {
+    return 'R$ ' + Number(v || 0).toFixed(2).replace('.', ',');
 }
-function maskCnpj(raw) {
-  var d = digits(raw).substring(0, 14);
-  if (d.length <= 2) return d;
-  if (d.length <= 5) return d.substring(0, 2) + "." + d.substring(2);
-  if (d.length <= 8) return d.substring(0, 2) + "." + d.substring(2, 5) + "." + d.substring(5);
-  if (d.length <= 12) return d.substring(0, 2) + "." + d.substring(2, 5) + "." + d.substring(5, 8) + "/" + d.substring(8);
-  return d.substring(0, 2) + "." + d.substring(2, 5) + "." + d.substring(5, 8) + "/" + d.substring(8, 12) + "-" + d.substring(12);
+function digits(s) { return (s || '').replace(/\D/g, ''); }
+function maskCep(v) {
+    const d = digits(v).substring(0, 8);
+    return d.length <= 5 ? d : d.substring(0, 5) + '-' + d.substring(5);
 }
-function toast(msg) {
-  var t = $("toast");
-  t.textContent = msg;
-  t.hidden = false;
-  clearTimeout(t._timer);
-  t._timer = setTimeout(function () { t.hidden = true; }, 2600);
+function maskCnpj(v) {
+    const d = digits(v).substring(0, 14);
+    if (d.length <= 2) return d;
+    if (d.length <= 5) return d.substring(0, 2) + '.' + d.substring(2);
+    if (d.length <= 8) return d.substring(0, 2) + '.' + d.substring(2, 5) + '.' + d.substring(5);
+    if (d.length <= 12) return d.substring(0, 2) + '.' + d.substring(2, 5) + '.' + d.substring(5, 8) + '/' + d.substring(8);
+    return d.substring(0, 2) + '.' + d.substring(2, 5) + '.' + d.substring(5, 8) + '/' + d.substring(8, 12) + '-' + d.substring(12);
 }
+
+function showToast(msg) {
+    const box = document.getElementById('toast-container');
+    if (!box) return;
+    const el = document.createElement('div');
+    el.className = 'toast-box';
+    el.textContent = msg;
+    box.appendChild(el);
+    setTimeout(() => { el.classList.add('show'); }, 30);
+    setTimeout(() => { el.classList.remove('show'); setTimeout(() => el.remove(), 400); }, 2600);
+}
+
 function badgeFor(p) {
-  if (p.cta) return { text: "Pátio · giro semanal", cls: "dark" };
-  if (p.colecao === "tka_novo") return { text: "TKA novo · sob consulta", cls: "dark" };
-  if (p.preco > 0) return { text: "Pronta entrega", cls: "ready" };
-  return { text: "Sob consulta", cls: "consult" };
+    if (p.cta) return { text: 'Pátio · giro semanal', cls: 'badge-dark' };
+    if (p.colecao === 'tka_novo') return { text: 'TKA novo · sob consulta', cls: 'badge-dark' };
+    if (p.preco > 0) return { text: 'Pronta entrega', cls: 'badge-ready' };
+    return { text: 'Sob consulta', cls: 'badge-consult' };
 }
 
-/* ---------- estado ---------- */
-var state = { search: "", category: "Todos", disp: "Todas", linha: "Todas", sacola: [], modalProduct: null };
-
-/* ---------- render: categorias ---------- */
-function renderCategories() {
-  var nav = $("categories");
-  nav.innerHTML = "";
-  CATEGORIES.forEach(function (c) {
-    var b = document.createElement("button");
-    b.className = "pill" + (state.category === c ? " active" : "");
-    b.textContent = c;
-    b.onclick = function () { state.category = c; renderCategories(); renderGrid(); };
-    nav.appendChild(b);
-  });
+function matchesFilter(p) {
+    const q = searchQuery;
+    const hay = (p.nome + ' ' + p.codigo + ' ' + p.desc + ' ' + (p.specs || []).join(' ')).toLowerCase();
+    if (q && hay.indexOf(q) === -1) return false;
+    if (activeCategory === '__tka') return p.colecao === 'tka_novo';
+    if (activeCategory === 'todos') return p.colecao !== 'tka_novo';
+    return p.categoria === activeCategory;
 }
 
-/* ---------- render: grade ---------- */
-function filtered() {
-  var q = state.search.toLowerCase();
-  return PRODUCTS.filter(function (p) {
-    var okCat = state.category === "Todos" || p.categoria === state.category;
-    var pronta = p.preco > 0;
-    var okDisp = state.disp === "Todas" ||
-      (state.disp === "Pronta entrega" ? pronta : !pronta);
-    var okLinha = state.linha === "Todas" || (p.linha || "") === state.linha;
-    var hay = (p.nome + " " + p.codigo + " " + p.desc + " " + p.specs.join(" ")).toLowerCase();
-    return okCat && okDisp && okLinha && (!q || hay.indexOf(q) !== -1);
-  });
+function renderPills() {
+    const nav = document.getElementById('category-filters');
+    if (!nav) return;
+    nav.innerHTML = '';
+    PILL_ORDER.forEach(p => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'filter-pill' + (activeCategory === p.id ? ' active' : '') + (p.special ? ' filter-pill-tka' : '');
+        b.setAttribute('data-category', p.id);
+        b.textContent = p.label;
+        b.addEventListener('click', () => {
+            activeCategory = p.id;
+            renderPills();
+            renderCatalog();
+        });
+        nav.appendChild(b);
+    });
 }
 
-function cardHtml(p) {
-  var b = badgeFor(p);
-  var price = p.preco > 0
-    ? '<p class="price">R$ ' + brl(p.preco) + '</p><p class="price-hint">referência + frete</p>'
-    : '<p class="price-consult">Valor sob consulta</p>';
-  var specs = p.specs.length
-    ? '<div class="specs">' + p.specs.map(function (s) { return "<span>" + s + "</span>"; }).join("") + "</div>"
-    : "";
-  var media = p.img
-    ? '<img class="card-photo" src="' + p.img + '" alt="' + p.nome + '" loading="lazy" onerror="this.remove()" />'
-    : "";
-  var actions;
-  if (p.cta) {
-    actions = '<div class="card-actions"><a class="btn btn-primary" style="flex:1;justify-content:center" target="_blank" rel="noopener" href="https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent("Olá, Marcelo! Vim pelo site da MT e quero saber o que tem no pátio de usados.") + '">Chamar no WhatsApp</a></div>';
-  } else {
-    var addBtn = p.colecao === "peca"
-      ? '<button class="btn btn-ghost" data-add="' + p.id + '">+ Sacola</button>'
-      : "";
-    actions = '<div class="card-actions"><button class="btn btn-primary" data-quote="' + p.id + '">Solicitar cotação</button>' + addBtn + "</div>";
-  }
-  return (
-    '<article class="card">' +
-      '<div class="card-media">' + media + '<span class="card-code">' + p.codigo + '</span>' +
-      '<span class="badge ' + b.cls + '">' + b.text + "</span></div>" +
-      '<div class="card-body"><h3>' + p.nome + "</h3>" +
-      '<p class="card-cat">' + p.categoria + (p.linha ? " · " + p.linha : "") + "</p>" +
-      specs +
-      '<p class="card-desc">' + p.desc + "</p>" +
-      price + actions +
-      "</div></article>"
-  );
+/* Card industrial: cabeçalho compacto (código + badge), foto, specs, preço, CTA por linha */
+function renderCatalog() {
+    const grid = document.getElementById('menu-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    const list = (typeof PRODUCTS !== 'undefined' ? PRODUCTS : []).filter(matchesFilter);
+
+    if (!list.length) {
+        grid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+                <i data-lucide="search-x" style="width: 48px; height: 48px; color: #9CA3AF; margin-bottom: 12px;"></i>
+                <h3 style="font-size: 1.2rem;">Nenhum item encontrado</h3>
+                <p style="color: #6B7280; font-size: 0.9rem;">Tente outro termo ou fale direto com o Marcelo no WhatsApp.</p>
+            </div>`;
+        if (window.lucide) lucide.createIcons();
+        return;
+    }
+
+    list.forEach(p => {
+        const b = badgeFor(p);
+        const specs = (p.specs || []).length
+            ? `<div class="ind-specs">${p.specs.map(s => `<span>${s}</span>`).join('')}</div>` : '';
+        const price = p.preco > 0
+            ? `<span class="price-label">Referência</span><div class="price-value price-green">R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</div><span class="price-hint">+ frete a combinar</span>`
+            : `<div class="price-consult">Valor sob consulta</div>`;
+        const media = p.img
+            ? `<img src="${p.img}" alt="${p.nome}" class="card-img" loading="lazy" onerror="this.remove()">`
+            : `<div class="card-noimg">${p.codigo}</div>`;
+        let action;
+        if (p.cta) {
+            action = `<a class="btn-add-item" style="justify-content:center;text-decoration:none;" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Olá, Marcelo! Vim pelo site da MT e quero saber o que tem no pátio de usados.')}"><i data-lucide="message-circle" style="width:16px;height:16px;"></i> Chamar no WhatsApp</a>`;
+        } else {
+            const sacola = p.colecao === 'peca'
+                ? `<button type="button" class="btn-add-sacola" onclick="event.stopPropagation(); window.addToQuote('${p.id}')">+ Sacola</button>` : '';
+            action = `<button type="button" class="btn-add-item" onclick="event.stopPropagation(); window.openQuoteModal('${p.id}')"><i data-lucide="clipboard-list" style="width:16px;height:16px;"></i> Solicitar cotação</button>${sacola}`;
+        }
+        grid.insertAdjacentHTML('beforeend', `
+            <div class="menu-card ind-card" onclick="window.openQuoteModal('${p.id}')">
+                <div class="ind-card-top"><span class="ind-code">${p.codigo}</span><span class="card-badge ${b.cls}">${b.text}</span></div>
+                <div class="card-img-box">${media}</div>
+                <div class="card-body">
+                    <h3 class="card-title">${p.nome}</h3>
+                    <p class="ind-cat">${p.categoria}${p.linha ? ' · ' + p.linha : ''}</p>
+                    ${specs}
+                    <p class="card-desc">${p.desc}</p>
+                    <div class="card-bottom"><div>${price}</div>${action}</div>
+                </div>
+            </div>`);
+    });
+    if (window.lucide) lucide.createIcons();
 }
 
-function renderGrid() {
-  var list = filtered();
-  var grid = $("grid");
-  grid.innerHTML = list.map(cardHtml).join("");
-  $("empty").hidden = list.length > 0;
-  grid.querySelectorAll("[data-quote]").forEach(function (btn) {
-    btn.onclick = function () { openModal(btn.getAttribute("data-quote")); };
-  });
-  grid.querySelectorAll("[data-add]").forEach(function (btn) {
-    btn.onclick = function () {
-      var p = PRODUCTS.find(function (x) { return x.id === btn.getAttribute("data-add"); });
-      if (!state.sacola.find(function (x) { return x.id === p.id; })) state.sacola.push(p);
-      updateCount();
-      toast(p.nome + " entrou na sacola.");
-    };
-  });
-  if (window.lucide) lucide.createIcons();
-}
+/* Modal de cotação: produto CTA abre WhatsApp direto */
+window.openQuoteModal = function(id) {
+    const p = (typeof PRODUCTS !== 'undefined' ? PRODUCTS : []).find(x => x.id === id);
+    if (!p) return;
+    if (p.cta) {
+        window.open('https://wa.me/' + WHATSAPP_PHONE + '?text=' + encodeURIComponent('Olá, Marcelo! Vim pelo site da MT e quero saber o que tem no pátio de usados.'), '_blank');
+        return;
+    }
+    window.closeCart();
+    modalProduct = p;
+    document.getElementById('modal-img').src = p.img || '';
+    document.getElementById('modal-img').style.display = p.img ? '' : 'none';
+    document.getElementById('modal-title').textContent = p.nome + ' · ' + p.codigo;
+    document.getElementById('modal-desc').textContent = p.desc;
+    document.getElementById('modal-ref').innerHTML = p.preco > 0
+        ? `Referência da peça: <strong>R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</strong>`
+        : `Item <strong>sob consulta</strong> — o Marcelo retorna com valor + frete.`;
+    document.getElementById('q-cep').value = '';
+    document.getElementById('q-cnpj').value = '';
+    document.getElementById('q-nome').value = '';
+    refreshModalConfirm();
+    document.getElementById('item-modal-overlay').removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => document.getElementById('q-cep').focus(), 80);
+};
 
-/* ---------- sacola ---------- */
-function updateCount() { $("quote-count").textContent = state.sacola.length; }
-
-function openDrawer() {
-  closeModal();
-  var box = $("drawer-items");
-  box.innerHTML = state.sacola.length
-    ? state.sacola.map(function (p) {
-        return '<div class="drawer-item"><div><strong>' + p.nome + '</strong><br /><small>' + p.codigo +
-          (p.preco > 0 ? " · R$ " + brl(p.preco) : " · sob consulta") + "</small></div>" +
-          '<button class="drawer-rm" data-rm="' + p.id + '" aria-label="Remover">×</button></div>';
-      }).join("")
-    : '<p class="drawer-note">Sacola vazia. Adicione peças pelos botões “+ Sacola”.</p>';
-  box.querySelectorAll("[data-rm]").forEach(function (btn) {
-    btn.onclick = function () {
-      state.sacola = state.sacola.filter(function (x) { return x.id !== btn.getAttribute("data-rm"); });
-      updateCount(); openDrawer();
-    };
-  });
-  var sub = state.sacola.filter(function (p) { return p.preco > 0; }).reduce(function (a, p) { return a + p.preco; }, 0);
-  var nConsult = state.sacola.filter(function (p) { return !(p.preco > 0); }).length;
-  var totalEl = $("drawer-total");
-  totalEl.hidden = !state.sacola.length;
-  totalEl.innerHTML = state.sacola.length
-    ? "<span>Referência das peças: <strong>R$ " + brl(sub) + "</strong></span>" +
-      (nConsult ? "<small> + " + nConsult + " item(ns) sob consulta</small>" : "") +
-      "<small>Frete a combinar · sem cobrança pelo site</small>"
-    : "";
-  $("drawer").hidden = false;
-  $("drawer-overlay").hidden = false;
-  refreshDrawerSend();
+function refreshModalConfirm() {
+    const ok = modalProduct && digits(document.getElementById('q-cep').value).length === 8;
+    const btn = document.getElementById('modal-confirm');
+    document.getElementById('modal-btn-label').textContent = ok ? 'Enviar pelo WhatsApp' : 'Informe o CEP para continuar';
+    btn.classList.toggle('btn-disabled', !ok);
 }
-function closeDrawer() { $("drawer").hidden = true; $("drawer-overlay").hidden = true; }
-
-function drawerMessage() {
-  var cep = $("drawer-cep").value || "—";
-  var cnpj = $("drawer-cnpj").value || "—";
-  var nome = $("drawer-nome").value || "—";
-  var lines = ["_cotação via site by Onira.fly_", "", "Solicitação de Cotação · Peças e Acessórios", ""];
-  state.sacola.forEach(function (p) {
-    lines.push("*1x* " + p.nome + " · " + p.codigo);
-    if (p.specs.length) lines.push(p.specs.join(" / "));
-    lines.push(p.preco > 0 ? "*Referência: R$ " + brl(p.preco) + "*" : "_Sob consulta_");
-    lines.push("");
-  });
-  lines.push("CEP de entrega: " + cep, "CNPJ: " + cnpj, "*" + nome + "*", "",
-    "Aguardo valor total com frete. Obrigado.", "", "_Enviado pelo site da " + RAZAO + "_");
-  return lines.join("\n");
-}
-function refreshDrawerSend() {
-  var ok = state.sacola.length > 0 && digits($("drawer-cep").value).length === 8;
-  var a = $("drawer-send");
-  a.href = ok ? "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(drawerMessage()) : "#";
-  a.classList.toggle("btn-disabled", !ok);
-  a.textContent = ok ? "Enviar cotação no WhatsApp" : "Informe o CEP para continuar";
-}
-
-/* ---------- modal individual ---------- */
-function openModal(id) {
-  var p = PRODUCTS.find(function (x) { return x.id === id; });
-  if (!p) { toast("Item não encontrado."); return; }
-  closeDrawer();
-  state.modalProduct = p;
-  $("modal-product").textContent = p.nome + " · " + p.codigo;
-  $("modal-ref").innerHTML = p.preco > 0
-    ? "Referência da peça: <strong>R$ " + brl(p.preco) + "</strong>"
-    : "Item <strong>sob consulta</strong> — o Marcelo retorna com valor + frete.";
-  $("modal-cep").value = ""; $("modal-cnpj").value = ""; $("modal-nome").value = "";
-  $("modal-overlay").hidden = false;
-  refreshModalSend();
-  setTimeout(function () { $("modal-cep").focus(); }, 60);
-}
-function closeModal() { $("modal-overlay").hidden = true; state.modalProduct = null; }
 
 function modalMessage() {
-  var p = state.modalProduct;
-  var cep = $("modal-cep").value || "—";
-  var cnpj = $("modal-cnpj").value || "—";
-  var nome = $("modal-nome").value || "—";
-  var lines = ["_cotação via site by Onira.fly_", "", "Solicitação de Cotação · Peças e Acessórios", "",
-    "*1x* " + p.nome + " · " + p.codigo];
-  if (p.specs.length) lines.push(p.specs.join(" / "));
-  lines.push(p.preco > 0 ? "*Referência: R$ " + brl(p.preco) + "*" : "_Sob consulta_");
-  lines.push("", "CEP de entrega: " + cep, "CNPJ: " + cnpj, "*" + nome + "*", "",
-    "Aguardo valor total com frete. Obrigado.", "", "_Enviado pelo site da " + RAZAO + "_");
-  return lines.join("\n");
-}
-function refreshModalSend() {
-  var ok = state.modalProduct && digits($("modal-cep").value).length === 8;
-  var a = $("modal-send");
-  a.href = ok ? "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(modalMessage()) : "#";
-  a.classList.toggle("btn-disabled", !ok);
-  a.textContent = ok ? "Enviar pelo WhatsApp" : "Informe o CEP para continuar";
+    const p = modalProduct;
+    const lines = ['_cotação via site by Onira.fly_', '', 'Solicitação de Cotação · Peças e Acessórios', '',
+        `*1x* ${p.nome} · ${p.codigo}`];
+    (p.specs || []).forEach(s => lines.push(`+ ${s}`));
+    lines.push(p.preco > 0 ? `*Referência: R$ ${Number(p.preco).toFixed(2).replace('.', ',')}*` : '_Sob consulta_');
+    lines.push('', `CEP de entrega: ${document.getElementById('q-cep').value || '—'}`,
+        `CNPJ: ${document.getElementById('q-cnpj').value || '—'}`,
+        `*${document.getElementById('q-nome').value || '—'}*`, '',
+        'Aguardo valor total com frete. Obrigado.', '', '_Enviado pelo site da MT Guindastes_');
+    return lines.join('\n');
 }
 
-/* ---------- boot ---------- */
-document.addEventListener("DOMContentLoaded", function () {
-  renderCategories();
-  renderGrid();
-  updateCount();
+window.closeQuoteModal = function() {
+    document.getElementById('item-modal-overlay').setAttribute('hidden', '');
+    document.body.style.overflow = 'auto';
+    modalProduct = null;
+};
 
-  $("search").addEventListener("input", function (e) { state.search = e.target.value; renderGrid(); });
+/* Sacola restrita a peças */
+window.addToQuote = function(id) {
+    const p = PRODUCTS.find(x => x.id === id);
+    if (!p || p.colecao !== 'peca') return;
+    if (!cart.find(x => x.id === id)) {
+        cart.push({ id: p.id, qty: 1 });
+        saveCart(); updateCartUI();
+        showToast(p.nome + ' entrou na sacola.');
+    } else {
+        showToast('Item já está na sacola.');
+    }
+};
 
-  var dispSel = $("filter-disp"), linhaSel = $("filter-linha");
-  DISP_OPTIONS.forEach(function (o) { dispSel.add(new Option(o, o)); });
-  LINHA_OPTIONS.forEach(function (o) { linhaSel.add(new Option(o, o)); });
-  dispSel.onchange = function () { state.disp = dispSel.value; renderGrid(); };
-  linhaSel.onchange = function () { state.linha = linhaSel.value; renderGrid(); };
+function saveCart() { localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+function cartDetailed() {
+    return cart.map(e => Object.assign({ qty: e.qty }, PRODUCTS.find(p => p.id === e.id))).filter(x => x.nome);
+}
 
-  $("quote-open").onclick = openDrawer;
-  $("quote-close").onclick = closeDrawer;
-  $("drawer-overlay").onclick = closeDrawer;
-  ["drawer-cep", "drawer-cnpj", "drawer-nome"].forEach(function (id) {
-    $(id).addEventListener("input", function (e) {
-      if (id === "drawer-cep") e.target.value = maskCep(e.target.value);
-      if (id === "drawer-cnpj") e.target.value = maskCnpj(e.target.value);
-      refreshDrawerSend();
+function updateCartUI() {
+    const items = cartDetailed();
+    const count = items.reduce((s, i) => s + i.qty, 0);
+    const sub = items.filter(i => i.preco > 0).reduce((s, i) => s + i.preco * i.qty, 0);
+    const fmt = v => 'R$ ' + v.toFixed(2).replace('.', ',');
+    const cc = document.getElementById('cart-count');
+    if (cc) cc.innerText = count;
+    const th = document.getElementById('cart-total-header');
+    if (th) th.innerText = fmt(sub);
+    const st = document.getElementById('cart-subtotal');
+    if (st) st.innerText = fmt(sub);
+    const gt = document.getElementById('cart-total-price');
+    if (gt) gt.innerText = fmt(sub);
+    const clear = document.getElementById('cart-clear-header');
+    if (clear) clear.style.display = cart.length ? 'inline-flex' : 'none';
+    const box = document.getElementById('cart-items-container');
+    if (!box) return;
+    if (!items.length) {
+        box.innerHTML = `<div style="text-align:center; padding:40px 20px; color:#A1A1AA;">
+            <i data-lucide="clipboard-list" style="width:48px; height:48px; margin-bottom:12px; opacity:0.5;"></i>
+            <p style="font-weight:700; color:#FFF; margin-bottom:4px;">Sacola vazia.</p>
+            <p style="font-size:0.85rem;">Adicione peças pelos botões “+ Sacola”.</p></div>`;
+    } else {
+        box.innerHTML = items.map(i => `
+            <div class="cart-item">
+                <div class="cart-item-info"><h4>${i.nome}</h4>
+                    <div class="cart-item-custom-list"><span>• ${i.codigo}${i.preco > 0 ? ' · ' + fmt(i.preco) : ' · sob consulta'}</span></div>
+                </div>
+                <div class="cart-controls">
+                    <button type="button" class="cart-qty-btn" onclick="window.changeQuoteQty('${i.id}', -1)" aria-label="Diminuir">-</button>
+                    <span style="font-size:0.88rem; font-weight:800; color:#FFF; min-width:26px; text-align:center;">${i.qty}</span>
+                    <button type="button" class="cart-qty-btn" onclick="window.changeQuoteQty('${i.id}', 1)" aria-label="Aumentar">+</button>
+                </div>
+            </div>`).join('');
+    }
+    if (window.lucide) lucide.createIcons();
+}
+
+window.changeQuoteQty = function(id, d) {
+    const e = cart.find(x => x.id === id);
+    if (!e) return;
+    e.qty += d;
+    if (e.qty <= 0) cart = cart.filter(x => x.id !== id);
+    saveCart(); updateCartUI();
+};
+
+window.openCart = function() {
+    window.closeQuoteModal();
+    document.getElementById('cart-drawer').classList.add('active', 'open');
+    document.getElementById('cart-overlay').classList.add('active', 'open');
+    document.body.style.overflow = 'hidden';
+};
+window.closeCart = function() {
+    document.getElementById('cart-drawer').classList.remove('active', 'open');
+    document.getElementById('cart-overlay').classList.remove('active', 'open');
+    document.body.style.overflow = 'auto';
+};
+
+window.askClearCart = function() {
+    if (!cart.length) return;
+    document.getElementById('confirm-clear-text').innerHTML = `Você vai remover <strong>${cart.length} ${cart.length === 1 ? 'item' : 'itens'}</strong> da cotação.`;
+    document.getElementById('confirm-clear').removeAttribute('hidden');
+};
+window.closeClearModal = function() { document.getElementById('confirm-clear').setAttribute('hidden', ''); };
+window.confirmClearCart = function() {
+    cart = []; saveCart(); updateCartUI();
+    window.closeClearModal();
+    showToast('Sacola limpa com sucesso!');
+};
+
+function drawerMessage() {
+    const items = cartDetailed();
+    const lines = ['_cotação via site by Onira.fly_', '', 'Solicitação de Cotação · Peças e Acessórios', ''];
+    items.forEach(p => {
+        lines.push(`*${p.qty}x* ${p.nome} · ${p.codigo}`);
+        (p.specs || []).forEach(s => lines.push(`+ ${s}`));
+        lines.push(p.preco > 0 ? `*Referência: R$ ${(p.preco * p.qty).toFixed(2).replace('.', ',')}*` : '_Sob consulta_');
+        lines.push('');
     });
-  });
-  $("drawer-send").addEventListener("click", function (e) {
-    if (this.classList.contains("btn-disabled")) e.preventDefault();
-  });
+    lines.push(`CEP de entrega: ${document.getElementById('c-cep').value || '—'}`,
+        `CNPJ: ${document.getElementById('c-cnpj').value || '—'}`,
+        `*${document.getElementById('c-nome').value || '—'}*`, '',
+        'Aguardo valor total com frete. Obrigado.', '', '_Enviado pelo site da MT Guindastes_');
+    return lines.join('\n');
+}
 
-  $("modal-close").onclick = closeModal;
-  $("modal-overlay").addEventListener("click", function (e) { if (e.target === this) closeModal(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeModal(); closeDrawer(); } });
-  ["modal-cep", "modal-cnpj", "modal-nome"].forEach(function (id) {
-    $(id).addEventListener("input", function (e) {
-      if (id === "modal-cep") e.target.value = maskCep(e.target.value);
-      if (id === "modal-cnpj") e.target.value = maskCnpj(e.target.value);
-      refreshModalSend();
+window.sendQuote = function() {
+    if (!cart.length) { showToast('Adicione ao menos uma peça na sacola.'); return; }
+    if (digits(document.getElementById('c-cep').value).length !== 8) {
+        showToast('Informe o CEP de entrega com 8 dígitos.');
+        document.getElementById('c-cep').focus();
+        return;
+    }
+    window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(drawerMessage())}`, '_blank');
+};
+
+/* Header some ao rolar p/ baixo, volta ao topo */
+function setupHideHeader() {
+    const header = document.getElementById('site-header');
+    if (!header) return;
+    let lastY = window.scrollY;
+    window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y <= 0) header.classList.remove('header-hidden');
+        else if (y > lastY + 4) header.classList.add('header-hidden');
+        else if (y < lastY - 4) header.classList.remove('header-hidden');
+        lastY = y;
+    }, { passive: true });
+}
+
+function setupOniraCta() {
+    const cta = document.getElementById('onira-cta');
+    const fechar = document.getElementById('onira-cta-close');
+    if (!cta) return;
+    if (fechar) fechar.addEventListener('click', e => {
+        e.preventDefault(); e.stopPropagation();
+        cta.style.display = 'none';
+        try { sessionStorage.setItem('mt_cta_dispensado', 'true'); } catch (err) {}
     });
-  });
-  $("modal-send").addEventListener("click", function (e) {
-    if (this.classList.contains("btn-disabled")) e.preventDefault();
-  });
+    try { if (sessionStorage.getItem('mt_cta_dispensado') === 'true') return; } catch (err) {}
+    let mostrado = false;
+    const mostrar = () => {
+        if (!mostrado) { mostrado = true; cta.style.display = 'flex'; if (window.lucide) lucide.createIcons(); }
+    };
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50 && !mostrado) mostrar();
+        if (!mostrado) return;
+        const dw = document.getElementById('cart-drawer');
+        const open = dw && (dw.classList.contains('active') || dw.classList.contains('open'));
+        cta.classList.toggle('onira-cta-hidden', !!open);
+        cta.classList.toggle('onira-cta-faded', !open && window.scrollY > 150);
+    }, { passive: true });
+    setTimeout(mostrar, 1200);
+}
 
-  /* widget proposta retrátil */
-  var cta = $("onira-cta");
-  cta.querySelector(".onira-cta-close").onclick = function () { cta.classList.toggle("collapsed"); };
-  var scrollT;
-  window.addEventListener("scroll", function () {
-    cta.classList.add("scrolling");
-    clearTimeout(scrollT);
-    scrollT = setTimeout(function () { cta.classList.remove("scrolling"); }, 400);
-  }, { passive: true });
+document.addEventListener('DOMContentLoaded', () => {
+    renderPills();
+    renderCatalog();
+    updateCartUI();
+    setupOniraCta();
+    setupHideHeader();
+
+    document.getElementById('search-input').addEventListener('input', e => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        renderCatalog();
+    });
+    document.getElementById('btn-cart-nav').addEventListener('click', window.openCart);
+    document.getElementById('cart-overlay').addEventListener('click', window.closeCart);
+    document.getElementById('cart-continue').addEventListener('click', window.closeCart);
+    document.getElementById('cart-clear-header').addEventListener('click', window.askClearCart);
+    document.getElementById('confirm-clear-no').addEventListener('click', window.closeClearModal);
+    document.getElementById('confirm-clear-yes').addEventListener('click', window.confirmClearCart);
+    document.getElementById('cart-send').addEventListener('click', window.sendQuote);
+
+    document.getElementById('modal-close').addEventListener('click', window.closeQuoteModal);
+    document.getElementById('item-modal-overlay').addEventListener('click', e => {
+        if (e.target.id === 'item-modal-overlay') window.closeQuoteModal();
+    });
+    ['q-cep', 'q-cnpj', 'q-nome'].forEach(id => {
+        document.getElementById(id).addEventListener('input', e => {
+            if (id === 'q-cep') e.target.value = maskCep(e.target.value);
+            if (id === 'q-cnpj') e.target.value = maskCnpj(e.target.value);
+            refreshModalConfirm();
+        });
+    });
+    document.getElementById('modal-confirm').addEventListener('click', () => {
+        if (!modalProduct) return;
+        if (digits(document.getElementById('q-cep').value).length !== 8) {
+            showToast('Informe o CEP de entrega com 8 dígitos.');
+            return;
+        }
+        window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(modalMessage())}`, '_blank');
+    });
+    ['c-cep', 'c-cnpj'].forEach(id => {
+        document.getElementById(id).addEventListener('input', e => {
+            e.target.value = id === 'c-cep' ? maskCep(e.target.value) : maskCnpj(e.target.value);
+        });
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { window.closeQuoteModal(); window.closeCart(); window.closeClearModal(); }
+    });
+    if (window.lucide) lucide.createIcons();
 });

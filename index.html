@@ -1,179 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MT Guindastes — Peças e Acessórios | Cotação via WhatsApp</title>
-  <meta name="description" content="Catálogo de peças e acessórios MT Guindastes em Caxias do Sul: garfos paleteiros, cestos de fibra e metálicos NR12, linha comercial e projetos especiais. Solicite cotação com CEP pelo WhatsApp." />
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#141414" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="style.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "MT Guindastes — Peças e Acessórios",
-    "telephone": "+55-54-99997-2976",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Caxias do Sul",
-      "addressRegion": "RS",
-      "addressCountry": "BR"
-    }
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MT Guindastes — Peças e Acessórios | Cotação via WhatsApp</title>
+    <meta name="description" content="Catálogo de peças e acessórios MT Guindastes em Caxias do Sul: garfos paleteiros, cestos de fibra e metálicos NR12, linha comercial e projetos especiais. Cotação com CEP pelo WhatsApp.">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#F5511D">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=mt1">
+    <link rel="stylesheet" href="mt-theme.css?v=mt1">
 </head>
 <body>
 
-  <!-- Top-bar informativa -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span class="topbar-item"><i data-lucide="map-pin"></i> Caxias do Sul/RS</span>
-      <a class="topbar-item" href="https://wa.me/5554999972976" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> (54) 99997-2976</a>
-      <span class="topbar-item topbar-hide-mobile"><i data-lucide="badge-check"></i> Revendedora oficial TKA Guindastes</span>
-    </div>
-  </div>
+    <!-- Header Navigation -->
+    <header class="site-header" id="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-wrapper" aria-label="Página inicial da MT Guindastes">
+                <img src="assets/logo-mt-branco.png" alt="MT Guindastes" class="brand-logo-img" onerror="this.outerHTML='<span class=&quot;brand-fallback&quot;>MT Guindastes</span>'">
+                <h1 class="sr-only">MT Guindastes — Peças e Acessórios</h1>
+            </a>
 
-  <!-- Header despoluído -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand" aria-label="MT Guindastes">
-        <span class="brand-mark">MT</span>
-        <span class="brand-text">GUINDASTES<small>peças &amp; acessórios</small></span>
-      </a>
-      <span class="status-pill"><span class="status-dot"></span> Cotação direta no WhatsApp</span>
-      <div class="nav-actions">
-        <a href="proposta.html" class="btn btn-proposta"><i data-lucide="briefcase"></i><span>Proposta</span></a>
-        <button id="quote-open" class="btn btn-quote" aria-label="Abrir minha cotação">
-          <i data-lucide="clipboard-list"></i><span>Minha Cotação</span>
-          <span id="quote-count" class="cart-count">0</span>
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                <span>Cotação direta no WhatsApp</span>
+            </div>
+
+            <div class="nav-actions">
+                <a href="proposta.html" class="nav-link-btn">Proposta</a>
+
+                <button type="button" class="cart-clear-btn" id="cart-clear-header" aria-label="Limpar cotação" style="display:none;">
+                    <i data-lucide="trash-2"></i>
+                </button>
+
+                <button type="button" class="btn-cart-trigger" id="btn-cart-nav">
+                    <i data-lucide="clipboard-list" style="width:18px; height:18px;"></i>
+                    <span class="cart-label">Cotação</span>
+                    <span class="cart-total-header" id="cart-total-header">R$ 0,00</span>
+                    <span class="cart-count-badge" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION PRINCIPAL: VITRINE DIRETA -->
+    <main class="section-menu-main" id="vitrine">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title-dark">Peças &amp; Acessórios MT</h2>
+                <p class="section-subtitle-dark">Escolha o item e solicite a cotação com frete direto no WhatsApp do Marcelo.</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <i data-lucide="search" class="search-icon"></i>
+                <input type="text" id="search-input" class="search-input" placeholder="Buscar peça, código ou capacidade...">
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="category-filter" id="category-filters"></div>
+
+            <!-- Dynamic Catalog Grid populated by app.js -->
+            <div class="menu-grid" id="menu-grid"></div>
+
+            <!-- Payment signaling only -->
+            <div class="pay-signal">
+                <p class="pay-signal-label">Formas de pagamento aceitas na finalização com o vendedor</p>
+                <div class="pay-badges">
+                    <span class="pay-badge">Pix</span>
+                    <span class="pay-badge">Boleto</span>
+                    <span class="pay-badge">Cartão em até 12x</span>
+                </div>
+                <p class="pay-signal-note">Sem cobrança pelo site — o fechamento é conduzido no WhatsApp.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div>MT Guindastes · CNPJ 44.652.208/0001-60 · Caxias do Sul/RS — Revendedora oficial TKA Guindastes</div>
+                <div>Desenvolvido por <a href="proposta.html" style="color:var(--secondary); font-weight:700; text-decoration:none;">Onira Labs (Jeff Motta)</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Cotação (CEP obrigatório) -->
+    <div class="item-modal-overlay" id="item-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="item-modal">
+            <button type="button" class="item-modal-close-btn" id="modal-close" aria-label="Fechar cotação">
+                <i data-lucide="x"></i>
+            </button>
+            <img src="" alt="" id="modal-img" class="item-modal-img">
+
+            <div class="item-modal-body">
+                <div class="item-modal-header-info">
+                    <h3 class="item-modal-title" id="modal-title">Item</h3>
+                    <p class="item-modal-desc" id="modal-desc"></p>
+                </div>
+                <div id="modal-ref" class="modal-ref"></div>
+                <div id="modal-options-container">
+                    <div class="opt-group" style="padding:14px;">
+                        <label class="quote-label">CEP de entrega *</label>
+                        <input type="text" id="q-cep" class="opt-obs-textarea" placeholder="00000-000" inputmode="numeric" maxlength="9">
+                        <label class="quote-label" style="margin-top:10px;">CNPJ (opcional)</label>
+                        <input type="text" id="q-cnpj" class="opt-obs-textarea" placeholder="00.000.000/0001-00" inputmode="numeric" maxlength="18">
+                        <label class="quote-label" style="margin-top:10px;">Nome (opcional)</label>
+                        <input type="text" id="q-nome" class="opt-obs-textarea" placeholder="Seu nome ou empresa">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-modal-footer">
+                <button type="button" class="btn-modal-add" id="modal-confirm" style="width:100%;">
+                    <span id="modal-btn-label">Informe o CEP para continuar</span>
+                </button>
+            </div>
+            <p class="modal-note">O frete é cotado conforme o destino. Sem pagamento pelo site.</p>
+        </div>
+    </div>
+
+    <!-- Sacola de Cotação Drawer -->
+    <div class="cart-drawer-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <div class="cart-header-title">
+                <i data-lucide="clipboard-list"></i>
+                <span>Minha Cotação</span>
+            </div>
+            <button type="button" class="btn-continue-shopping" id="cart-continue">
+                <i data-lucide="arrow-left" style="width:14px; height:14px;"></i>
+                <span>Continuar vendo peças</span>
+            </button>
+        </div>
+
+        <div class="cart-body">
+            <div class="cart-section">
+                <div class="cart-section-title">PEÇAS SELECIONADAS</div>
+                <div id="cart-items-container" class="cart-items-container"></div>
+            </div>
+
+            <div class="cart-option-group">
+                <label>DADOS PARA O FRETE:</label>
+                <input type="text" id="c-cep" class="input-dark" placeholder="CEP de entrega *" inputmode="numeric" maxlength="9" style="margin-bottom:8px;">
+                <input type="text" id="c-cnpj" class="input-dark" placeholder="CNPJ (opcional)" inputmode="numeric" maxlength="18" style="margin-bottom:8px;">
+                <input type="text" id="c-nome" class="input-dark" placeholder="Seu nome ou empresa (opcional)">
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Referência das peças:</span>
+                    <span id="cart-subtotal">R$ 0,00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Frete:</span>
+                    <span>a combinar</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total no WhatsApp:</span>
+                    <span id="cart-total-price">R$ 0,00</span>
+                </div>
+            </div>
+
+            <button type="button" class="btn-send-whatsapp" id="cart-send">
+                <i data-lucide="send"></i>
+                <span>Enviar Cotação via WhatsApp</span>
+            </button>
+            <p class="modal-note" style="color:#94A3B8;">TKA novos e usados têm cotação individual, direto no card.</p>
+
+            <div class="onira-signature">
+                <span>Tecnologia por <strong>Onira Labs</strong></span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Modal de Confirmação: Limpar Cotação -->
+    <div class="confirm-overlay" id="confirm-clear" role="dialog" aria-modal="true" aria-labelledby="confirm-clear-title" hidden>
+        <div class="confirm-box">
+            <div class="confirm-icon"><i data-lucide="trash-2"></i></div>
+            <h3 class="confirm-title" id="confirm-clear-title">Limpar a cotação?</h3>
+            <p class="confirm-text" id="confirm-clear-text">Você vai remover os itens da sua cotação.</p>
+            <p class="confirm-warning">Esta ação não pode ser desfeita.</p>
+            <div class="confirm-actions">
+                <button type="button" class="confirm-btn confirm-cancel" id="confirm-clear-no">Manter</button>
+                <button type="button" class="confirm-btn confirm-ok" id="confirm-clear-yes">Sim, limpar tudo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5554999972976?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20pelo%20site%20da%20MT%20e%20quero%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar com o Marcelo no WhatsApp">
+        <i data-lucide="message-circle" aria-hidden="true"></i>
+    </a>
+
+    <!-- Convite da Onira -->
+    <div class="onira-cta" id="onira-cta">
+        <a class="onira-cta-link" href="proposta.html" rel="nofollow">
+            <img src="assets/jeff-avatar.webp" alt="Jefferson Motta, Onira Labs" class="onira-cta-avatar" width="40" height="40">
+            <span class="onira-cta-text">
+                <span class="onira-cta-hook">Gostou do site?</span>
+                <span class="onira-cta-call">Saiba como funciona meu trabalho →</span>
+            </span>
+        </a>
+        <button type="button" class="onira-cta-close" id="onira-cta-close" aria-label="Dispensar convite">
+            <i data-lucide="x"></i>
         </button>
-      </div>
-    </div>
-    <div class="container search-row">
-      <div class="search-wrapper">
-        <i data-lucide="search" class="search-icon"></i>
-        <input id="search" type="text" placeholder="Buscar peça, código ou capacidade…" aria-label="Buscar peças e acessórios" autocomplete="off" />
-      </div>
-    </div>
-    <div class="container">
-      <nav id="categories" class="category-scroll-pills" aria-label="Categorias"></nav>
-      <div class="filter-row">
-        <label>Disponibilidade
-          <select id="filter-disp" aria-label="Filtrar por disponibilidade"></select>
-        </label>
-        <label>Linha TKA
-          <select id="filter-linha" aria-label="Filtrar por linha TKA"></select>
-        </label>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- Barra de confiança -->
-    <section class="trustbar" aria-label="Confiança">
-      <span class="trust-item"><i data-lucide="shield-check"></i> Equipamentos adequados à NR12</span>
-      <span class="trust-item"><i data-lucide="receipt"></i> Nota fiscal em todas as compras</span>
-      <span class="trust-item"><i data-lucide="headset"></i> Atendimento com Marcelo</span>
-    </section>
-
-    <!-- Vitrine: primeira dobra -->
-    <section id="grid" class="grid" aria-live="polite"></section>
-    <div id="empty" class="empty" hidden>
-      <p><strong>Nenhum item encontrado</strong></p>
-      <p>Ajuste a busca ou fale direto com o Marcelo no WhatsApp.</p>
-      <a class="btn btn-primary" href="https://wa.me/5554999972976?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20pelo%20site%20da%20MT%20e%20preciso%20de%20uma%20pe%C3%A7a." target="_blank" rel="noopener">Chamar no WhatsApp</a>
     </div>
 
-    <!-- Formas de pagamento: só sinalização -->
-    <section class="pay-signal" aria-label="Formas de pagamento">
-      <p class="pay-signal-label">Formas de pagamento aceitas na finalização com o vendedor</p>
-      <div class="pay-badges">
-        <span class="pay-badge">Pix</span>
-        <span class="pay-badge">Boleto</span>
-        <span class="pay-badge">Cartão em até 12x</span>
-      </div>
-      <p class="pay-signal-note">Sem cobrança pelo site — o fechamento é conduzido no WhatsApp.</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span><strong>MT Guindastes</strong> · CNPJ 44.652.208/0001-60 · Caxias do Sul/RS</span>
-      <span class="onira-sign">Tecnologia por <strong>Onira Labs</strong></span>
-    </div>
-  </footer>
-
-  <!-- Drawer da cotação (sacola de peças) -->
-  <div id="drawer-overlay" class="drawer-overlay" hidden></div>
-  <aside id="drawer" class="drawer" aria-label="Minha cotação" hidden>
-    <div class="drawer-header">
-      <strong>Minha Cotação</strong>
-      <button id="quote-close" class="drawer-close" aria-label="Fechar">×</button>
-    </div>
-    <div class="cart-body">
-      <div id="drawer-items" class="cart-items-list"></div>
-      <div class="drawer-form">
-        <label>CEP de entrega <span class="required">*</span>
-          <input id="drawer-cep" inputmode="numeric" maxlength="9" placeholder="00000-000" />
-        </label>
-        <label>CNPJ (opcional)
-          <input id="drawer-cnpj" inputmode="numeric" maxlength="18" placeholder="00.000.000/0001-00" />
-        </label>
-        <label>Nome (opcional)
-          <input id="drawer-nome" placeholder="Seu nome ou empresa" />
-        </label>
-      </div>
-      <div id="drawer-total" class="drawer-total"></div>
-      <a id="drawer-send" class="btn btn-primary btn-block" href="#" target="_blank" rel="noopener">Enviar cotação no WhatsApp</a>
-      <p class="drawer-note">TKA novos e usados têm cotação individual, direto no card do item.</p>
-    </div>
-  </aside>
-
-  <!-- Modal de cotação individual -->
-  <div id="modal-overlay" class="modal-overlay" hidden>
-    <div class="modal" role="dialog" aria-modal="true" id="modal-box">
-      <button id="modal-close" class="drawer-close" aria-label="Fechar">×</button>
-      <p class="modal-title">Solicitar cotação com frete</p>
-      <p id="modal-product" class="modal-product"></p>
-      <div id="modal-ref" class="modal-ref"></div>
-      <label>CEP de entrega <span class="required">*</span>
-        <input id="modal-cep" inputmode="numeric" maxlength="9" placeholder="00000-000" />
-      </label>
-      <label>CNPJ (opcional)
-        <input id="modal-cnpj" inputmode="numeric" maxlength="18" placeholder="00.000.000/0001-00" />
-      </label>
-      <label>Nome (opcional)
-        <input id="modal-nome" placeholder="Seu nome ou empresa" />
-      </label>
-      <a id="modal-send" class="btn btn-primary btn-block btn-disabled" href="#" target="_blank" rel="noopener">Informe o CEP para continuar</a>
-      <p class="drawer-note">O frete é cotado conforme o destino. Sem pagamento pelo site.</p>
-    </div>
-  </div>
-
-  <!-- Toast não-bloqueante -->
-  <div id="toast" class="toast-box" hidden></div>
-
-  <!-- Widget proposta Onira -->
-  <div id="onira-cta" class="onira-cta">
-    <button class="onira-cta-close" aria-label="Recolher">–</button>
-    <img src="assets/jeff-avatar.webp" alt="Jefferson Motta" class="onira-cta-avatar" onerror="this.style.display='none'" />
-    <div class="onira-cta-text">
-      <strong>Gostou do site?</strong>
-      <a href="proposta.html">Saiba como funciona meu trabalho →</a>
-    </div>
-  </div>
-
-  <!-- Botão flutuante WhatsApp -->
-  <a class="floating-whatsapp-btn" href="https://wa.me/5554999972976?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20pelo%20site%20da%20MT%20e%20quero%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar com o Marcelo">
-    <i data-lucide="message-circle"></i><span>Falar com o Marcelo</span>
-  </a>
-
-  <script src="app.js"></script>
-  <script>lucide.createIcons();</script>
+    <script src="app.js?v=mt2"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js').catch(() => {});
+        });
+      }
+    </script>
 </body>
 </html>
