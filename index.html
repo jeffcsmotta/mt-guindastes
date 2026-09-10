@@ -9,11 +9,11 @@
     <meta name="theme-color" content="#F5511D">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;0,700;0,800;0,900;1,700&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css?v=mt2">
-    <link rel="stylesheet" href="mt-theme.css?v=mt2">
-    <link rel="stylesheet" href="mt-rails.css?v=mt2">
+    <link rel="stylesheet" href="style.css?v=mt3">
+    <link rel="stylesheet" href="mt-theme.css?v=mt3">
+    <link rel="stylesheet" href="mt-rails.css?v=mt3">
 </head>
 <body>
 
@@ -25,20 +25,20 @@
                 <h1 class="sr-only">MT Guindastes — Peças e Acessórios</h1>
             </a>
 
-            <div class="status-pill">
+            <div class="status-pill status-pill-desktop">
                 <span class="status-dot"></span>
-                <span>Conectado ao Comercial MT · Cotação Direta</span>
+                <span>Comercial MT · Cotação Direta WhatsApp</span>
             </div>
 
             <div class="nav-actions">
-                <a href="proposta.html" class="nav-link-btn"><i data-lucide="file-text" style="width:14px;height:14px;"></i> Proposta</a>
+                <a href="proposta.html" class="nav-link-btn"><i data-lucide="file-text" style="width:14px;height:14px;"></i> <span>Proposta</span></a>
 
                 <button type="button" class="cart-clear-btn" id="cart-clear-header" aria-label="Limpar cotação" style="display:none;">
                     <i data-lucide="trash-2" style="width:16px;height:16px;"></i>
                 </button>
 
-                <button type="button" class="btn-cart-trigger" id="btn-cart-nav">
-                    <i data-lucide="clipboard-list" style="width:17px; height:17px;"></i>
+                <button type="button" class="btn-cart-trigger" id="btn-cart-nav" aria-label="Abrir prancheta de cotação">
+                    <i data-lucide="clipboard-list" style="width:18px; height:18px;"></i>
                     <span class="cart-label">Cotação</span>
                     <span class="cart-total-header" id="cart-total-header">R$ 0,00</span>
                     <span class="cart-count-badge" id="cart-count">0</span>
@@ -199,26 +199,7 @@
     <!-- Toast -->
     <div class="toast-container" id="toast-container"></div>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5554999972976?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20pelo%20site%20da%20MT%20e%20quero%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar com o Marcelo no WhatsApp">
-        <i data-lucide="message-circle" aria-hidden="true"></i>
-    </a>
-
-    <!-- Convite da Onira -->
-    <div class="onira-cta" id="onira-cta">
-        <a class="onira-cta-link" href="proposta.html" rel="nofollow">
-            <img src="assets/jeff-avatar.webp" alt="Jefferson Motta, Onira Labs" class="onira-cta-avatar" width="40" height="40">
-            <span class="onira-cta-text">
-                <span class="onira-cta-hook">Gostou do site?</span>
-                <span class="onira-cta-call">Saiba como funciona meu trabalho →</span>
-            </span>
-        </a>
-        <button type="button" class="onira-cta-close" id="onira-cta-close" aria-label="Dispensar convite">
-            <i data-lucide="x"></i>
-        </button>
-    </div>
-
-    <script src="app.js?v=mt2"></script>
+    <script src="app.js?v=mt3"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

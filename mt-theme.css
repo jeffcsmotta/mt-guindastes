@@ -6,13 +6,13 @@
    ========================================================================== */
 
 :root {
-  /* Font Families */
-  --font-heading: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Font Families — Padrão Onira.fly Oficial */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* Industrial Color Tokens */
-  --primary: #EA580C;                /* Safety Blaze refinado */
+  --primary: #EA580C;                /* Safety Blaze MT Guindastes */
   --primary-hover: #C2410C;          /* Blaze escurecido */
   --primary-glow: rgba(234, 88, 12, 0.22);
   --primary-subtle: rgba(234, 88, 12, 0.08);
@@ -92,28 +92,29 @@
 }
 
 .site-header .nav-container {
-  padding: 12px 20px;
+  padding: 14px 24px;
+  min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
 
-/* Marca Oficial */
+/* Marca Oficial Ampliada no Desktop */
 .brand-wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  flex-shrink: 0;
 }
 .brand-wrapper:hover {
-  opacity: 0.92;
+  opacity: 0.95;
 }
 .brand-logo-img {
-  height: 38px;
+  height: 52px;
   width: auto;
-  max-width: 220px;
+  max-width: 300px;
   object-fit: contain;
   display: block;
 }
@@ -602,27 +603,30 @@
   border: 1px solid var(--badge-tka-border);
 }
 
-/* Caixa de Imagem Técnica */
+/* Caixa de Imagem Técnica - Foto Ocupando Todo o Espaço */
 .card-img-box {
   width: 100%;
-  aspect-ratio: 4/3;
-  background: #F8FAFC;
+  aspect-ratio: 16/10;
+  height: 200px;
+  background: #F1F5F9;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
-  border-bottom: 1px solid #F1F5F9;
+  border-bottom: 1px solid #E2E8F0;
 }
 .card-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 12px;
-  transition: transform 0.3s ease;
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .menu-card.ind-card:hover .card-img {
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 .card-noimg {
   width: 100%;
@@ -1262,92 +1266,7 @@
   gap: 12px;
 }
 
-/* ==========================================================================
-   WHATSAPP FLUTUANTE & CONVITE ONIRA
-   ========================================================================== */
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 54px;
-  height: 54px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-  z-index: 99;
-  text-decoration: none;
-  transition: var(--transition-smooth);
-}
-.whatsapp-float:hover {
-  transform: scale(1.08);
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.55);
-}
-.whatsapp-float i {
-  width: 28px;
-  height: 28px;
-}
-
-.onira-cta {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  background: var(--obsidian-surface);
-  border: 1px solid var(--obsidian-border);
-  border-radius: var(--radius-full);
-  padding: 6px 14px 6px 6px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: var(--shadow-cockpit);
-  z-index: 98;
-}
-.onira-cta-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.onira-cta-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1.5px solid var(--primary);
-  object-fit: cover;
-}
-.onira-cta-text {
-  display: flex;
-  flex-direction: column;
-}
-.onira-cta-hook {
-  font-size: 0.72rem;
-  color: #94A3B8;
-  line-height: 1.1;
-}
-.onira-cta-call {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.78rem;
-  color: #FFFFFF;
-}
-.onira-cta-close {
-  background: transparent;
-  border: none;
-  color: #64748B;
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.onira-cta-close:hover {
-  color: #FFFFFF;
-}
-
-/* Toasts */
+/* Toasts de Notificação */
 .toast-container {
   position: fixed;
   bottom: 24px;
@@ -1376,4 +1295,76 @@
 .toast-box.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE REFINADA (SEM QUEBRA DE CABEÇALHO)
+   ========================================================================== */
+@media (max-width: 860px) {
+  .status-pill-desktop {
+    display: none !important;
+  }
+  .site-header .nav-container {
+    padding: 10px 16px;
+    min-height: 64px;
+    gap: 12px;
+  }
+  .brand-logo-img {
+    height: 40px;
+    max-width: 180px;
+  }
+  .site-header .nav-link-btn {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
+  .site-header .btn-cart-trigger {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  .card-img-box {
+    height: 180px;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header .nav-container {
+    padding: 8px 12px;
+    min-height: 60px;
+  }
+  .brand-logo-img {
+    height: 36px;
+    max-width: 145px;
+  }
+  .site-header .nav-link-btn span {
+    display: none;
+  }
+  .site-header .nav-link-btn {
+    padding: 7px 9px;
+  }
+  .site-header .btn-cart-trigger {
+    padding: 7px 10px;
+    font-size: 0.76rem;
+    gap: 6px;
+  }
+  .cart-label {
+    display: none;
+  }
+  .cart-total-header {
+    display: none;
+  }
+  .card-bottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .btn-add-item {
+    width: 100%;
+    justify-content: center;
+  }
+  .section-title-dark {
+    font-size: 1.6rem;
+  }
+  .card-img-box {
+    height: 165px;
+  }
 }
