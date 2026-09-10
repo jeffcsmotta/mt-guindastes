@@ -195,8 +195,14 @@ function cardHtml(p) {
     let action;
     if (p.cta) {
         action = `<a class="btn-add-item" style="justify-content:center;text-decoration:none;" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Olá, Marcelo! Vim pelo site da MT e quero saber o que tem no pátio de usados.')}"><i data-lucide="message-circle" style="width:16px;height:16px;"></i> Chamar no WhatsApp</a>`;
+    } else if (p.colecao === 'peca') {
+        const inCart = cart.find(x => x.id === p.id);
+        action = `<button type="button" class="btn-add-quote" onclick="event.stopPropagation(); window.addToQuote('${p.id}')">
+            <i data-lucide="${inCart ? 'check' : 'plus-circle'}" style="width:16px;height:16px;"></i>
+            <span>${inCart ? 'Na Cotação (' + inCart.qty + ')' : '+ Cotação'}</span>
+        </button>`;
     } else {
-        action = `<button type="button" class="btn-add-item" onclick="event.stopPropagation(); window.openQuoteModal('${p.id}')"><i data-lucide="clipboard-list" style="width:16px;height:16px;"></i> Solicitar Cotação</button>`;
+        action = `<button type="button" class="btn-add-item" onclick="event.stopPropagation(); window.openQuoteModal('${p.id}')"><i data-lucide="clipboard-list" style="width:16px;height:16px;"></i> Ficha Técnica</button>`;
     }
     return `
         <div class="menu-card ind-card" onclick="window.openQuoteModal('${p.id}')">
@@ -211,6 +217,7 @@ function cardHtml(p) {
             </div>
         </div>`;
 }
+
 
 /* Grade em dois modos: trilhos streaming (Todos/TKA, sem busca) ou grade (filtro/busca) */
 function renderCatalog() {
@@ -320,11 +327,25 @@ window.openQuoteModal = function(id) {
     document.getElementById('q-cep').value = '';
     document.getElementById('q-cnpj').value = '';
     document.getElementById('q-nome').value = '';
+
+    const addBtn = document.getElementById('modal-add-to-cart-btn');
+    if (addBtn) {
+        if (p.colecao === 'peca') {
+            addBtn.style.display = 'flex';
+            const inCart = cart.find(x => x.id === p.id);
+            addBtn.innerHTML = `<i data-lucide="${inCart ? 'check' : 'plus-circle'}" style="width:18px;height:18px;"></i> <span>${inCart ? 'Já Consta na Cotação (' + inCart.qty + 'x)' : '+ Adicionar à Prancheta de Cotação'}</span>`;
+        } else {
+            addBtn.style.display = 'none';
+        }
+    }
+
     refreshModalConfirm();
     document.getElementById('item-modal-overlay').removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
+    if (window.lucide) lucide.createIcons();
     setTimeout(() => document.getElementById('q-cep').focus(), 80);
 };
+
 
 function refreshModalConfirm() {
     const ok = modalProduct && digits(document.getElementById('q-cep').value).length === 8;
@@ -356,14 +377,18 @@ window.closeQuoteModal = function() {
 window.addToQuote = function(id) {
     const p = PRODUCTS.find(x => x.id === id);
     if (!p || p.colecao !== 'peca') return;
-    if (!cart.find(x => x.id === id)) {
+    const existing = cart.find(x => x.id === id);
+    if (!existing) {
         cart.push({ id: p.id, qty: 1 });
-        saveCart(); updateCartUI();
+        saveCart(); updateCartUI(); renderCatalog();
         showToast(p.nome + ' adicionado à cotação.');
     } else {
-        showToast('Item já consta na prancheta de cotação.');
+        existing.qty += 1;
+        saveCart(); updateCartUI(); renderCatalog();
+        showToast(p.nome + ' (+1 na cotação: ' + existing.qty + 'x).');
     }
 };
+
 
 function saveCart() { localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
 function cartDetailed() {
@@ -413,7 +438,7 @@ window.changeQuoteQty = function(id, d) {
     if (!e) return;
     e.qty += d;
     if (e.qty <= 0) cart = cart.filter(x => x.id !== id);
-    saveCart(); updateCartUI();
+    saveCart(); updateCartUI(); renderCatalog();
 };
 
 window.openCart = function() {
@@ -435,10 +460,11 @@ window.askClearCart = function() {
 };
 window.closeClearModal = function() { document.getElementById('confirm-clear').setAttribute('hidden', ''); };
 window.confirmClearCart = function() {
-    cart = []; saveCart(); updateCartUI();
+    cart = []; saveCart(); updateCartUI(); renderCatalog();
     window.closeClearModal();
     showToast('Prancheta de cotação limpa com sucesso!');
 };
+
 
 function drawerMessage() {
     const items = cartDetailed();
@@ -525,9 +551,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cart-send').addEventListener('click', window.sendQuote);
 
     document.getElementById('modal-close').addEventListener('click', window.closeQuoteModal);
+    const modalAddCartBtn = document.getElementById('modal-add-to-cart-btn');
+    if (modalAddCartBtn) {
+        modalAddCartBtn.addEventListener('click', () => {
+            if (modalProduct && modalProduct.colecao === 'peca') {
+                window.addToQuote(modalProduct.id);
+                window.closeQuoteModal();
+                renderCatalog();
+            }
+        });
+    }
     document.getElementById('item-modal-overlay').addEventListener('click', e => {
         if (e.target.id === 'item-modal-overlay') window.closeQuoteModal();
     });
+
     ['q-cep', 'q-cnpj', 'q-nome'].forEach(id => {
         document.getElementById(id).addEventListener('input', e => {
             if (id === 'q-cep') e.target.value = maskCep(e.target.value);

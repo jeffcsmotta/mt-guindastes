@@ -119,7 +119,11 @@
                 </div>
             </div>
 
-            <div class="item-modal-footer">
+            <div class="item-modal-footer" style="display:flex; flex-direction:column; gap:8px;">
+                <button type="button" class="btn-modal-quote" id="modal-add-to-cart-btn" style="display:none; width:100%;">
+                    <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                    <span>Adicionar à Prancheta de Cotação</span>
+                </button>
                 <button type="button" class="btn-modal-add" id="modal-confirm" style="width:100%;">
                     <span id="modal-btn-label">Informe o CEP para continuar</span>
                 </button>
@@ -127,6 +131,7 @@
             <p class="modal-note">O frete é cotado conforme o destino. Sem pagamento pelo site.</p>
         </div>
     </div>
+
 
     <!-- Sacola de Cotação Drawer -->
     <div class="cart-drawer-overlay" id="cart-overlay"></div>
