@@ -1,0 +1,31 @@
+
+/* Primeira dobra compacta: título + busca + pills, grade começa cedo */
+.section-menu-main { padding-top: 20px; }
+.section-header { margin-bottom: 12px; }
+.section-header .section-title-dark { font-size: 1.5rem; }
+.search-container { margin-bottom: 10px; }
+.category-filter { margin-bottom: 4px; }
+
+/* Galeria do modal: fotos em uso */
+.modal-gallery { display: flex; gap: 8px; margin-top: 10px; }
+.modal-gallery a { flex: 1; border-radius: 8px; overflow: hidden; border: 1px solid #E2E8F0; }
+.modal-gallery img { width: 100%; height: 90px; object-fit: cover; display: block; }
+.modal-gallery-hint { font-size: 0.72rem; color: var(--text-muted-dark); margin-top: 4px; }
+
+/* Trilhos streaming MT */
+.streaming-rails-container { display: flex; flex-direction: column; gap: 34px; width: 100%; padding: 14px 0 8px; }
+.streaming-rail-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+.rail-title-row { display: flex; align-items: center; gap: 10px; }
+.rail-icon { width: 22px; height: 22px; color: var(--primary); }
+.rail-title { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; margin: 0; }
+.rail-count-tag { background: #F1F5F9; font-size: 0.72rem; font-weight: 800; padding: 2px 10px; border-radius: 999px; }
+.rail-subtitle { font-size: 0.84rem; color: var(--text-muted-dark); margin: 2px 0 0; }
+.rail-nav-controls { display: flex; gap: 8px; }
+.btn-rail-nav { width: 36px; height: 36px; border-radius: 50%; background: #fff; border: 1.5px solid #E2E8F0; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.btn-rail-nav:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.streaming-rail-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; padding: 6px 2px 16px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+.streaming-rail-track::-webkit-scrollbar { height: 6px; }
+.streaming-rail-track::-webkit-scrollbar-thumb { background: rgba(245,81,29,0.3); border-radius: 999px; }
+.streaming-rail-track .menu-card { flex: 0 0 300px; width: 300px; max-width: 300px; scroll-snap-align: start; }
+.streaming-rail-track.is-dragging { cursor: grabbing !important; scroll-snap-type: none !important; }
+@media (max-width: 640px) { .streaming-rail-track .menu-card { flex-basis: 260px; width: 260px; } }

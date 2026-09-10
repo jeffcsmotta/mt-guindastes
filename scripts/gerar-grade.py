@@ -71,6 +71,7 @@ for it in tka:
                 (' — linha ' + it['line'] + '.' if it['line'] else '.') +
                 ' Representante autorizado. Cotação consultiva via WhatsApp.',
         'img': ('assets/tka/' + it['img_local']) if it.get('img_local') else '',
+        'gallery': it.get('gallery', []),
         'preco': 0,
     })
 
@@ -90,6 +91,8 @@ for p in products:
         js_str(p['desc']), js_str(p['img']), repr(float(p['preco'])))
     if p.get('linha'):
         linha += ', linha: %s' % js_str(p['linha'])
+    if p.get('gallery'):
+        linha += ', gallery: [%s]' % ', '.join(js_str(g) for g in p['gallery'])
     if p.get('cta'):
         linha += ', cta: true'
     lines.append(linha + ' },')

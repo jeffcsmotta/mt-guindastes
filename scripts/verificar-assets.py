@@ -7,8 +7,9 @@ threading.Thread(target=srv.serve_forever, daemon=True).start()
 
 src = open('clientes/mt-guindastes/app.js', encoding='utf-8').read()
 paths = set('clientes/mt-guindastes/' + p for p in re.findall(r'img: "([^"]+)"', src))
+paths.update('clientes/mt-guindastes/' + p for p in re.findall(r'"(assets/tka/g_[^"]+)"', src))
 paths.update(['clientes/mt-guindastes/' + p for p in
-              ['index.html', 'app.js', 'style.css', 'mt-theme.css', 'sw.js',
+              ['index.html', 'app.js', 'style.css', 'mt-theme.css', 'mt-rails.css', 'sw.js',
                'manifest.json', 'proposta.html', 'proposta-config.js',
                'style-proposta.css']])
 bad = []

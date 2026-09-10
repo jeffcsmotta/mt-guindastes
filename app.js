@@ -30,40 +30,40 @@ var PRODUCTS = [
   { id: "rebocador-e-carrinhos-especiais", nome: "Rebocador e Carrinhos Especiais", colecao: "peca", categoria: "Projetos Especiais", codigo: "PE-MT", specs: [], desc: "Carrinhos para movimentação industrial interna sob medida e rebocador hidráulico de cargas pesadas.", img: "assets/pecas/angra_13.png", preco: 0.0 },
   { id: "escada-industrial-sob-medida", nome: "Escada Industrial sob Medida", colecao: "peca", categoria: "Projetos Especiais", codigo: "PE-MT", specs: [], desc: "Escadas industriais e passarelas de acesso metálicas fabricadas sob medida para galpões e indústrias.", img: "assets/pecas/angra_14.png", preco: 0.0 },
   { id: "tka-10.700", nome: "TKA 10.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-10.700", specs: ["CAP. MÁX. 2.750 Kg PESO PRÓPRIO 1.415 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 14,5 m MÁX. HORIZONTAL 11,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-100.900", nome: "TKA 100.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-100.900", specs: ["CAP. MÁX. 19.000KG PESO PRÓPRIO 10.200KG EXTENSÕES HIDRÁULICAS 9 EXTENSÕES MANUAIS 2 MÁX. VERTICAL 31,5 MÁX. HORIZONTAL 26,3"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_02.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-11.900", nome: "TKA 11.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-11.900", specs: ["CAP. MÁX. 5.950 Kg PESO PRÓPRIO 1.560 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 1 MÁX. VERTICAL 17,3 m MÁX. HORIZONTAL 14,2 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-12.700", nome: "TKA 12.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-12.700", specs: ["CAP. MÁX. 3.420 Kg PESO PRÓPRIO 1.655 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 14,5 m MÁX. HORIZONTAL 11,3 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_04.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-14.900", nome: "TKA 14.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-14.900", specs: ["CAP. MÁX. 5.700 Kg PESO PRÓPRIO 2.090 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 2 MÁX. VERTICAL 19,6 m MÁX. HORIZONTAL 16,3 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_05.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-16.700", nome: "TKA 16.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-16.700", specs: ["CAP. MÁX. 3.975 Kg PESO PRÓPRIO 2.425 Kg EXTENSÕES HIDRÁULICAS 4 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 18,8 m MÁX. HORIZONTAL 15,7 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-17.900", nome: "TKA 17.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-17.900", specs: ["CAP. MÁX. 7.000 Kg PESO PRÓPRIO 2.420 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 2 MÁX. VERTICAL 19,6 m MÁX. HORIZONTAL 16,3 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-18.900", nome: "TKA 18.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-18.900", specs: ["CAP. MÁX. 7.250 Kg PESO PRÓPRIO 2.570 Kg EXTENSÕES HIDRÁULICAS 5h EXTENSÕES MANUAIS 2 MÁX. VERTICAL 22,2 m MÁX. HORIZONTAL 18,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_06.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-20.700", nome: "TKA 20.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-20.700", specs: ["CAP. MÁX. 5.060 Kg PESO PRÓPRIO 2.600 Kg EXTENSÕES HIDRÁULICAS 4 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 22,2 m MÁX. HORIZONTAL 18,7 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_07.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-23.700", nome: "TKA 23.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-23.700", specs: ["CAP. MÁX. 9.355 Kg PESO PRÓPRIO 3.010 Kg EXTENSÕES HIDRÁULICAS 5h EXTENSÕES MANUAIS 2 MÁX. VERTICAL 21,5 m MÁX. HORIZONTAL 18,2 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-30.700", nome: "TKA 30.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-30.700", specs: ["CAP. MÁX. 5.800 Kg PESO PRÓPRIO 3.495 Kg EXTENSÕES HIDRÁULICAS 5 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 21,8 m MÁX. HORIZONTAL 18,3 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_08.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-30.900", nome: "TKA 30.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-30.900", specs: ["CAP. MÁX. 10.250 Kg PESO PRÓPRIO 3.740 Kg EXTENSÕES HIDRÁULICAS 5h EXTENSÕES MANUAIS 3 MÁX. VERTICAL 23,8 m MÁX. HORIZONTAL 20,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-38.900", nome: "TKA 38.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-38.900", specs: ["CAP. MÁX. 18.350 Kg PESO PRÓPRIO 4.425 Kg EXTENSÕES HIDRÁULICAS 6h EXTENSÕES MANUAIS 2M MÁX. VERTICAL 24,5 m MÁX. HORIZONTAL 20,9 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_09.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-40.900", nome: "TKA 40.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-40.900", specs: ["CAP. MÁX. 9.500 Kg PESO PRÓPRIO 3.680 Kg EXTENSÕES HIDRÁULICAS 5 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 23,8 m MÁX. HORIZONTAL 20,6 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_10.png", preco: 0.0, linha: "TRAVE" },
+  { id: "tka-100.900", nome: "TKA 100.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-100.900", specs: ["CAP. MÁX. 19.000KG PESO PRÓPRIO 10.200KG EXTENSÕES HIDRÁULICAS 9 EXTENSÕES MANUAIS 2 MÁX. VERTICAL 31,5 MÁX. HORIZONTAL 26,3"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_02.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_100_900_Ej7H2y.png"] },
+  { id: "tka-11.900", nome: "TKA 11.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-11.900", specs: ["CAP. MÁX. 5.950 Kg PESO PRÓPRIO 1.560 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 1 MÁX. VERTICAL 17,3 m MÁX. HORIZONTAL 14,2 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_11_900_5wd85H.png"] },
+  { id: "tka-12.700", nome: "TKA 12.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-12.700", specs: ["CAP. MÁX. 3.420 Kg PESO PRÓPRIO 1.655 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 14,5 m MÁX. HORIZONTAL 11,3 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_04.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_12_700_CDxGpP.png"] },
+  { id: "tka-14.900", nome: "TKA 14.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-14.900", specs: ["CAP. MÁX. 5.700 Kg PESO PRÓPRIO 2.090 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 2 MÁX. VERTICAL 19,6 m MÁX. HORIZONTAL 16,3 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_05.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_14_900_CTqGG7.png"] },
+  { id: "tka-16.700", nome: "TKA 16.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-16.700", specs: ["CAP. MÁX. 3.975 Kg PESO PRÓPRIO 2.425 Kg EXTENSÕES HIDRÁULICAS 4 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 18,8 m MÁX. HORIZONTAL 15,7 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_16_700_6GzCah.png"] },
+  { id: "tka-17.900", nome: "TKA 17.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-17.900", specs: ["CAP. MÁX. 7.000 Kg PESO PRÓPRIO 2.420 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 2 MÁX. VERTICAL 19,6 m MÁX. HORIZONTAL 16,3 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_17_900_0iNIdR.png"] },
+  { id: "tka-18.900", nome: "TKA 18.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-18.900", specs: ["CAP. MÁX. 7.250 Kg PESO PRÓPRIO 2.570 Kg EXTENSÕES HIDRÁULICAS 5h EXTENSÕES MANUAIS 2 MÁX. VERTICAL 22,2 m MÁX. HORIZONTAL 18,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_06.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_18_900_P8EltX.png"] },
+  { id: "tka-20.700", nome: "TKA 20.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-20.700", specs: ["CAP. MÁX. 5.060 Kg PESO PRÓPRIO 2.600 Kg EXTENSÕES HIDRÁULICAS 4 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 22,2 m MÁX. HORIZONTAL 18,7 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_07.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_20_700_Rv46iU.png"] },
+  { id: "tka-23.700", nome: "TKA 23.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-23.700", specs: ["CAP. MÁX. 9.355 Kg PESO PRÓPRIO 3.010 Kg EXTENSÕES HIDRÁULICAS 5h EXTENSÕES MANUAIS 2 MÁX. VERTICAL 21,5 m MÁX. HORIZONTAL 18,2 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_23_700_08YQR0.png"] },
+  { id: "tka-30.700", nome: "TKA 30.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-30.700", specs: ["CAP. MÁX. 5.800 Kg PESO PRÓPRIO 3.495 Kg EXTENSÕES HIDRÁULICAS 5 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 21,8 m MÁX. HORIZONTAL 18,3 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_08.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_30_700_CeAfjh.png"] },
+  { id: "tka-30.900", nome: "TKA 30.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-30.900", specs: ["CAP. MÁX. 10.250 Kg PESO PRÓPRIO 3.740 Kg EXTENSÕES HIDRÁULICAS 5h EXTENSÕES MANUAIS 3 MÁX. VERTICAL 23,8 m MÁX. HORIZONTAL 20,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_30_900_04ooMs.png"] },
+  { id: "tka-38.900", nome: "TKA 38.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-38.900", specs: ["CAP. MÁX. 18.350 Kg PESO PRÓPRIO 4.425 Kg EXTENSÕES HIDRÁULICAS 6h EXTENSÕES MANUAIS 2M MÁX. VERTICAL 24,5 m MÁX. HORIZONTAL 20,9 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_09.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_38_900_EfiG1R.png"] },
+  { id: "tka-40.900", nome: "TKA 40.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-40.900", specs: ["CAP. MÁX. 9.500 Kg PESO PRÓPRIO 3.680 Kg EXTENSÕES HIDRÁULICAS 5 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 23,8 m MÁX. HORIZONTAL 20,6 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_10.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_40_900_GQDVSK.png"] },
   { id: "tka-41.900", nome: "TKA 41.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-41.900", specs: ["CAP. MÁX. 9.500 Kg PESO PRÓPRIO 3.680 Kg EXTENSÕES HIDRÁULICAS 5 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 23,8 m MÁX. HORIZONTAL 20,6 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-45.700", nome: "TKA 45.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-45.700", specs: ["CAP. MÁX. 10.130 Kg PESO PRÓPRIO 4.425 Kg EXTENSÕES HIDRÁULICAS 4 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 22,8 m MÁX. HORIZONTAL 19 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_11.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-48.700", nome: "TKA 48.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-48.700", specs: ["CAP. MÁX. 10.840 Kg PESO PRÓPRIO 4.540 Kg EXTENSÕES HIDRÁULICAS 6 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 25,5 m MÁX. HORIZONTAL 22,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_12.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-50.700", nome: "TKA 50.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-50.700", specs: ["CAP. MÁX. 24.000 Kg PESO PRÓPRIO 5.850 Kg EXTENSÕES HIDRÁULICAS 6h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 26,7 m MÁX. HORIZONTAL 22,9 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-50.700-fly", nome: "TKA 50.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-50.700-FLY", specs: ["CAP. MÁX. 20.880 Kg PESO PRÓPRIO 6.600 Kg EXTENSÕES HIDRÁULICAS 6h + 4h da fly EXTENSÕES MANUAIS 1m da fly MÁX. VERTICAL 30,30m MÁX. HORIZONTAL 27,63m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_13.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-50.900", nome: "TKA 50.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-50.900", specs: ["CAP. MÁX. 11.600 kG PESO PRÓPRIO 4.540 Kg EXTENSÕES HIDRÁULICAS 6 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 25,5 m MÁX. HORIZONTAL 22,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-51.900", nome: "TKA 51.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-51.900", specs: ["CAP. MÁX. 11.600 kG PESO PRÓPRIO 4.830 Kg EXTENSÕES HIDRÁULICAS 6h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 25,5 m MÁX. HORIZONTAL 22,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_14.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-6.700", nome: "TKA 6.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-6.700", specs: ["CAP. MÁX. 2.670 Kg PESO PRÓPRIO 1.100 Kg EXTENSÕES HIDRÁULICAS 3 EXTENSÕES MANUAIS 1 MÁX. VERTICAL 13,6 m MÁX. HORIZONTAL 10,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_15.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-66.700", nome: "TKA 66.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-66.700", specs: ["CAP. MÁX. 30.190 Kg PESO PRÓPRIO 6.320 Kg EXTENSÕES HIDRÁULICAS 3H EXTENSÕES MANUAIS 7 MÁX. VERTICAL 29,2m MÁX. HORIZONTAL 18,6m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-66.700-fly", nome: "TKA 66.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-66.700-FLY", specs: ["CAP. MÁX. 28.220 Kg PESO PRÓPRIO 7.040 Kg EXTENSÕES HIDRÁULICAS 7h + 4h da fly EXTENSÕES MANUAIS 1m da fly MÁX. VERTICAL 33,60m MÁX. HORIZONTAL 30,03m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_16.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-72.900", nome: "TKA 72.900 com Fly", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-72.900", specs: ["CAP. MÁX. 15.000 Kg PESO PRÓPRIO 6.670 Kg EXTENSÕES HIDRÁULICAS 7h + 4h da fly EXTENSÕES MANUAIS 1 m da flly MÁX. VERTICAL 32.7 m MÁX. HORIZONTAL 28.9 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-72.900-fly", nome: "TKA 72.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-72.900-FLY", specs: ["CAP. MÁX. 16.000 Kg PESO PRÓPRIO 5.950 Kg EXTENSÕES HIDRÁULICAS 7h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 27.6 m MÁX. HORIZONTAL 24.1 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-8.700", nome: "TKA 8.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-8.700", specs: ["CAP. MÁX. 2.000 Kg PESO PRÓPRIO 1.210 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 1 m MÁX. VERTICAL 13,5 m MÁX. HORIZONTAL 10,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_17.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-8.700-bx", nome: "TKA 8.700 BX", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-8.700-BX", specs: ["CAP. MÁX. 2.000 Kg PESO PRÓPRIO 1.210 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 1 m MÁX. VERTICAL 13,5 m MÁX. HORIZONTAL 10,2 m"], desc: "Guindaste TKA novo — linha BX. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0, linha: "BX" },
-  { id: "tka-80.700", nome: "TKA 80.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-80.700", specs: ["CAP. MÁX. 17.100 Kg PESO PRÓPRIO 7.400 Kg EXTENSÕES HIDRÁULICAS 7H EXTENSÕES MANUAIS 3 M MÁX. VERTICAL 28.3 m MÁX. HORIZONTAL 24.06 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_19.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-80.700-fly", nome: "TKA 80.700 com Fly", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-80.700-FLY", specs: ["CAP. MÁX. 16.800 Kg PESO PRÓPRIO 8.125 Kg EXTENSÕES HIDRÁULICAS 7h + 4h da fly EXTENSÕES MANUAIS 1 m da fly MÁX. VERTICAL 32,64 m MÁX. HORIZONTAL 29,07 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-9.900", nome: "TKA 9.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-9.900", specs: ["CAP. MÁX. 4.000 Kg PESO PRÓPRIO 1.320 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 0 MÁX. VERTICAL 13,6 m MÁX. HORIZONTAL 10,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_20.png", preco: 0.0, linha: "CANIVETE" },
-  { id: "tka-90.900", nome: "TKA 90.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-90.900", specs: ["CAP. MÁX. 20.300 Kg PESO PRÓPRIO 7.870 Kg EXTENSÕES HIDRÁULICAS 8h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 31 m MÁX. HORIZONTAL 26.1 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-90.900-fly", nome: "TKA 90.900 com Fly", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-90.900-FLY", specs: ["CAP. MÁX. 19.400 Kg PESO PRÓPRIO 8.930 Kg EXTENSÕES HIDRÁULICAS 8h + 5h da fly EXTENSÕES MANUAIS 1m da fly MÁX. VERTICAL 36.5 m MÁX. HORIZONTAL 32.8 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-cesto-10", nome: "Cesto 10", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-10", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0 },
-  { id: "tka-cesto-13.5", nome: "Cesto 13.5", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-13.5", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0 },
+  { id: "tka-45.700", nome: "TKA 45.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-45.700", specs: ["CAP. MÁX. 10.130 Kg PESO PRÓPRIO 4.425 Kg EXTENSÕES HIDRÁULICAS 4 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 22,8 m MÁX. HORIZONTAL 19 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_11.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_45_700_56oKjJ.png", "assets/tka/g_45_700_0M5WM6.png"] },
+  { id: "tka-48.700", nome: "TKA 48.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-48.700", specs: ["CAP. MÁX. 10.840 Kg PESO PRÓPRIO 4.540 Kg EXTENSÕES HIDRÁULICAS 6 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 25,5 m MÁX. HORIZONTAL 22,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_12.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_48_700_0YrDCV.png", "assets/tka/g_48_700_1qtrFT.png"] },
+  { id: "tka-50.700", nome: "TKA 50.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-50.700", specs: ["CAP. MÁX. 24.000 Kg PESO PRÓPRIO 5.850 Kg EXTENSÕES HIDRÁULICAS 6h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 26,7 m MÁX. HORIZONTAL 22,9 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_50_700_2OiqPO.png"] },
+  { id: "tka-50.700-fly", nome: "TKA 50.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-50.700-FLY", specs: ["CAP. MÁX. 20.880 Kg PESO PRÓPRIO 6.600 Kg EXTENSÕES HIDRÁULICAS 6h + 4h da fly EXTENSÕES MANUAIS 1m da fly MÁX. VERTICAL 30,30m MÁX. HORIZONTAL 27,63m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_13.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_50_700-fly_Id5UgH.png"] },
+  { id: "tka-50.900", nome: "TKA 50.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-50.900", specs: ["CAP. MÁX. 11.600 kG PESO PRÓPRIO 4.540 Kg EXTENSÕES HIDRÁULICAS 6 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 25,5 m MÁX. HORIZONTAL 22,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_50_900_5U3ygW.png"] },
+  { id: "tka-51.900", nome: "TKA 51.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-51.900", specs: ["CAP. MÁX. 11.600 kG PESO PRÓPRIO 4.830 Kg EXTENSÕES HIDRÁULICAS 6h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 25,5 m MÁX. HORIZONTAL 22,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_14.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_51_900_BAeMhD.png"] },
+  { id: "tka-6.700", nome: "TKA 6.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-6.700", specs: ["CAP. MÁX. 2.670 Kg PESO PRÓPRIO 1.100 Kg EXTENSÕES HIDRÁULICAS 3 EXTENSÕES MANUAIS 1 MÁX. VERTICAL 13,6 m MÁX. HORIZONTAL 10,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_15.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_6_700_Az4aon.png"] },
+  { id: "tka-66.700", nome: "TKA 66.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-66.700", specs: ["CAP. MÁX. 30.190 Kg PESO PRÓPRIO 6.320 Kg EXTENSÕES HIDRÁULICAS 3H EXTENSÕES MANUAIS 7 MÁX. VERTICAL 29,2m MÁX. HORIZONTAL 18,6m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_66_700_33uyTV.png"] },
+  { id: "tka-66.700-fly", nome: "TKA 66.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-66.700-FLY", specs: ["CAP. MÁX. 28.220 Kg PESO PRÓPRIO 7.040 Kg EXTENSÕES HIDRÁULICAS 7h + 4h da fly EXTENSÕES MANUAIS 1m da fly MÁX. VERTICAL 33,60m MÁX. HORIZONTAL 30,03m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_16.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_66_700-fly_D2HBIf.png"] },
+  { id: "tka-72.900", nome: "TKA 72.900 com Fly", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-72.900", specs: ["CAP. MÁX. 15.000 Kg PESO PRÓPRIO 6.670 Kg EXTENSÕES HIDRÁULICAS 7h + 4h da fly EXTENSÕES MANUAIS 1 m da flly MÁX. VERTICAL 32.7 m MÁX. HORIZONTAL 28.9 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_72_900_7F48FS.png"] },
+  { id: "tka-72.900-fly", nome: "TKA 72.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-72.900-FLY", specs: ["CAP. MÁX. 16.000 Kg PESO PRÓPRIO 5.950 Kg EXTENSÕES HIDRÁULICAS 7h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 27.6 m MÁX. HORIZONTAL 24.1 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_72_900-fly_58Bu9D.png"] },
+  { id: "tka-8.700", nome: "TKA 8.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-8.700", specs: ["CAP. MÁX. 2.000 Kg PESO PRÓPRIO 1.210 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 1 m MÁX. VERTICAL 13,5 m MÁX. HORIZONTAL 10,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_17.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_8_700_H6WREa.png"] },
+  { id: "tka-8.700-bx", nome: "TKA 8.700 BX", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-8.700-BX", specs: ["CAP. MÁX. 2.000 Kg PESO PRÓPRIO 1.210 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 1 m MÁX. VERTICAL 13,5 m MÁX. HORIZONTAL 10,2 m"], desc: "Guindaste TKA novo — linha BX. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0, linha: "BX", gallery: ["assets/tka/g_8_700-bx_LKBIX9.png"] },
+  { id: "tka-80.700", nome: "TKA 80.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-80.700", specs: ["CAP. MÁX. 17.100 Kg PESO PRÓPRIO 7.400 Kg EXTENSÕES HIDRÁULICAS 7H EXTENSÕES MANUAIS 3 M MÁX. VERTICAL 28.3 m MÁX. HORIZONTAL 24.06 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_19.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_80_700_DBTrot.png"] },
+  { id: "tka-80.700-fly", nome: "TKA 80.700 com Fly", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-80.700-FLY", specs: ["CAP. MÁX. 16.800 Kg PESO PRÓPRIO 8.125 Kg EXTENSÕES HIDRÁULICAS 7h + 4h da fly EXTENSÕES MANUAIS 1 m da fly MÁX. VERTICAL 32,64 m MÁX. HORIZONTAL 29,07 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_80_700-fly_6glAfh.png"] },
+  { id: "tka-9.900", nome: "TKA 9.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-9.900", specs: ["CAP. MÁX. 4.000 Kg PESO PRÓPRIO 1.320 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 0 MÁX. VERTICAL 13,6 m MÁX. HORIZONTAL 10,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_20.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_9_900_BNjPVc.png"] },
+  { id: "tka-90.900", nome: "TKA 90.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-90.900", specs: ["CAP. MÁX. 20.300 Kg PESO PRÓPRIO 7.870 Kg EXTENSÕES HIDRÁULICAS 8h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 31 m MÁX. HORIZONTAL 26.1 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_90_900_0VRXlU.png"] },
+  { id: "tka-90.900-fly", nome: "TKA 90.900 com Fly", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-90.900-FLY", specs: ["CAP. MÁX. 19.400 Kg PESO PRÓPRIO 8.930 Kg EXTENSÕES HIDRÁULICAS 8h + 5h da fly EXTENSÕES MANUAIS 1m da fly MÁX. VERTICAL 36.5 m MÁX. HORIZONTAL 32.8 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_90_900-fly_0DEjVm.png"] },
+  { id: "tka-cesto-10", nome: "Cesto 10", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-10", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0, gallery: ["assets/tka/g_cesto-10_LKBIX9.png"] },
+  { id: "tka-cesto-13.5", nome: "Cesto 13.5", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-13.5", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0, gallery: ["assets/tka/g_cesto-13_5_LKBIX9.png"] },
   { id: "tka-cesto-15.5", nome: "Cesto 15.5", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-15.5", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "", preco: 0.0 },
   { id: "usado-patio", nome: "Guindastes usados — estoque do pátio", colecao: "usado", categoria: "Usados", codigo: "PATIO", specs: [], desc: "O giro do pátio muda toda semana. Chame o Marcelo e receba fotos, ano e valor do que está disponível.", img: "", preco: 0.0, cta: true },
 ];
@@ -72,14 +72,21 @@ var PRODUCTS = [
 /* Ordem dos pills: TKA diferenciado, Todos (exceto TKA), categorias, Usados */
 const PILL_ORDER = [
     { id: '__tka', label: 'TKA Novos', special: true },
+    { id: 'Usados', label: 'Usados' },
     { id: 'todos', label: 'Todos' },
     { id: 'Acessórios', label: 'Acessórios' },
     { id: 'Garfos Paleteiros', label: 'Garfos Paleteiros' },
     { id: 'Cestos de Fibra', label: 'Cestos de Fibra' },
     { id: 'Cestos Metálicos', label: 'Cestos Metálicos' },
     { id: 'Linha Comercial', label: 'Linha Comercial' },
-    { id: 'Projetos Especiais', label: 'Projetos Especiais' },
-    { id: 'Usados', label: 'Usados' }
+    { id: 'Projetos Especiais', label: 'Projetos Especiais' }
+];
+
+/* Trilhos estilo streaming: TKA Novos, Peças por família, Usados */
+const RAILS = [
+    { id: 'tka', title: 'TKA Novos', subtitle: 'Guindastes novos com cotação consultiva direta.', icon: 'truck', match: p => p.colecao === 'tka_novo' },
+    { id: 'pecas', title: 'Peças e Acessórios', subtitle: 'Preço de referência + sacola + cotação com CEP.', icon: 'wrench', match: p => p.colecao === 'peca' },
+    { id: 'usados', title: 'Usados do pátio', subtitle: 'Giro semanal — chame o Marcelo no WhatsApp.', icon: 'badge-check', match: p => p.colecao === 'usado' }
 ];
 
 let cart = [];
@@ -151,14 +158,78 @@ function renderPills() {
     });
 }
 
-/* Card industrial: cabeçalho compacto (código + badge), foto, specs, preço, CTA por linha */
+function cardHtml(p) {
+    const b = badgeFor(p);
+    const specs = (p.specs || []).length
+        ? `<div class="ind-specs">${p.specs.map(s => `<span>${s}</span>`).join('')}</div>` : '';
+    const price = p.preco > 0
+        ? `<span class="price-label">Referência</span><div class="price-value price-green">R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</div><span class="price-hint">+ frete a combinar</span>`
+        : `<div class="price-consult">Valor sob consulta</div>`;
+    const media = p.img
+        ? `<img src="${p.img}" alt="${p.nome}" class="card-img" loading="lazy" onerror="this.remove()">`
+        : `<div class="card-noimg">${p.codigo}</div>`;
+    let action;
+    if (p.cta) {
+        action = `<a class="btn-add-item" style="justify-content:center;text-decoration:none;" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Olá, Marcelo! Vim pelo site da MT e quero saber o que tem no pátio de usados.')}"><i data-lucide="message-circle" style="width:16px;height:16px;"></i> Chamar no WhatsApp</a>`;
+    } else {
+        const sacola = p.colecao === 'peca'
+            ? `<button type="button" class="btn-add-sacola" onclick="event.stopPropagation(); window.addToQuote('${p.id}')">+ Sacola</button>` : '';
+        action = `<button type="button" class="btn-add-item" onclick="event.stopPropagation(); window.openQuoteModal('${p.id}')"><i data-lucide="clipboard-list" style="width:16px;height:16px;"></i> Solicitar cotação</button>${sacola}`;
+    }
+    return `
+        <div class="menu-card ind-card" onclick="window.openQuoteModal('${p.id}')">
+            <div class="ind-card-top"><span class="ind-code">${p.codigo}</span><span class="card-badge ${b.cls}">${b.text}</span></div>
+            <div class="card-img-box">${media}</div>
+            <div class="card-body">
+                <h3 class="card-title">${p.nome}</h3>
+                <p class="ind-cat">${p.categoria}${p.linha ? ' · ' + p.linha : ''}</p>
+                ${specs}
+                <p class="card-desc">${p.desc}</p>
+                <div class="card-bottom"><div>${price}</div>${action}</div>
+            </div>
+        </div>`;
+}
+
+/* Grade em dois modos: trilhos streaming (Todos/TKA, sem busca) ou grade (filtro/busca) */
 function renderCatalog() {
     const grid = document.getElementById('menu-grid');
     if (!grid) return;
-    grid.innerHTML = '';
-    const list = (typeof PRODUCTS !== 'undefined' ? PRODUCTS : []).filter(matchesFilter);
+    const all = (typeof PRODUCTS !== 'undefined' ? PRODUCTS : []).filter(matchesFilter);
 
-    if (!list.length) {
+    if ((activeCategory === 'todos' || activeCategory === '__tka') && !searchQuery) {
+        const rails = RAILS
+            .map(r => ({ def: r, items: all.filter(r.match) }))
+            .filter(r => r.items.length && (activeCategory === '__tka' ? r.def.id === 'tka' : true));
+        grid.className = 'streaming-rails-container';
+        grid.innerHTML = rails.map(r => `
+            <section class="streaming-rail-section" id="rail-section-${r.def.id}">
+                <div class="streaming-rail-header">
+                    <div class="rail-header-text">
+                        <div class="rail-title-row">
+                            <i data-lucide="${r.def.icon}" class="rail-icon"></i>
+                            <h2 class="rail-title">${r.def.title}</h2>
+                            <span class="rail-count-tag">${r.items.length} ${r.items.length === 1 ? 'opção' : 'opções'}</span>
+                        </div>
+                        <p class="rail-subtitle">${r.def.subtitle}</p>
+                    </div>
+                    <div class="rail-nav-controls">
+                        <button type="button" class="btn-rail-nav prev" onclick="window.scrollRail('${r.def.id}', -320)" aria-label="Voltar">
+                            <i data-lucide="chevron-left" style="width:18px;height:18px;"></i>
+                        </button>
+                        <button type="button" class="btn-rail-nav next" onclick="window.scrollRail('${r.def.id}', 320)" aria-label="Avançar">
+                            <i data-lucide="chevron-right" style="width:18px;height:18px;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="streaming-rail-track" id="rail-${r.def.id}">${r.items.map(cardHtml).join('')}</div>
+            </section>`).join('');
+        if (window.lucide) lucide.createIcons();
+        initRailDrag();
+        return;
+    }
+
+    grid.className = 'menu-grid';
+    if (!all.length) {
         grid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
                 <i data-lucide="search-x" style="width: 48px; height: 48px; color: #9CA3AF; margin-bottom: 12px;"></i>
@@ -168,39 +239,40 @@ function renderCatalog() {
         if (window.lucide) lucide.createIcons();
         return;
     }
-
-    list.forEach(p => {
-        const b = badgeFor(p);
-        const specs = (p.specs || []).length
-            ? `<div class="ind-specs">${p.specs.map(s => `<span>${s}</span>`).join('')}</div>` : '';
-        const price = p.preco > 0
-            ? `<span class="price-label">Referência</span><div class="price-value price-green">R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</div><span class="price-hint">+ frete a combinar</span>`
-            : `<div class="price-consult">Valor sob consulta</div>`;
-        const media = p.img
-            ? `<img src="${p.img}" alt="${p.nome}" class="card-img" loading="lazy" onerror="this.remove()">`
-            : `<div class="card-noimg">${p.codigo}</div>`;
-        let action;
-        if (p.cta) {
-            action = `<a class="btn-add-item" style="justify-content:center;text-decoration:none;" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent('Olá, Marcelo! Vim pelo site da MT e quero saber o que tem no pátio de usados.')}"><i data-lucide="message-circle" style="width:16px;height:16px;"></i> Chamar no WhatsApp</a>`;
-        } else {
-            const sacola = p.colecao === 'peca'
-                ? `<button type="button" class="btn-add-sacola" onclick="event.stopPropagation(); window.addToQuote('${p.id}')">+ Sacola</button>` : '';
-            action = `<button type="button" class="btn-add-item" onclick="event.stopPropagation(); window.openQuoteModal('${p.id}')"><i data-lucide="clipboard-list" style="width:16px;height:16px;"></i> Solicitar cotação</button>${sacola}`;
-        }
-        grid.insertAdjacentHTML('beforeend', `
-            <div class="menu-card ind-card" onclick="window.openQuoteModal('${p.id}')">
-                <div class="ind-card-top"><span class="ind-code">${p.codigo}</span><span class="card-badge ${b.cls}">${b.text}</span></div>
-                <div class="card-img-box">${media}</div>
-                <div class="card-body">
-                    <h3 class="card-title">${p.nome}</h3>
-                    <p class="ind-cat">${p.categoria}${p.linha ? ' · ' + p.linha : ''}</p>
-                    ${specs}
-                    <p class="card-desc">${p.desc}</p>
-                    <div class="card-bottom"><div>${price}</div>${action}</div>
-                </div>
-            </div>`);
-    });
+    grid.innerHTML = all.map(cardHtml).join('');
     if (window.lucide) lucide.createIcons();
+}
+
+window.scrollRail = function(railId, offset) {
+    const track = document.getElementById('rail-' + railId);
+    if (track) track.scrollBy({ left: offset || 320, behavior: 'smooth' });
+};
+
+function initRailDrag() {
+    document.querySelectorAll('.streaming-rail-track').forEach(track => {
+        if (track.dataset.dragInitialized) return;
+        track.dataset.dragInitialized = 'true';
+        let isDown = false, startX = 0, scrollLeft = 0, hasDragged = false;
+        track.addEventListener('mousedown', e => {
+            if (e.button !== 0) return;
+            isDown = true; hasDragged = false;
+            track.classList.add('is-dragging');
+            startX = e.pageX - track.offsetLeft;
+            scrollLeft = track.scrollLeft;
+        });
+        track.addEventListener('mouseleave', () => { isDown = false; track.classList.remove('is-dragging'); });
+        track.addEventListener('mouseup', () => { isDown = false; track.classList.remove('is-dragging'); });
+        track.addEventListener('mousemove', e => {
+            if (!isDown) return;
+            e.preventDefault();
+            const walk = (e.pageX - track.offsetLeft - startX) * 1.8;
+            if (Math.abs(walk) > 6) hasDragged = true;
+            track.scrollLeft = scrollLeft - walk;
+        });
+        track.addEventListener('click', e => {
+            if (hasDragged) { e.preventDefault(); e.stopPropagation(); hasDragged = false; }
+        }, true);
+    });
 }
 
 /* Modal de cotação: produto CTA abre WhatsApp direto */
@@ -217,9 +289,12 @@ window.openQuoteModal = function(id) {
     document.getElementById('modal-img').style.display = p.img ? '' : 'none';
     document.getElementById('modal-title').textContent = p.nome + ' · ' + p.codigo;
     document.getElementById('modal-desc').textContent = p.desc;
-    document.getElementById('modal-ref').innerHTML = p.preco > 0
+    document.getElementById('modal-ref').innerHTML = (p.preco > 0
         ? `Referência da peça: <strong>R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</strong>`
-        : `Item <strong>sob consulta</strong> — o Marcelo retorna com valor + frete.`;
+        : `Item <strong>sob consulta</strong> — o Marcelo retorna com valor + frete.`)
+        + ((p.gallery || []).length
+            ? `<div class="modal-gallery">${p.gallery.map(g => `<a href="${g}" target="_blank" rel="noopener"><img src="${g}" alt="${p.nome} em uso" loading="lazy" onerror="this.parentNode.remove()"></a>`).join('')}</div>
+               <p class="modal-gallery-hint">Fotos do equipamento em operação — toque para ampliar.</p>` : '');
     document.getElementById('q-cep').value = '';
     document.getElementById('q-cnpj').value = '';
     document.getElementById('q-nome').value = '';
