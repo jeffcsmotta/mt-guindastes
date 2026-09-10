@@ -89,6 +89,23 @@ const RAILS = [
     { id: 'usados', title: 'Usados do pátio', subtitle: 'Giro semanal — chame o Marcelo no WhatsApp.', icon: 'badge-check', match: p => p.colecao === 'usado' }
 ];
 
+/* Subgrupos ao clicar numa seção: TKA por linha, peças por família */
+function groupsFor() {
+    if (activeCategory === '__tka') {
+        return [
+            { id: 'canivete', title: 'Linha Canivete', subtitle: 'Articulação para espaços confinados.', icon: 'truck', match: p => p.colecao === 'tka_novo' && p.linha === 'CANIVETE' },
+            { id: 'trave', title: 'Linha Trave', subtitle: 'Estrutura fixa para cargas pesadas.', icon: 'truck', match: p => p.colecao === 'tka_novo' && p.linha === 'TRAVE' },
+            { id: 'bx', title: 'Linha BX', subtitle: 'Versatilidade entre móvel e fixo.', icon: 'truck', match: p => p.colecao === 'tka_novo' && p.linha === 'BX' },
+            { id: 'cestos-tka', title: 'Cestos TKA', subtitle: 'Elevação de pessoas acoplada ao guindaste.', icon: 'arrow-up-from-line', match: p => p.colecao === 'tka_novo' && p.id.indexOf('tka-cesto') === 0 }
+        ];
+    }
+    if (activeCategory !== 'todos' && activeCategory !== 'Usados') {
+        return [{ id: 'cat', title: activeCategory, subtitle: 'Arraste para o lado ou abra a cotação no card.', icon: 'wrench', match: p => p.categoria === activeCategory }];
+    }
+    if (activeCategory === 'Usados') return [RAILS[2]];
+    return RAILS;
+}
+
 let cart = [];
 try { cart = JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch (e) { cart = []; }
 let activeCategory = 'todos';
@@ -196,10 +213,10 @@ function renderCatalog() {
     if (!grid) return;
     const all = (typeof PRODUCTS !== 'undefined' ? PRODUCTS : []).filter(matchesFilter);
 
-    if ((activeCategory === 'todos' || activeCategory === '__tka') && !searchQuery) {
-        const rails = RAILS
+    if (!searchQuery) {
+        const rails = groupsFor()
             .map(r => ({ def: r, items: all.filter(r.match) }))
-            .filter(r => r.items.length && (activeCategory === '__tka' ? r.def.id === 'tka' : true));
+            .filter(r => r.items.length);
         grid.className = 'streaming-rails-container';
         grid.innerHTML = rails.map(r => `
             <section class="streaming-rail-section" id="rail-section-${r.def.id}">
