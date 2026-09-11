@@ -20,14 +20,18 @@
     <!-- Header Navigation -->
     <header class="site-header" id="site-header">
         <div class="container nav-container">
-            <a href="index.html" class="brand-wrapper" aria-label="Página inicial da MT Guindastes">
-                <img src="assets/logo_branco.png" alt="MT Guindastes" class="brand-logo-img">
-                <h1 class="sr-only">MT Guindastes — Peças e Acessórios</h1>
-            </a>
-
-            <div class="status-pill status-pill-desktop">
-                <span class="status-dot"></span>
-                <span>Comercial MT · Cotação Direta WhatsApp</span>
+            <div style="display:flex; align-items:center; gap:16px;">
+                <a href="index.html" class="brand-wrapper" aria-label="Página inicial da MT Guindastes">
+                    <img src="assets/logo_branco.png" alt="MT Guindastes" class="brand-logo-img">
+                    <h1 class="sr-only">MT Guindastes — Peças e Implementos</h1>
+                </a>
+                <a href="#tka-factory" class="tka-auth-seal" title="Revendedor Autorizado TKA Guindastes">
+                    <img src="assets/logo-tka-oficial.svg" alt="TKA" class="tka-seal-logo">
+                    <span class="tka-seal-text">
+                        <span>Revenda Autorizada</span>
+                        <small>SC &amp; Litoral RS</small>
+                    </span>
+                </a>
             </div>
 
             <div class="nav-actions">
@@ -47,14 +51,124 @@
         </div>
     </header>
 
+    <!-- HERO: GUINDASTES DIRETOS DA FÁBRICA (TKA OFICIAL) -->
+    <section class="tka-factory-hero" id="tka-factory">
+        <div class="container">
+            <div class="hero-header-row">
+                <div class="hero-header-left">
+                    <div class="hero-badge-tag">
+                        <i data-lucide="award" style="width:14px;height:14px;"></i>
+                        <span>Linha de Fábrica · TKA Guindastes</span>
+                    </div>
+                    <h2 class="hero-main-title">Guindastes Articulados <span>Direto da Fábrica</span></h2>
+                    <p class="hero-main-subtitle">Condição especial de revendedor autorizado em SC e Litoral RS. Modelos novos com garantia estrutural, tecnologia global e assessoria técnica para estudo de montagem veicular.</p>
+                </div>
+                <div class="hero-nav-arrows">
+                    <button type="button" class="btn-hero-arrow" onclick="document.getElementById('tka-hero-carousel').scrollBy({left: -300, behavior: 'smooth'})" aria-label="Voltar">
+                        <i data-lucide="chevron-left" style="width:20px;height:20px;"></i>
+                    </button>
+                    <button type="button" class="btn-hero-arrow" onclick="document.getElementById('tka-hero-carousel').scrollBy({left: 300, behavior: 'smooth'})" aria-label="Avançar">
+                        <i data-lucide="chevron-right" style="width:20px;height:20px;"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tka-hero-carousel" id="tka-hero-carousel">
+                <!-- Modelo 1: TKA 40.900 -->
+                <a href="tka-produto.html?slug=40.900" class="tka-hero-card">
+                    <span class="tka-card-badge">Trave Pesada</span>
+                    <div class="tka-card-img-wrap">
+                        <img src="assets/tka-oficial/40.900/foto-1.png" alt="TKA 40.900" class="tka-card-img" loading="lazy">
+                    </div>
+                    <div class="tka-card-info">
+                        <h4>TKA 40.900</h4>
+                        <div class="tka-card-line">Linha Trave · 5H + 3M</div>
+                        <div class="tka-mini-specs">
+                            <span>Cap. 9.500 Kg</span>
+                            <span>Vert. 23,8m</span>
+                            <span>Horiz. 20,6m</span>
+                        </div>
+                        <div class="btn-tka-spec">
+                            <span>Ver Ficha Técnica Completa</span>
+                            <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Modelo 2: TKA 45.700 -->
+                <a href="tka-produto.html?slug=45.700" class="tka-hero-card">
+                    <span class="tka-card-badge">Alta Estabilidade</span>
+                    <div class="tka-card-img-wrap">
+                        <img src="assets/tka-oficial/45.700/foto-1.png" alt="TKA 45.700" class="tka-card-img" loading="lazy">
+                    </div>
+                    <div class="tka-card-info">
+                        <h4>TKA 45.700</h4>
+                        <div class="tka-card-line">Linha Trave · 4H + 3M</div>
+                        <div class="tka-mini-specs">
+                            <span>Cap. 10.130 Kg</span>
+                            <span>Vert. 22,8m</span>
+                            <span>Patolas 6,1m</span>
+                        </div>
+                        <div class="btn-tka-spec">
+                            <span>Ver Ficha Técnica Completa</span>
+                            <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Modelo 3: TKA 55.900 -->
+                <a href="tka-produto.html?slug=55.900" class="tka-hero-card">
+                    <span class="tka-card-badge">Extrapesado</span>
+                    <div class="tka-card-img-wrap">
+                        <img src="assets/tka-oficial/55.900/foto-1.png" alt="TKA 55.900" class="tka-card-img" loading="lazy">
+                    </div>
+                    <div class="tka-card-info">
+                        <h4>TKA 55.900</h4>
+                        <div class="tka-card-line">Linha Trave · 6H + 3M</div>
+                        <div class="tka-mini-specs">
+                            <span>Cap. 13.700 Kg</span>
+                            <span>Vert. 25,8m</span>
+                            <span>Horiz. 22,4m</span>
+                        </div>
+                        <div class="btn-tka-spec">
+                            <span>Ver Ficha Técnica Completa</span>
+                            <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Modelo 4: TKA 8.700 BX -->
+                <a href="tka-produto.html?slug=8.700bx" class="tka-hero-card">
+                    <span class="tka-card-badge">Agro &amp; Carroceria</span>
+                    <div class="tka-card-img-wrap">
+                        <img src="assets/tka-oficial/8.700bx/foto-1.png" alt="TKA 8.700 BX" class="tka-card-img" loading="lazy">
+                    </div>
+                    <div class="tka-card-info">
+                        <h4>TKA 8.700 BX</h4>
+                        <div class="tka-card-line">Linha BX · Compacto</div>
+                        <div class="tka-mini-specs">
+                            <span>Cap. 4.500 Kg</span>
+                            <span>Peso 970 Kg</span>
+                            <span>Big Bags</span>
+                        </div>
+                        <div class="btn-tka-spec">
+                            <span>Ver Ficha Técnica Completa</span>
+                            <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION PRINCIPAL: VITRINE DIRETA -->
     <main class="section-menu-main" id="vitrine">
         <div class="container">
 
             <div class="section-header">
                 <div class="section-eyebrow"><i data-lucide="shield-check" style="width:14px;height:14px;"></i> Catálogo Técnico Industrial · Conformidade NR12</div>
-                <h2 class="section-title-dark">Implementos, Peças &amp; Guindastes</h2>
-                <p class="section-subtitle">Consulte especificações, códigos de peça e solicite cotação com cálculo de frete direto com o especialista no WhatsApp.</p>
+                <h2 class="section-title-dark">Usados de Pátio &amp; Acessórios Marca Própria</h2>
+                <p class="section-subtitle">Giro semanal de seminovos revisados e linha completa de implementos industriais padrão Angra Metal. Adicione múltiplos itens à sua cotação.</p>
             </div>
 
             <!-- Search Bar -->
@@ -212,5 +326,25 @@
         });
       }
     </script>
+    <!-- Barra Flutuante de Acúmulo de Cotação (Feedback Deliberado) -->
+    <div class="floating-quote-bar" id="floating-quote-bar">
+        <div class="fq-left">
+            <div class="fq-icon-box">
+                <i data-lucide="check" style="width:20px;height:20px;"></i>
+            </div>
+            <div class="fq-text">
+                <h5 id="fq-title">Item adicionado à cotação!</h5>
+                <p id="fq-subtitle">1 item na lista · Você pode adicionar mais peças</p>
+            </div>
+        </div>
+        <div class="fq-actions">
+            <button type="button" class="btn-fq-continue" onclick="window.hideFloatingBar()">+ Adicionar Mais Peças</button>
+            <button type="button" class="btn-fq-review" onclick="window.openCart()">
+                <i data-lucide="clipboard-list" style="width:16px;height:16px;"></i>
+                <span>Ver Prancheta</span>
+            </button>
+        </div>
+    </div>
+
 </body>
 </html>
