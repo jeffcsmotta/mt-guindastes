@@ -573,3 +573,61 @@ window.switchModalPhoto = function(src, el) {
     document.querySelectorAll('.modal-gallery-thumb').forEach(t => t.classList.remove('active'));
     if (el) el.classList.add('active');
 };
+
+/* ==========================================================================
+   MOTION SHOWCASE ANGRA METAL (10% OFF NO PIX) CONTROLLER
+   ========================================================================== */
+let angraSlideIndex = 0;
+let angraSlideInterval = null;
+
+window.switchAngraSlide = function(idx) {
+    const slides = document.querySelectorAll('.angra-slide');
+    const dots = document.querySelectorAll('#angra-dots .dot');
+    const counter = document.getElementById('angra-slide-counter');
+    if (!slides.length) return;
+
+    angraSlideIndex = (idx + slides.length) % slides.length;
+
+    slides.forEach((s, i) => {
+        s.classList.toggle('active', i === angraSlideIndex);
+    });
+
+    dots.forEach((d, i) => {
+        d.classList.toggle('active', i === angraSlideIndex);
+    });
+
+    if (counter) {
+        counter.textContent = `0${angraSlideIndex + 1} / 0${slides.length}`;
+    }
+};
+
+function initAngraShowcase() {
+    const stage = document.getElementById('angra-motion-stage');
+    if (!stage) return;
+
+    // Inicia rotação suave a cada 4.2 segundos
+    const startTimer = () => {
+        angraSlideInterval = setInterval(() => {
+            window.switchAngraSlide(angraSlideIndex + 1);
+        }, 4200);
+    };
+
+    const stopTimer = () => {
+        if (angraSlideInterval) clearInterval(angraSlideInterval);
+    };
+
+    stage.addEventListener('mouseenter', stopTimer);
+    stage.addEventListener('mouseleave', startTimer);
+    stage.addEventListener('touchstart', stopTimer, { passive: true });
+    stage.addEventListener('touchend', startTimer, { passive: true });
+
+    startTimer();
+}
+
+// Inicia junto com o DOM
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAngraShowcase);
+} else {
+    initAngraShowcase();
+}
+
