@@ -19,11 +19,235 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style-proposta.css?v=mt1">
     <style>
-        .mt-lines-panel { display: flex; flex-direction: column; gap: 10px; padding: 22px; height: 100%; background: #0F172A; }
-        .mt-lines-title { color: #fff; font-weight: 800; font-size: 0.95rem; }
-        .mt-line { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 10px 12px; font-size: 0.82rem; color: #E2E8F0; }
-        .mt-line em { color: #F59E0B; font-style: normal; font-weight: 700; }
-        .mt-cta { margin-top: auto; text-align: center; background: #F5511D; color: #fff; font-weight: 800; border-radius: 10px; padding: 12px; font-size: 0.85rem; }
+        .mt-real-viewport {
+            display: flex;
+            flex-direction: column;
+            background: #090D14;
+            height: 100%;
+            overflow-y: auto;
+            position: relative;
+            scrollbar-width: none;
+        }
+        .mt-real-viewport::-webkit-scrollbar { display: none; }
+
+        /* Mini Header Laranja MT */
+        .mock-header {
+            background: #F5511D;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #C2410C;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .mock-header-brand {
+            display: flex;
+            align-items: center;
+        }
+        .mock-logo {
+            height: 22px;
+            width: auto;
+            object-fit: contain;
+        }
+        .mock-header-cart {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .mock-cart-badge {
+            background: #090D14;
+            color: #FFF;
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+
+        /* Mini Hero TKA */
+        .mock-tka-banner {
+            background: linear-gradient(180deg, #0D131F 0%, #111A29 100%);
+            border-bottom: 1px solid #1E293B;
+            padding: 12px 14px;
+        }
+        .mock-tka-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(245, 81, 29, 0.15);
+            border: 1px solid rgba(245, 81, 29, 0.4);
+            color: #FFEDD5;
+            font-size: 0.58rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+        }
+        .mock-tka-title {
+            color: #FFFFFF;
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .mock-tka-card {
+            background: #151D2A;
+            border: 1px solid #222C3D;
+            border-radius: 8px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mock-tka-img {
+            width: 48px;
+            height: 38px;
+            object-fit: contain;
+            border-radius: 4px;
+            background: #090D14;
+            padding: 2px;
+        }
+        .mock-tka-info strong {
+            display: block;
+            color: #FFFFFF;
+            font-size: 0.72rem;
+            font-weight: 800;
+        }
+        .mock-tka-info span {
+            color: #94A3B8;
+            font-size: 0.6rem;
+        }
+
+        /* Mini Feed de Peças */
+        .mock-feed {
+            padding: 12px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .mock-feed-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #CBD5E1;
+            font-family: var(--font-heading);
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .mock-live-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #10B981;
+            box-shadow: 0 0 6px #10B981;
+        }
+        .mock-item-card {
+            background: #111722;
+            border: 1px solid #1E293B;
+            border-radius: 8px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mock-item-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            background: #090D14;
+            border: 1px solid #1E293B;
+            border-radius: 6px;
+            padding: 2px;
+            flex-shrink: 0;
+        }
+        .mock-item-details {
+            flex: 1;
+            min-width: 0;
+        }
+        .mock-item-name {
+            display: block;
+            color: #F5511D;
+            font-family: var(--font-heading);
+            font-size: 0.72rem;
+            font-weight: 800;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .mock-item-spec {
+            display: block;
+            color: #64748B;
+            font-size: 0.58rem;
+        }
+        .mock-item-price {
+            display: block;
+            color: #00BFA5;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            font-weight: 800;
+        }
+        .mock-item-btn {
+            background: #F5511D;
+            color: #FFFFFF;
+            font-size: 0.6rem;
+            font-weight: 800;
+            padding: 4px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        /* Barra de Cotação Flutuante no Mockup */
+        .mock-floating-bar {
+            margin-top: auto;
+            position: sticky;
+            bottom: 8px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background: #0F172A;
+            border: 1px solid #F5511D;
+            border-radius: 8px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            z-index: 10;
+        }
+        .mock-float-left {
+            display: flex;
+            flex-direction: column;
+        }
+        .mock-float-title {
+            color: #94A3B8;
+            font-size: 0.56rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .mock-float-val {
+            color: #00BFA5;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 800;
+        }
+        .mock-float-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #25D366;
+            color: #063116;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 5px 8px;
+            border-radius: 6px;
+        }
     </style>
 </head>
 
@@ -90,13 +314,71 @@
                                 <span class="browser-url" data-var="dominio">mtguindastes.com.br</span>
                                 <span class="browser-speed-badge" data-var="ticker">🏗️ Peças & Acessórios • ⚡ Cotação direta</span>
                             </div>
-                            <div class="phone-screen-viewport">
-                                <div class="mt-lines-panel">
-                                    <p class="mt-lines-title">Catálogo tri-modal</p>
-                                    <span class="mt-line">Peças e Acessórios <em>com preço</em></span>
-                                    <span class="mt-line">Usados do pátio <em>com preço</em></span>
-                                    <span class="mt-line">TKA Novos <em>sob consulta</em></span>
-                                    <span class="mt-cta">Solicitar cotação →</span>
+                            <div class="phone-screen-viewport mt-real-viewport">
+                                <!-- Mini Header Real MT Guindastes -->
+                                <div class="mock-header">
+                                    <div class="mock-header-brand">
+                                        <img src="assets/logo_branco.png" alt="MT Guindastes" class="mock-logo">
+                                    </div>
+                                    <div class="mock-header-cart">
+                                        <i data-lucide="clipboard-list" style="width:12px;height:12px;color:#FFF;"></i>
+                                        <span class="mock-cart-badge">2</span>
+                                    </div>
+                                </div>
+
+                                <!-- Mini Hero TKA Oficial -->
+                                <div class="mock-tka-banner">
+                                    <div class="mock-tka-tag">
+                                        <i data-lucide="award" style="width:10px;height:10px;"></i> TKA Direto da Fábrica
+                                    </div>
+                                    <div class="mock-tka-title">Guindastes Articulados</div>
+                                    <div class="mock-tka-card">
+                                        <img src="assets/tka-oficial/40.900/foto-1.png" alt="TKA 40.900" class="mock-tka-img">
+                                        <div class="mock-tka-info">
+                                            <strong>TKA 40.900</strong>
+                                            <span>Cap. 9.500 Kg · 5H + 3M</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mini Vitrine Peças & Acessórios -->
+                                <div class="mock-feed">
+                                    <div class="mock-feed-title">
+                                        <span>Garfos Paleteiros &amp; Peças</span>
+                                        <span class="mock-live-dot"></span>
+                                    </div>
+                                    
+                                    <div class="mock-item-card">
+                                        <img src="assets/pecas/angra_01.png" alt="Garfo Paleteiro" class="mock-item-img">
+                                        <div class="mock-item-details">
+                                            <span class="mock-item-name">Garfo Paleteiro</span>
+                                            <span class="mock-item-spec">GP-MT · 1.5T a 3.0T</span>
+                                            <span class="mock-item-price">R$ 1.890,00</span>
+                                        </div>
+                                        <div class="mock-item-btn">+ Cotação</div>
+                                    </div>
+
+                                    <div class="mock-item-card">
+                                        <img src="assets/pecas/angra_05.png" alt="Cesto de Fibra" class="mock-item-img">
+                                        <div class="mock-item-details">
+                                            <span class="mock-item-name">Cesto de Fibra NR12</span>
+                                            <span class="mock-item-spec">CF-MT1 · 46kV</span>
+                                            <span class="mock-item-price">R$ 5.700,00</span>
+                                        </div>
+                                        <div class="mock-item-btn">+ Cotação</div>
+                                    </div>
+                                </div>
+
+                                <!-- Mini Floating Bar com os botões laranjas e total -->
+                                <div class="mock-floating-bar">
+                                    <div class="mock-float-left">
+                                        <span class="mock-float-title">Cotação Pronta</span>
+                                        <span class="mock-float-val">R$ 7.590,00</span>
+                                    </div>
+                                    <div class="mock-float-cta">
+                                        <i data-lucide="message-circle" style="width:13px;height:13px;"></i>
+                                        <span>WhatsApp</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="phone-bottom-bar"></div>

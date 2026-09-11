@@ -275,10 +275,14 @@ window.openQuoteModal = function(id) {
     const galleryThumbs = (p.gallery && p.gallery.length > 1)
         ? `<div class="modal-gallery-thumbs">${p.gallery.map((g, idx) => `<img src="${g}" alt="${p.nome}" class="modal-gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="window.switchModalPhoto('${g}', this)">`).join('')}</div>`
         : '';
-    document.getElementById('modal-ref').innerHTML = (p.preco > 0
-        ? `Referência da peça: <strong>R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</strong>`
-        : `Item <strong>sob consulta</strong> — o Marcelo retorna com valor + frete.`)
-        + galleryThumbs;
+    const specsHtml = (p.specs && p.specs.length)
+        ? `<div class="modal-specs-strip">${p.specs.map(s => `<span class="modal-spec-badge">${s}</span>`).join('')}</div>`
+        : '';
+    document.getElementById('modal-ref').innerHTML = galleryThumbs
+        + specsHtml
+        + (p.preco > 0
+            ? `<div class="modal-price-box"><span class="modal-price-label">Valor de Referência:</span><div class="modal-price-val">R$ ${Number(p.preco).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</div><span class="modal-price-obs">+ frete rodoviário conforme o CEP</span></div>`
+            : `<div class="modal-price-box"><span class="modal-price-label">Condição Comercial:</span><div class="modal-price-consult">Sob Consulta — Cotação com o Marcelo</div><span class="modal-price-obs">Informações completas de procedência e laudos</span></div>`);
     document.getElementById('q-cep').value = '';
     document.getElementById('q-cnpj').value = '';
     document.getElementById('q-nome').value = '';
@@ -297,8 +301,10 @@ window.openQuoteModal = function(id) {
     refreshModalConfirm();
     document.getElementById('item-modal-overlay').removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
+    // O modal abre no topo com foco nas imagens e especificações, sem acionar o teclado do celular
+    const modalBox = document.querySelector('.item-modal');
+    if (modalBox) modalBox.scrollTop = 0;
     if (window.lucide) lucide.createIcons();
-    setTimeout(() => document.getElementById('q-cep').focus(), 80);
 };
 
 
@@ -395,13 +401,17 @@ function updateCartUI() {
     } else {
         box.innerHTML = items.map(i => `
             <div class="cart-item">
-                <div class="cart-item-info"><h4>${i.nome}</h4>
+                <div class="cart-item-thumb-box">
+                    <img src="${i.img || 'assets/pecas/angra_01.png'}" alt="${i.nome}" class="cart-item-thumb" onerror="this.src='assets/pecas/angra_01.png'">
+                </div>
+                <div class="cart-item-info">
+                    <h4 class="cart-item-title">${i.nome}</h4>
                     <div class="cart-item-custom-list"><span>• ${i.codigo}${i.preco > 0 ? ' · ' + fmt(i.preco) : ' · sob consulta'}</span></div>
                 </div>
                 <div class="cart-controls">
-                    <button type="button" class="cart-qty-btn" onclick="window.changeQuoteQty('${i.id}', -1)" aria-label="Diminuir">-</button>
-                    <span style="font-size:0.88rem; font-weight:800; color:#FFF; min-width:26px; text-align:center;">${i.qty}</span>
-                    <button type="button" class="cart-qty-btn" onclick="window.changeQuoteQty('${i.id}', 1)" aria-label="Aumentar">+</button>
+                    <button type="button" class="cart-qty-btn cart-qty-minus" onclick="window.changeQuoteQty('${i.id}', -1)" aria-label="Diminuir">-</button>
+                    <span class="cart-qty-num">${i.qty}</span>
+                    <button type="button" class="cart-qty-btn cart-qty-plus" onclick="window.changeQuoteQty('${i.id}', 1)" aria-label="Aumentar">+</button>
                 </div>
             </div>`).join('');
     }
@@ -573,61 +583,4 @@ window.switchModalPhoto = function(src, el) {
     document.querySelectorAll('.modal-gallery-thumb').forEach(t => t.classList.remove('active'));
     if (el) el.classList.add('active');
 };
-
-/* ==========================================================================
-   MOTION SHOWCASE ANGRA METAL (10% OFF NO PIX) CONTROLLER
-   ========================================================================== */
-let angraSlideIndex = 0;
-let angraSlideInterval = null;
-
-window.switchAngraSlide = function(idx) {
-    const slides = document.querySelectorAll('.angra-slide');
-    const dots = document.querySelectorAll('#angra-dots .dot');
-    const counter = document.getElementById('angra-slide-counter');
-    if (!slides.length) return;
-
-    angraSlideIndex = (idx + slides.length) % slides.length;
-
-    slides.forEach((s, i) => {
-        s.classList.toggle('active', i === angraSlideIndex);
-    });
-
-    dots.forEach((d, i) => {
-        d.classList.toggle('active', i === angraSlideIndex);
-    });
-
-    if (counter) {
-        counter.textContent = `0${angraSlideIndex + 1} / 0${slides.length}`;
-    }
-};
-
-function initAngraShowcase() {
-    const stage = document.getElementById('angra-motion-stage');
-    if (!stage) return;
-
-    // Inicia rotação suave a cada 4.2 segundos
-    const startTimer = () => {
-        angraSlideInterval = setInterval(() => {
-            window.switchAngraSlide(angraSlideIndex + 1);
-        }, 4200);
-    };
-
-    const stopTimer = () => {
-        if (angraSlideInterval) clearInterval(angraSlideInterval);
-    };
-
-    stage.addEventListener('mouseenter', stopTimer);
-    stage.addEventListener('mouseleave', startTimer);
-    stage.addEventListener('touchstart', stopTimer, { passive: true });
-    stage.addEventListener('touchend', startTimer, { passive: true });
-
-    startTimer();
-}
-
-// Inicia junto com o DOM
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAngraShowcase);
-} else {
-    initAngraShowcase();
-}
 

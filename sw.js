@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mt-guindastes-v5';
+const CACHE_NAME = 'mt-guindastes-v7';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

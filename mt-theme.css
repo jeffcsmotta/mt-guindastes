@@ -117,6 +117,12 @@
   max-width: 300px;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.24));
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+.brand-wrapper:hover .brand-logo-img {
+  filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.32));
+  transform: translateY(-1px);
 }
 .brand-fallback {
   font-family: var(--font-heading);
@@ -236,21 +242,32 @@
 }
 
 .cart-clear-btn {
-  background: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.25);
-  color: #F87171;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1.5px solid #FFFFFF !important;
+  color: #FFFFFF !important;
   border-radius: var(--radius-sm);
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: var(--transition-fast);
 }
+.cart-clear-btn i,
+.cart-clear-btn svg {
+  stroke: #FFFFFF !important;
+}
 .cart-clear-btn:hover {
-  background: rgba(239, 68, 68, 0.25);
-  color: #FFFFFF;
+  background: #FFFFFF !important;
+  color: #DC2626 !important;
+  border-color: #FFFFFF !important;
+  transform: scale(1.05);
+}
+.cart-clear-btn:hover i,
+.cart-clear-btn:hover svg {
+  stroke: #DC2626 !important;
 }
 
 /* ==========================================================================
@@ -1328,39 +1345,68 @@
 }
 
 .modal-ref {
-  background: #F8FAFC;
-  border: 1px solid var(--border-metal);
-  border-radius: var(--radius-sm);
-  padding: 12px 14px;
-  font-size: 0.88rem;
-  margin: 14px 0 8px;
-  color: #334155;
-}
-.modal-ref strong {
-  color: var(--text-dark);
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 14px 0 16px;
 }
 
-.modal-gallery {
+.modal-specs-strip {
   display: flex;
-  gap: 8px;
-  margin-top: 12px;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
 }
-.modal-gallery a {
-  flex: 1;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  border: 1px solid var(--border-metal);
-}
-.modal-gallery img {
-  width: 100%;
-  height: 85px;
-  object-fit: cover;
-  display: block;
-}
-.modal-gallery-hint {
+
+.modal-spec-badge {
+  font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--text-muted-dark);
-  margin-top: 6px;
+  font-weight: 700;
+  background: #F1F5F9;
+  border: 1px solid var(--border-metal);
+  color: #334155;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.modal-price-box {
+  background: #F8FAFC;
+  border: 1px solid var(--border-metal);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+
+.modal-price-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748B;
+  margin-bottom: 2px;
+}
+
+.modal-price-val {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #059669;
+}
+
+.modal-price-consult {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #EA580C;
+}
+
+.modal-price-obs {
+  display: block;
+  font-size: 0.72rem;
+  color: #94A3B8;
+  margin-top: 2px;
 }
 
 .quote-label {
@@ -1740,12 +1786,12 @@
   }
   .site-header .nav-container {
     padding: 10px 16px;
-    min-height: 64px;
+    min-height: 60px;
     gap: 12px;
   }
   .brand-logo-img {
-    height: 40px;
-    max-width: 180px;
+    height: 38px;
+    max-width: 170px;
   }
   .site-header .nav-link-btn {
     padding: 8px 12px;
@@ -1763,20 +1809,25 @@
 @media (max-width: 520px) {
   .site-header .nav-container {
     padding: 8px 12px;
-    min-height: 60px;
+    min-height: 56px;
+    gap: 8px;
   }
   .brand-logo-img {
-    height: 36px;
-    max-width: 145px;
+    height: 32px;
+    max-width: 140px;
   }
-  .site-header .nav-link-btn span {
-    display: none;
+  .site-header .nav-actions {
+    gap: 6px;
   }
   .site-header .nav-link-btn {
-    padding: 7px 9px;
+    padding: 6px 10px;
+    font-size: 0.74rem;
+  }
+  .site-header .nav-link-btn span {
+    display: inline-block;
   }
   .site-header .btn-cart-trigger {
-    padding: 7px 10px;
+    padding: 6px 10px;
     font-size: 0.76rem;
     gap: 6px;
   }
@@ -1784,7 +1835,8 @@
     display: none;
   }
   .cart-total-header {
-    display: none;
+    display: inline-block;
+    font-size: 0.75rem;
   }
   .card-bottom {
     flex-direction: column;
@@ -1801,46 +1853,85 @@
   .card-img-box {
     height: 165px;
   }
+  .hero-badges-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-logo-img {
+    height: 28px;
+    max-width: 120px;
+  }
+  .site-header .nav-link-btn span {
+    display: none;
+  }
+  .site-header .nav-link-btn {
+    padding: 6px 8px;
+  }
+  .cart-total-header {
+    display: none;
+  }
 }
 
 /* ==========================================================================
    SELO OFICIAL TKA GUINDASTES & HERO DE FÁBRICA
    ========================================================================== */
-.tka-auth-seal {
-  display: inline-flex;
+.hero-badges-group {
+  display: flex;
   align-items: center;
   gap: 10px;
-  background: #090D14;
-  border: 1.5px solid #1E293B;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-  text-decoration: none;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
 }
-.tka-auth-seal:hover {
+
+.tka-hero-auth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0B1019;
+  border: 1px solid rgba(234, 88, 12, 0.4);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tka-hero-auth-badge:hover {
   border-color: #EA580C;
   transform: translateY(-1px);
 }
-.tka-seal-logo {
-  height: 20px;
+
+.tka-hero-seal-img {
+  height: 16px;
   width: auto;
   display: block;
 }
-.tka-seal-text {
-  font-family: var(--font-body);
-  font-size: 0.76rem;
-  font-weight: 800;
-  color: #F8FAFC;
-  letter-spacing: 0.02em;
+
+.tka-hero-seal-copy {
   display: flex;
-  flex-direction: column;
-  line-height: 1.15;
+  align-items: center;
+  gap: 6px;
 }
-.tka-seal-text small {
+
+.tka-hero-seal-status {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+}
+
+.tka-hero-seal-region {
+  font-family: var(--font-mono);
   font-size: 0.65rem;
-  color: #FDBA74;
   font-weight: 700;
+  color: #FDBA74;
+  background: rgba(234, 88, 12, 0.15);
+  padding: 1px 6px;
+  border-radius: 4px;
   text-transform: uppercase;
 }
 
