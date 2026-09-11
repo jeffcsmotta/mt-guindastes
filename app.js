@@ -11,105 +11,59 @@ const CART_KEY = 'mtguindastes_cotacao';
 
 /*GENERATED:PRODUCTS*/
 var PRODUCTS = [
-  { id: "garfo-paleteiro", nome: "Garfo Paleteiro", colecao: "peca", categoria: "Garfos Paleteiros", codigo: "GP-MT", specs: ["1.5 Ton / 2.5 Ton / 3.0 Ton"], desc: "Garfo paleteiro ajustável de alta resistência projetado para movimentação e elevação de cargas paletizadas.", img: "assets/pecas/angra_01.png", preco: 1890.0 },
-  { id: "garfo-para-bobcat", nome: "Garfo para Bobcat", colecao: "peca", categoria: "Garfos Paleteiros", codigo: "GP-MT", specs: [], desc: "Garfo paleteiro projetado para engate rápido e movimentação ágil em minicarregadeiras estilo Bobcat.", img: "assets/pecas/angra_02.png", preco: 0.0 },
-  { id: "garfo-para-retroescavadeira", nome: "Garfo para Retroescavadeira", colecao: "peca", categoria: "Garfos Paleteiros", codigo: "GP-MT", specs: [], desc: "Acessório de garfos paleteiros para retroescavadeiras, ideal para movimentação de pallets em canteiros de obra.", img: "assets/pecas/angra_02.png", preco: 0.0 },
-  { id: "garfo-pega-tubos-tipo-c", nome: "Garfo Pega Tubos Tipo C", colecao: "peca", categoria: "Garfos Paleteiros", codigo: "GP-MT", specs: ["Cap. 2.0 Ton"], desc: "Acessório específico para movimentação segura e precisa de manilhas e tubos de concreto.", img: "assets/pecas/angra_02.png", preco: 0.0 },
-  { id: "balancim-de-carga", nome: "Balancim de Carga", colecao: "peca", categoria: "Acessórios", codigo: "AC-MT", specs: ["Cap. 5.0 Ton"], desc: "Trave metálica de içamento projetada para distribuição de peso equilibrada em cargas pesadas e içamentos complexos.", img: "assets/pecas/angra_03.png", preco: 0.0 },
-  { id: "suporte-para-big-bag", nome: "Suporte para Big Bag", colecao: "peca", categoria: "Acessórios", codigo: "AC-MT", specs: ["1.0 Ton / 1.2 Ton"], desc: "Suporte em cruz reforçado com ganchos de segurança para transporte estável de sacarias tipo big bag.", img: "assets/pecas/angra_03.png", preco: 2450.0 },
-  { id: "pega-postes", nome: "Pega Postes", colecao: "peca", categoria: "Acessórios", codigo: "AC-MT", specs: [], desc: "Pinça mecânica autoajustável projetada para elevação e assentamento vertical de postes cilíndricos.", img: "assets/pecas/angra_04.png", preco: 0.0 },
-  { id: "saca-postes-hidraulico", nome: "Saca Postes Hidráulico", colecao: "peca", categoria: "Acessórios", codigo: "AC-MT", specs: [], desc: "Equipamento hidráulico robusto para extração vertical eficiente de postes e estacas.", img: "assets/pecas/angra_04.png", preco: 0.0 },
-  { id: "funil-multiuso", nome: "Funil Multiuso", colecao: "peca", categoria: "Acessórios", codigo: "AC-MT", specs: [], desc: "Funil de descarga metálico indicado para ração, grãos, concreto, brita e areia.", img: "assets/pecas/angra_04.png", preco: 0.0 },
-  { id: "cesto-de-fibra-1-operador", nome: "Cesto de Fibra — 1 Operador", colecao: "peca", categoria: "Cestos de Fibra", codigo: "CF-MT", specs: ["1 Operador"], desc: "Cesto aéreo de fibra para trabalho em altura de 1 operador, garantindo segurança e isolamento elétrico.", img: "assets/pecas/angra_05.png", preco: 5700.0 },
-  { id: "cesto-de-fibra-com-lanca-frontal", nome: "Cesto de Fibra com Lança Frontal", colecao: "peca", categoria: "Cestos de Fibra", codigo: "CF-MT", specs: ["1 ou 2 Operadores"], desc: "Modelo com fixação por lança frontal, ideal para posicionamento rente a fachadas e postes. Suporta até 2 operadores.", img: "assets/pecas/angra_06.png", preco: 0.0 },
-  { id: "cesto-de-fibra-2-operadores", nome: "Cesto de Fibra — 2 Operadores", colecao: "peca", categoria: "Cestos de Fibra", codigo: "CF-MT", specs: ["2 Operadores (NR12)"], desc: "Cesto duplo para trabalho em altura com 2 operadores simultâneos, fabricado em fibra de alta resistência.", img: "assets/pecas/angra_07.png", preco: 0.0 },
-  { id: "cesto-metalico-acoplado", nome: "Cesto Metálico Acoplado", colecao: "peca", categoria: "Cestos Metálicos", codigo: "CM-MT", specs: ["1 ou 2 Operadores (NR12)"], desc: "Cesto com estrutura em aço tubular reforçado para acoplamento em guindastes de elevação.", img: "assets/pecas/angra_09.png", preco: 0.0 },
-  { id: "cesto-metalico-suspenso", nome: "Cesto Metálico Suspenso", colecao: "peca", categoria: "Cestos Metálicos", codigo: "CM-MT", specs: ["1 ou 2 Operadores"], desc: "Cesto metálico para suspensão por guinchos de cabo de aço, com grades de proteção reforçadas e portas de acesso.", img: "assets/pecas/angra_10.png", preco: 0.0 },
-  { id: "goleiras-pitocos-escudos-comerciais", nome: "Goleiras, Pitocos e Escudos Comerciais", colecao: "peca", categoria: "Linha Comercial", codigo: "LC-MT", specs: [], desc: "Estruturas metálicas de proteção, delimitação de vagas e organização para calçadas e comércios.", img: "assets/pecas/angra_11.png", preco: 0.0 },
-  { id: "ralos-canaletas-tampas-grelhas", nome: "Ralos, Canaletas, Tampas e Grelhas", colecao: "peca", categoria: "Linha Comercial", codigo: "LC-MT", specs: [], desc: "Tampas de ferro, grelhas para pista de tráfego, ralos de escoamento e canaletas de drainage pluvial.", img: "assets/pecas/angra_12.png", preco: 0.0 },
-  { id: "rebocador-e-carrinhos-especiais", nome: "Rebocador e Carrinhos Especiais", colecao: "peca", categoria: "Projetos Especiais", codigo: "PE-MT", specs: [], desc: "Carrinhos para movimentação industrial interna sob medida e rebocador hidráulico de cargas pesadas.", img: "assets/pecas/angra_13.png", preco: 0.0 },
-  { id: "escada-industrial-sob-medida", nome: "Escada Industrial sob Medida", colecao: "peca", categoria: "Projetos Especiais", codigo: "PE-MT", specs: [], desc: "Escadas industriais e passarelas de acesso metálicas fabricadas sob medida para galpões e indústrias.", img: "assets/pecas/angra_14.png", preco: 0.0 },
-  { id: "tka-10.700", nome: "TKA 10.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-10.700", specs: ["CAP. MÁX. 2.750 Kg PESO PRÓPRIO 1.415 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 14,5 m MÁX. HORIZONTAL 11,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-100.900", nome: "TKA 100.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-100.900", specs: ["CAP. MÁX. 19.000KG PESO PRÓPRIO 10.200KG EXTENSÕES HIDRÁULICAS 9 EXTENSÕES MANUAIS 2 MÁX. VERTICAL 31,5 MÁX. HORIZONTAL 26,3"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_02.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_100_900_Ej7H2y.png"] },
-  { id: "tka-11.900", nome: "TKA 11.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-11.900", specs: ["CAP. MÁX. 5.950 Kg PESO PRÓPRIO 1.560 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 1 MÁX. VERTICAL 17,3 m MÁX. HORIZONTAL 14,2 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_11_900_5wd85H.png"] },
-  { id: "tka-12.700", nome: "TKA 12.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-12.700", specs: ["CAP. MÁX. 3.420 Kg PESO PRÓPRIO 1.655 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 14,5 m MÁX. HORIZONTAL 11,3 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_04.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_12_700_CDxGpP.png"] },
-  { id: "tka-14.900", nome: "TKA 14.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-14.900", specs: ["CAP. MÁX. 5.700 Kg PESO PRÓPRIO 2.090 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 2 MÁX. VERTICAL 19,6 m MÁX. HORIZONTAL 16,3 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_05.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_14_900_CTqGG7.png"] },
-  { id: "tka-16.700", nome: "TKA 16.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-16.700", specs: ["CAP. MÁX. 3.975 Kg PESO PRÓPRIO 2.425 Kg EXTENSÕES HIDRÁULICAS 4 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 18,8 m MÁX. HORIZONTAL 15,7 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_16_700_6GzCah.png"] },
-  { id: "tka-17.900", nome: "TKA 17.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-17.900", specs: ["CAP. MÁX. 7.000 Kg PESO PRÓPRIO 2.420 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 2 MÁX. VERTICAL 19,6 m MÁX. HORIZONTAL 16,3 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_17_900_0iNIdR.png"] },
-  { id: "tka-18.900", nome: "TKA 18.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-18.900", specs: ["CAP. MÁX. 7.250 Kg PESO PRÓPRIO 2.570 Kg EXTENSÕES HIDRÁULICAS 5h EXTENSÕES MANUAIS 2 MÁX. VERTICAL 22,2 m MÁX. HORIZONTAL 18,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_06.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_18_900_P8EltX.png"] },
-  { id: "tka-20.700", nome: "TKA 20.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-20.700", specs: ["CAP. MÁX. 5.060 Kg PESO PRÓPRIO 2.600 Kg EXTENSÕES HIDRÁULICAS 4 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 22,2 m MÁX. HORIZONTAL 18,7 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_07.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_20_700_Rv46iU.png"] },
-  { id: "tka-23.700", nome: "TKA 23.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-23.700", specs: ["CAP. MÁX. 9.355 Kg PESO PRÓPRIO 3.010 Kg EXTENSÕES HIDRÁULICAS 5h EXTENSÕES MANUAIS 2 MÁX. VERTICAL 21,5 m MÁX. HORIZONTAL 18,2 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_23_700_08YQR0.png"] },
-  { id: "tka-30.700", nome: "TKA 30.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-30.700", specs: ["CAP. MÁX. 5.800 Kg PESO PRÓPRIO 3.495 Kg EXTENSÕES HIDRÁULICAS 5 h EXTENSÕES MANUAIS 2 m MÁX. VERTICAL 21,8 m MÁX. HORIZONTAL 18,3 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_08.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_30_700_CeAfjh.png"] },
-  { id: "tka-30.900", nome: "TKA 30.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-30.900", specs: ["CAP. MÁX. 10.250 Kg PESO PRÓPRIO 3.740 Kg EXTENSÕES HIDRÁULICAS 5h EXTENSÕES MANUAIS 3 MÁX. VERTICAL 23,8 m MÁX. HORIZONTAL 20,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_30_900_04ooMs.png"] },
-  { id: "tka-38.900", nome: "TKA 38.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-38.900", specs: ["CAP. MÁX. 18.350 Kg PESO PRÓPRIO 4.425 Kg EXTENSÕES HIDRÁULICAS 6h EXTENSÕES MANUAIS 2M MÁX. VERTICAL 24,5 m MÁX. HORIZONTAL 20,9 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_09.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_38_900_EfiG1R.png"] },
-  { id: "tka-40.900", nome: "TKA 40.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-40.900", specs: ["CAP. MÁX. 9.500 Kg PESO PRÓPRIO 3.680 Kg EXTENSÕES HIDRÁULICAS 5 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 23,8 m MÁX. HORIZONTAL 20,6 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_10.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_40_900_GQDVSK.png"] },
-  { id: "tka-41.900", nome: "TKA 41.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-41.900", specs: ["CAP. MÁX. 9.500 Kg PESO PRÓPRIO 3.680 Kg EXTENSÕES HIDRÁULICAS 5 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 23,8 m MÁX. HORIZONTAL 20,6 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "", preco: 0.0, linha: "TRAVE" },
-  { id: "tka-45.700", nome: "TKA 45.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-45.700", specs: ["CAP. MÁX. 10.130 Kg PESO PRÓPRIO 4.425 Kg EXTENSÕES HIDRÁULICAS 4 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 22,8 m MÁX. HORIZONTAL 19 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_11.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_45_700_56oKjJ.png", "assets/tka/g_45_700_0M5WM6.png"] },
-  { id: "tka-48.700", nome: "TKA 48.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-48.700", specs: ["CAP. MÁX. 10.840 Kg PESO PRÓPRIO 4.540 Kg EXTENSÕES HIDRÁULICAS 6 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 25,5 m MÁX. HORIZONTAL 22,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_12.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_48_700_0YrDCV.png", "assets/tka/g_48_700_1qtrFT.png"] },
-  { id: "tka-50.700", nome: "TKA 50.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-50.700", specs: ["CAP. MÁX. 24.000 Kg PESO PRÓPRIO 5.850 Kg EXTENSÕES HIDRÁULICAS 6h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 26,7 m MÁX. HORIZONTAL 22,9 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_50_700_2OiqPO.png"] },
-  { id: "tka-50.700-fly", nome: "TKA 50.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-50.700-FLY", specs: ["CAP. MÁX. 20.880 Kg PESO PRÓPRIO 6.600 Kg EXTENSÕES HIDRÁULICAS 6h + 4h da fly EXTENSÕES MANUAIS 1m da fly MÁX. VERTICAL 30,30m MÁX. HORIZONTAL 27,63m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_13.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_50_700-fly_Id5UgH.png"] },
-  { id: "tka-50.900", nome: "TKA 50.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-50.900", specs: ["CAP. MÁX. 11.600 kG PESO PRÓPRIO 4.540 Kg EXTENSÕES HIDRÁULICAS 6 h EXTENSÕES MANUAIS 3 m MÁX. VERTICAL 25,5 m MÁX. HORIZONTAL 22,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_50_900_5U3ygW.png"] },
-  { id: "tka-51.900", nome: "TKA 51.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-51.900", specs: ["CAP. MÁX. 11.600 kG PESO PRÓPRIO 4.830 Kg EXTENSÕES HIDRÁULICAS 6h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 25,5 m MÁX. HORIZONTAL 22,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_14.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_51_900_BAeMhD.png"] },
-  { id: "tka-6.700", nome: "TKA 6.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-6.700", specs: ["CAP. MÁX. 2.670 Kg PESO PRÓPRIO 1.100 Kg EXTENSÕES HIDRÁULICAS 3 EXTENSÕES MANUAIS 1 MÁX. VERTICAL 13,6 m MÁX. HORIZONTAL 10,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_15.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_6_700_Az4aon.png"] },
-  { id: "tka-66.700", nome: "TKA 66.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-66.700", specs: ["CAP. MÁX. 30.190 Kg PESO PRÓPRIO 6.320 Kg EXTENSÕES HIDRÁULICAS 3H EXTENSÕES MANUAIS 7 MÁX. VERTICAL 29,2m MÁX. HORIZONTAL 18,6m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_66_700_33uyTV.png"] },
-  { id: "tka-66.700-fly", nome: "TKA 66.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-66.700-FLY", specs: ["CAP. MÁX. 28.220 Kg PESO PRÓPRIO 7.040 Kg EXTENSÕES HIDRÁULICAS 7h + 4h da fly EXTENSÕES MANUAIS 1m da fly MÁX. VERTICAL 33,60m MÁX. HORIZONTAL 30,03m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_16.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_66_700-fly_D2HBIf.png"] },
-  { id: "tka-72.900", nome: "TKA 72.900 com Fly", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-72.900", specs: ["CAP. MÁX. 15.000 Kg PESO PRÓPRIO 6.670 Kg EXTENSÕES HIDRÁULICAS 7h + 4h da fly EXTENSÕES MANUAIS 1 m da flly MÁX. VERTICAL 32.7 m MÁX. HORIZONTAL 28.9 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_72_900_7F48FS.png"] },
-  { id: "tka-72.900-fly", nome: "TKA 72.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-72.900-FLY", specs: ["CAP. MÁX. 16.000 Kg PESO PRÓPRIO 5.950 Kg EXTENSÕES HIDRÁULICAS 7h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 27.6 m MÁX. HORIZONTAL 24.1 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_72_900-fly_58Bu9D.png"] },
-  { id: "tka-8.700", nome: "TKA 8.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-8.700", specs: ["CAP. MÁX. 2.000 Kg PESO PRÓPRIO 1.210 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 1 m MÁX. VERTICAL 13,5 m MÁX. HORIZONTAL 10,2 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_17.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_8_700_H6WREa.png"] },
-  { id: "tka-8.700-bx", nome: "TKA 8.700 BX", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-8.700-BX", specs: ["CAP. MÁX. 2.000 Kg PESO PRÓPRIO 1.210 Kg EXTENSÕES HIDRÁULICAS 3 h EXTENSÕES MANUAIS 1 m MÁX. VERTICAL 13,5 m MÁX. HORIZONTAL 10,2 m"], desc: "Guindaste TKA novo — linha BX. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0, linha: "BX", gallery: ["assets/tka/g_8_700-bx_LKBIX9.png"] },
-  { id: "tka-80.700", nome: "TKA 80.700", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-80.700", specs: ["CAP. MÁX. 17.100 Kg PESO PRÓPRIO 7.400 Kg EXTENSÕES HIDRÁULICAS 7H EXTENSÕES MANUAIS 3 M MÁX. VERTICAL 28.3 m MÁX. HORIZONTAL 24.06 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_19.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_80_700_DBTrot.png"] },
-  { id: "tka-80.700-fly", nome: "TKA 80.700 com Fly", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-80.700-FLY", specs: ["CAP. MÁX. 16.800 Kg PESO PRÓPRIO 8.125 Kg EXTENSÕES HIDRÁULICAS 7h + 4h da fly EXTENSÕES MANUAIS 1 m da fly MÁX. VERTICAL 32,64 m MÁX. HORIZONTAL 29,07 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_80_700-fly_6glAfh.png"] },
-  { id: "tka-9.900", nome: "TKA 9.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-9.900", specs: ["CAP. MÁX. 4.000 Kg PESO PRÓPRIO 1.320 Kg EXTENSÕES HIDRÁULICAS 4 EXTENSÕES MANUAIS 0 MÁX. VERTICAL 13,6 m MÁX. HORIZONTAL 10,7 m"], desc: "Guindaste TKA novo — linha CANIVETE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_20.png", preco: 0.0, linha: "CANIVETE", gallery: ["assets/tka/g_9_900_BNjPVc.png"] },
-  { id: "tka-90.900", nome: "TKA 90.900", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-90.900", specs: ["CAP. MÁX. 20.300 Kg PESO PRÓPRIO 7.870 Kg EXTENSÕES HIDRÁULICAS 8h EXTENSÕES MANUAIS 3m MÁX. VERTICAL 31 m MÁX. HORIZONTAL 26.1 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_90_900_0VRXlU.png"] },
-  { id: "tka-90.900-fly", nome: "TKA 90.900 com Fly", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-90.900-FLY", specs: ["CAP. MÁX. 19.400 Kg PESO PRÓPRIO 8.930 Kg EXTENSÕES HIDRÁULICAS 8h + 5h da fly EXTENSÕES MANUAIS 1m da fly MÁX. VERTICAL 36.5 m MÁX. HORIZONTAL 32.8 m"], desc: "Guindaste TKA novo — linha TRAVE. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_03.png", preco: 0.0, linha: "TRAVE", gallery: ["assets/tka/g_90_900-fly_0DEjVm.png"] },
-  { id: "tka-cesto-10", nome: "Cesto 10", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-10", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0, gallery: ["assets/tka/g_cesto-10_LKBIX9.png"] },
-  { id: "tka-cesto-13.5", nome: "Cesto 13.5", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-13.5", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "assets/tka/tka_18.png", preco: 0.0, gallery: ["assets/tka/g_cesto-13_5_LKBIX9.png"] },
-  { id: "tka-cesto-15.5", nome: "Cesto 15.5", colecao: "tka_novo", categoria: "TKA Novos", codigo: "TKA-CESTO-15.5", specs: [], desc: "Guindaste TKA novo. Representante autorizado. Cotação consultiva via WhatsApp.", img: "", preco: 0.0 },
-  { id: "usado-madal-md300", nome: "Guindauto Madal MD 30.000", colecao: "usado", categoria: "Usados", codigo: "US-MADAL30", specs: ["Ano 2018", "4 Hidráulicas + 2 Manuais", "Cap. 7.5 Ton", "Laudo NR12"], desc: "Equipamento em excelente estado de conservação, revisado recentemente no pátio MT. Acompanha sobrechassi e sapatas hidráulicas estendidas.", img: "assets/tka/tka_07.png", preco: 168000.0 },
-  { id: "usado-tka-45700", nome: "Guindaste TKA 45.700 Trave", colecao: "usado", categoria: "Usados", codigo: "US-TKA45", specs: ["Ano 2019", "Linha Trave", "4 Hidráulicas + 3 Manuais", "Revisado Fábrica"], desc: "Guindaste TKA revisado com peças originais. Bomba hidráulica nova e comandos duplos. Pronto para trabalhar e com garantia de procedência.", img: "assets/tka/tka_11.png", preco: 235000.0 },
-  { id: "usado-argos-agi20", nome: "Guindauto Argos AGI 20.5", colecao: "usado", categoria: "Usados", codigo: "US-ARGOS20", specs: ["Ano 2020", "Controle Remoto", "3 Hidráulicas + 1 Manual", "Único Dono"], desc: "Guindauto compacto e muito ágil para entregas e canteiro de obras. Rádio controle operacional incluso e sapatas dianteiras e traseiras.", img: "assets/tka/tka_04.png", preco: 182000.0 },
-  { id: "usado-palfinger-pk23500", nome: "Guindaste Palfinger PK 23500", colecao: "usado", categoria: "Usados", codigo: "US-PALF23", specs: ["Ano 2016", "Linha Canivete", "5 Hidráulicas", "Alcance 18m"], desc: "Excelente para movimentação em galpões e locais de difícil acesso. Sistema de giro contínuo e cilindros de elevação cromados sem vazamentos.", img: "assets/tka/tka_05.png", preco: 195000.0 },
-  { id: "usado-caminhao-vw-tka50", nome: "Caminhão VW 24.280 + TKA 50.700", colecao: "usado", categoria: "Usados", codigo: "US-VWTKA50", specs: ["Conjunto 2017/2018", "Truck 6x2", "Carroceria 7.5m", "Cap. 12 Ton"], desc: "Conjunto completo caminhão + guindaste veicular montado. Caminhão com 182.000 km, mecânica rigorosamente em dia e carroceria metálica reforçada.", img: "assets/tka/tka_12.png", preco: 510000.0 },
-  { id: "usado-masal-ms200", nome: "Guindauto Masal MS 200", colecao: "usado", categoria: "Usados", codigo: "US-MASAL20", specs: ["Ano 2015", "3 Hidráulicas + 1 Manual", "Trave Robusta", "Ótimo Custo/Benefício"], desc: "Equipamento robusto para carga e descarga de paletes e materiais de construção. Revisado no pátio, pintura nova e selos em dia.", img: "assets/tka/tka_17.png", preco: 98000.0 },
-  { id: "usado-patio", nome: "Estoque Rotativo de Pátio — Chame o Marcelo", colecao: "usado", categoria: "Usados", codigo: "US-PATIO", specs: ["Giro Semanal", "Modelos de 6 a 80 Ton", "Consultoria Direta"], desc: "O estoque de guindastes usados e seminovos da MT tem alta rotatividade semanal. Fale diretamente com o especialista comercial e receba a lista do dia.", img: "assets/tka/tka_09.png", preco: 0.0, cta: true },
+  { id: "garfo-paleteiro", nome: "Garfo Paleteiro", colecao: "peca", categoria: "Garfos Paleteiros", codigo: "GP-MT", specs: ["1.5 Ton / 2.5 Ton / 3.0 Ton"], desc: "Garfo paleteiro ajustável de alta resistência projetado para movimentação e elevação de cargas paletizadas. Fabricação padrão Angra Metal.", img: "assets/pecas/angra_01.png", gallery: ["assets/pecas/angra_01.png", "assets/pecas/angra_02.png"], preco: 1890.0 },
+  { id: "garfo-para-bobcat", nome: "Garfo para Bobcat", colecao: "peca", categoria: "Garfos Paleteiros", codigo: "GP-BOBCAT-MT", specs: ["Engate Rápido Mini"], desc: "Garfo paleteiro projetado para engate rápido e movimentação ágil em minicarregadeiras estilo Bobcat.", img: "assets/pecas/angra_02.png", gallery: ["assets/pecas/angra_02.png"], preco: 0.0 },
+  { id: "garfo-para-retroescavadeira", nome: "Garfo para Retroescavadeira", colecao: "peca", categoria: "Garfos Paleteiros", codigo: "GP-RETRO-MT", specs: ["Adaptável Concha"], desc: "Acessório de garfos paleteiros para retroescavadeiras, ideal para movimentação de pallets em canteiros de obra.", img: "assets/pecas/angra_02.png", gallery: ["assets/pecas/angra_02.png"], preco: 0.0 },
+  { id: "garfo-pega-tubos-tipo-c", nome: "Garfo Pega Tubos Tipo C", colecao: "peca", categoria: "Garfos Paleteiros", codigo: "GP-TUBOC-MT", specs: ["Cap. 2.0 Ton"], desc: "Acessório específico para movimentação segura e precisa de manilhas e tubos de concreto.", img: "assets/pecas/angra_02.png", gallery: ["assets/pecas/angra_02.png"], preco: 0.0 },
+  { id: "balancim-de-carga", nome: "Balancim de Carga", colecao: "peca", categoria: "Acessórios", codigo: "AC-BALANCIM-MT", specs: ["Cap. 5.0 Ton"], desc: "Trave metálica de içamento projetada para distribuição de peso equilibrada em cargas pesadas e içamentos complexos.", img: "assets/pecas/angra_03.png", gallery: ["assets/pecas/angra_03.png"], preco: 0.0 },
+  { id: "suporte-para-big-bag", nome: "Suporte para Big Bag", colecao: "peca", categoria: "Acessórios", codigo: "AC-BIGBAG-MT", specs: ["1.0 Ton / 1.2 Ton"], desc: "Suporte em cruz reforçado com ganchos de segurança para transporte estável de sacarias tipo big bag.", img: "assets/pecas/angra_03.png", gallery: ["assets/pecas/angra_03.png"], preco: 2450.0 },
+  { id: "pega-postes", nome: "Pega Postes", colecao: "peca", categoria: "Acessórios", codigo: "AC-POSTE-MT", specs: ["Pinça Mecânica Autoajustável"], desc: "Pinça mecânica autoajustável projetada para elevação e assentamento vertical de postes cilíndricos.", img: "assets/pecas/angra_04.png", gallery: ["assets/pecas/angra_04.png"], preco: 0.0 },
+  { id: "saca-postes-hidraulico", nome: "Saca Postes Hidráulico", colecao: "peca", categoria: "Acessórios", codigo: "AC-SACAPOSTE-MT", specs: ["Cilindro Hidráulico Integrado"], desc: "Equipamento hidráulico robusto para extração vertical eficiente de postes e estacas.", img: "assets/pecas/angra_04.png", gallery: ["assets/pecas/angra_04.png"], preco: 0.0 },
+  { id: "funil-multiuso", nome: "Funil Multiuso", colecao: "peca", categoria: "Acessórios", codigo: "AC-FUNIL-MT", specs: ["Descarga Metálica"], desc: "Funil de descarga metálico indicado para ração, grãos, concreto, brita e areia.", img: "assets/pecas/angra_04.png", gallery: ["assets/pecas/angra_04.png"], preco: 0.0 },
+  { id: "cesto-de-fibra-1-operador", nome: "Cesto de Fibra — 1 Operador", colecao: "peca", categoria: "Cestos de Fibra", codigo: "CF-MT1", specs: ["1 Operador NR12", "Isolamento 46kV"], desc: "Cesto aéreo de fibra para trabalho em altura de 1 operador, garantindo segurança e isolamento elétrico segundo NR12.", img: "assets/pecas/angra_05.png", gallery: ["assets/pecas/angra_05.png", "assets/pecas/angra_06.png"], preco: 5700.0 },
+  { id: "cesto-de-fibra-com-lanca-frontal", nome: "Cesto de Fibra com Lança Frontal", colecao: "peca", categoria: "Cestos de Fibra", codigo: "CF-MTF", specs: ["Lança Frontal", "Conforme NR12"], desc: "Modelo com fixação por lança frontal, ideal para posicionamento rente a fachadas e postes. Suporta até 2 operadores.", img: "assets/pecas/angra_06.png", gallery: ["assets/pecas/angra_06.png"], preco: 0.0 },
+  { id: "cesto-de-fibra-2-operadores", nome: "Cesto de Fibra — 2 Operadores", colecao: "peca", categoria: "Cestos de Fibra", codigo: "CF-MT2", specs: ["2 Operadores NR12", "Alta Carga"], desc: "Cesto duplo para trabalho em altura com 2 operadores simultâneos, fabricado em fibra de alta resistência conforme NR12.", img: "assets/pecas/angra_07.png", gallery: ["assets/pecas/angra_07.png", "assets/pecas/angra_08.png"], preco: 0.0 },
+  { id: "cesto-metalico-acoplado", nome: "Cesto Metálico Acoplado", colecao: "peca", categoria: "Cestos Metálicos", codigo: "CM-MTA", specs: ["1 ou 2 Operadores NR12", "Estrutura Tubular"], desc: "Cesto com estrutura em aço tubular reforçado para acoplamento em guindastes veiculares.", img: "assets/pecas/angra_09.png", gallery: ["assets/pecas/angra_09.png"], preco: 0.0 },
+  { id: "cesto-metalico-suspenso", nome: "Cesto Metálico Suspenso", colecao: "peca", categoria: "Cestos Metálicos", codigo: "CM-MTS", specs: ["Suspensão por Cabo", "Porta de Segurança"], desc: "Cesto metálico para suspensão por guinchos de cabo de aço, com grades de proteção reforçadas e portas de acesso.", img: "assets/pecas/angra_10.png", gallery: ["assets/pecas/angra_10.png"], preco: 0.0 },
+  { id: "goleiras-pitocos-escudos-comerciais", nome: "Goleiras, Pitocos e Escudos Comerciais", colecao: "peca", categoria: "Linha Comercial", codigo: "LC-MT1", specs: ["Proteção de Fachadas", "Aço Galvanizado"], desc: "Estruturas metálicas de proteção, delimitação de vagas e organização para calçadas e postos de combustível.", img: "assets/pecas/angra_11.png", gallery: ["assets/pecas/angra_11.png"], preco: 0.0 },
+  { id: "ralos-canaletas-tampas-grelhas", nome: "Ralos, Canaletas, Tampas e Grelhas", colecao: "peca", categoria: "Linha Comercial", codigo: "LC-MT2", specs: ["Piso Pesado", "Drenagem Pluvial"], desc: "Tampas de ferro, grelhas para pista de tráfego pesado, ralos de escoamento e canaletas de drenagem industrial.", img: "assets/pecas/angra_12.png", gallery: ["assets/pecas/angra_12.png"], preco: 0.0 },
+  { id: "rebocador-e-carrinhos-especiais", nome: "Rebocador e Carrinhos Especiais", colecao: "peca", categoria: "Projetos Especiais", codigo: "PE-MT1", specs: ["Até 10 Ton", "Sob Medida"], desc: "Carrinhos para movimentação industrial interna sob medida e rebocador hidráulico de cargas pesadas em comboio.", img: "assets/pecas/angra_13.png", gallery: ["assets/pecas/angra_13.png"], preco: 0.0 },
+  { id: "escada-industrial-sob-medida", nome: "Escada Industrial sob Medida", colecao: "peca", categoria: "Projetos Especiais", codigo: "PE-MT2", specs: ["Guarda-Corpo NR12", "Passarela Industrial"], desc: "Escadas industriais e passarelas de acesso metálicas fabricadas sob medida para galpões, silos e indústrias.", img: "assets/pecas/angra_14.png", gallery: ["assets/pecas/angra_14.png"], preco: 0.0 },
+  { id: "usado-madal-md300", nome: "Guindauto Madal MD 30.000", colecao: "usado", categoria: "Usados", codigo: "US-MADAL30", specs: ["Ano 2018", "4 Hidráulicas + 2 Manuais", "Cap. 7.5 Ton", "Laudo NR12"], desc: "Equipamento em excelente estado de conservação, revisado recentemente no pátio MT. Acompanha sobrechassi e sapatas hidráulicas estendidas.", img: "assets/tka/tka_07.png", gallery: ["assets/tka/tka_07.png", "assets/tka/g_20_700_Rv46iU.png"], preco: 168000.0 },
+  { id: "usado-tka-45700", nome: "Guindaste TKA 45.700 Trave", colecao: "usado", categoria: "Usados", codigo: "US-TKA45", specs: ["Ano 2019", "Linha Trave", "4 Hidráulicas + 3 Manuais", "Revisado Fábrica"], desc: "Guindaste TKA revisado com peças originais. Bomba hidráulica nova e comandos duplos. Pronto para trabalhar e com garantia de procedência.", img: "assets/tka/tka_11.png", gallery: ["assets/tka/tka_11.png", "assets/tka/g_45_700_56oKjJ.png"], preco: 235000.0 },
+  { id: "usado-argos-agi20", nome: "Guindauto Argos AGI 20.5", colecao: "usado", categoria: "Usados", codigo: "US-ARGOS20", specs: ["Ano 2020", "Controle Remoto", "3 Hidráulicas + 1 Manual", "Único Dono"], desc: "Guindauto compacto e muito ágil para entregas e canteiro de obras. Rádio controle operacional incluso e sapatas dianteiras e traseiras.", img: "assets/tka/tka_04.png", gallery: ["assets/tka/tka_04.png", "assets/tka/g_12_700_CDxGpP.png"], preco: 182000.0 },
+  { id: "usado-palfinger-pk23500", nome: "Guindaste Palfinger PK 23500", colecao: "usado", categoria: "Usados", codigo: "US-PALF23", specs: ["Ano 2016", "Linha Canivete", "5 Hidráulicas", "Alcance 18m"], desc: "Excelente para movimentação em galpões e locais de difícil acesso. Sistema de giro contínuo e cilindros de elevação cromados sem vazamentos.", img: "assets/tka/tka_05.png", gallery: ["assets/tka/tka_05.png", "assets/tka/g_14_900_CTqGG7.png"], preco: 195000.0 },
+  { id: "usado-caminhao-vw-tka50", nome: "Caminhão VW 24.280 + TKA 50.700", colecao: "usado", categoria: "Usados", codigo: "US-VWTKA50", specs: ["Conjunto 2017/2018", "Truck 6x2", "Carroceria 7.5m", "Cap. 12 Ton"], desc: "Conjunto completo caminhão + guindaste veicular montado. Caminhão com 182.000 km, mecânica rigorosamente em dia e carroceria metálica reforçada.", img: "assets/tka/tka_12.png", gallery: ["assets/tka/tka_12.png", "assets/tka/g_48_700_0YrDCV.png"], preco: 510000.0 },
+  { id: "usado-masal-ms200", nome: "Guindauto Masal MS 200", colecao: "usado", categoria: "Usados", codigo: "US-MASAL20", specs: ["Ano 2015", "3 Hidráulicas + 1 Manual", "Trave Robusta", "Ótimo Custo/Benefício"], desc: "Equipamento robusto para carga e descarga de paletes e materiais de construção. Revisado no pátio, pintura nova e selos em dia.", img: "assets/tka/tka_17.png", gallery: ["assets/tka/tka_17.png", "assets/tka/g_8_700_H6WREa.png"], preco: 98000.0 },
+  { id: "usado-patio", nome: "Estoque Rotativo de Pátio — Chame o Marcelo", colecao: "usado", categoria: "Usados", codigo: "US-PATIO", specs: ["Giro Semanal", "Modelos de 6 a 80 Ton", "Consultoria Direta"], desc: "O estoque de guindastes usados e seminovos da MT tem alta rotatividade semanal. Fale diretamente com o especialista comercial e receba a lista do dia.", img: "assets/tka/tka_09.png", gallery: ["assets/tka/tka_09.png"], preco: 0.0, cta: true }
 ];
 /*END:PRODUCTS*/
 
-/* Ordem dos pills: TKA diferenciado, Todos (exceto TKA), categorias, Usados */
+/* Ordem dos pills: Todos os implementos e usados */
 const PILL_ORDER = [
-    { id: '__tka', label: 'TKA Novos', special: true },
-    { id: 'Usados', label: 'Usados' },
-    { id: 'todos', label: 'Todos' },
-    { id: 'Acessórios', label: 'Acessórios' },
+    { id: 'todos', label: 'Todos os Implementos' },
+    { id: 'Usados', label: 'Usados & Seminovos' },
     { id: 'Garfos Paleteiros', label: 'Garfos Paleteiros' },
+    { id: 'Acessórios', label: 'Acessórios Industriais' },
     { id: 'Cestos de Fibra', label: 'Cestos de Fibra' },
     { id: 'Cestos Metálicos', label: 'Cestos Metálicos' },
     { id: 'Linha Comercial', label: 'Linha Comercial' },
     { id: 'Projetos Especiais', label: 'Projetos Especiais' }
 ];
 
-/* Trilhos estilo streaming: TKA Novos, Peças por família, Usados */
+/* Trilhos principais de streaming */
 const RAILS = [
-    { id: 'tka', title: 'TKA Novos', subtitle: 'Guindastes novos com cotação consultiva direta.', icon: 'truck', match: p => p.colecao === 'tka_novo' },
-    { id: 'pecas', title: 'Peças e Acessórios', subtitle: 'Preço de referência + sacola + cotação com CEP.', icon: 'wrench', match: p => p.colecao === 'peca' },
-    { id: 'usados', title: 'Usados do pátio', subtitle: 'Giro semanal — chame o Marcelo no WhatsApp.', icon: 'badge-check', match: p => p.colecao === 'usado' }
+    { id: 'usados', title: 'Pátio de Usados & Seminovos', subtitle: 'Giro semanal com revisão e laudo. Chame o Marcelo no WhatsApp.', icon: 'badge-check', match: p => p.colecao === 'usado' },
+    { id: 'garfos', title: 'Garfos Paleteiros & Elevação', subtitle: 'Para guindastes veiculares, bobcats e retroescavadeiras.', icon: 'wrench', match: p => p.categoria === 'Garfos Paleteiros' },
+    { id: 'acessorios', title: 'Acessórios & Dispositivos de Carga', subtitle: 'Balancins, suportes big bag e garras para postes.', icon: 'wrench', match: p => p.categoria === 'Acessórios' },
+    { id: 'cestos', title: 'Cestos Aéreos NR12 (Fibra & Metal)', subtitle: 'Elevação com isolamento e segurança para 1 ou 2 operadores.', icon: 'arrow-up-from-line', match: p => p.categoria === 'Cestos de Fibra' || p.categoria === 'Cestos Metálicos' },
+    { id: 'comercial-especial', title: 'Linha Comercial & Projetos Especiais', subtitle: 'Goleiras de proteção, canaletas e carrinhos sob medida.', icon: 'shield-check', match: p => p.categoria === 'Linha Comercial' || p.categoria === 'Projetos Especiais' }
 ];
 
-/* Subgrupos ao clicar numa seção: TKA por linha, peças por família */
 function groupsFor() {
-    if (activeCategory === '__tka') {
-        return [
-            { id: 'canivete', title: 'Linha Canivete', subtitle: 'Articulação para espaços confinados.', icon: 'truck', match: p => p.colecao === 'tka_novo' && p.linha === 'CANIVETE' },
-            { id: 'trave', title: 'Linha Trave', subtitle: 'Estrutura fixa para cargas pesadas.', icon: 'truck', match: p => p.colecao === 'tka_novo' && p.linha === 'TRAVE' },
-            { id: 'bx', title: 'Linha BX', subtitle: 'Versatilidade entre móvel e fixo.', icon: 'truck', match: p => p.colecao === 'tka_novo' && p.linha === 'BX' },
-            { id: 'cestos-tka', title: 'Cestos TKA', subtitle: 'Elevação de pessoas acoplada ao guindaste.', icon: 'arrow-up-from-line', match: p => p.colecao === 'tka_novo' && p.id.indexOf('tka-cesto') === 0 }
-        ];
-    }
-    if (activeCategory !== 'todos' && activeCategory !== 'Usados') {
-        return [{ id: 'cat', title: activeCategory, subtitle: 'Arraste para o lado ou abra a cotação no card.', icon: 'wrench', match: p => p.categoria === activeCategory }];
-    }
-    if (activeCategory === 'Usados') return [RAILS[2]];
-    return RAILS;
+    if (activeCategory === 'todos') return RAILS;
+    if (activeCategory === 'Usados') return [RAILS[0]];
+    return [{ id: 'cat', title: activeCategory, subtitle: 'Arraste para o lado ou adicione peças à sua cotação.', icon: 'wrench', match: p => p.categoria === activeCategory }];
 }
 
 let cart = [];
@@ -318,12 +272,13 @@ window.openQuoteModal = function(id) {
     document.getElementById('modal-img').style.display = p.img ? '' : 'none';
     document.getElementById('modal-title').textContent = p.nome + ' · ' + p.codigo;
     document.getElementById('modal-desc').textContent = p.desc;
+    const galleryThumbs = (p.gallery && p.gallery.length > 1)
+        ? `<div class="modal-gallery-thumbs">${p.gallery.map((g, idx) => `<img src="${g}" alt="${p.nome}" class="modal-gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="window.switchModalPhoto('${g}', this)">`).join('')}</div>`
+        : '';
     document.getElementById('modal-ref').innerHTML = (p.preco > 0
         ? `Referência da peça: <strong>R$ ${Number(p.preco).toFixed(2).replace('.', ',')}</strong>`
         : `Item <strong>sob consulta</strong> — o Marcelo retorna com valor + frete.`)
-        + ((p.gallery || []).length
-            ? `<div class="modal-gallery">${p.gallery.map(g => `<a href="${g}" target="_blank" rel="noopener"><img src="${g}" alt="${p.nome} em uso" loading="lazy" onerror="this.parentNode.remove()"></a>`).join('')}</div>
-               <p class="modal-gallery-hint">Fotos do equipamento em operação — toque para ampliar.</p>` : '');
+        + galleryThumbs;
     document.getElementById('q-cep').value = '';
     document.getElementById('q-cnpj').value = '';
     document.getElementById('q-nome').value = '';
@@ -373,7 +328,7 @@ window.closeQuoteModal = function() {
     modalProduct = null;
 };
 
-/* Prancheta de cotação restrita a peças */
+/* Prancheta de cotação restrita a peças com feedback deliberado */
 window.addToQuote = function(id) {
     const p = PRODUCTS.find(x => x.id === id);
     if (!p || p.colecao !== 'peca') return;
@@ -381,12 +336,32 @@ window.addToQuote = function(id) {
     if (!existing) {
         cart.push({ id: p.id, qty: 1 });
         saveCart(); updateCartUI(); renderCatalog();
-        showToast(p.nome + ' adicionado à cotação.');
+        window.showFloatingBar(p.nome + ' adicionado à cotação.');
     } else {
         existing.qty += 1;
         saveCart(); updateCartUI(); renderCatalog();
-        showToast(p.nome + ' (+1 na cotação: ' + existing.qty + 'x).');
+        window.showFloatingBar(p.nome + ' (' + existing.qty + 'x na cotação).');
     }
+};
+
+let floatingTimeout = null;
+window.showFloatingBar = function(msg) {
+    const bar = document.getElementById('floating-quote-bar');
+    if (!bar) return;
+    const items = cartDetailed();
+    const count = items.reduce((s, i) => s + i.qty, 0);
+    document.getElementById('fq-title').textContent = msg || 'Item adicionado à cotação!';
+    document.getElementById('fq-subtitle').textContent = count + (count === 1 ? ' item selecionado' : ' itens selecionados') + ' · Pode adicionar mais peças à lista';
+    bar.classList.add('show');
+    if (floatingTimeout) clearTimeout(floatingTimeout);
+    floatingTimeout = setTimeout(() => {
+        bar.classList.remove('show');
+    }, 5500);
+};
+
+window.hideFloatingBar = function() {
+    const bar = document.getElementById('floating-quote-bar');
+    if (bar) bar.classList.remove('show');
 };
 
 
@@ -591,3 +566,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     if (window.lucide) lucide.createIcons();
 });
+
+window.switchModalPhoto = function(src, el) {
+    const main = document.getElementById('modal-img');
+    if (main) main.src = src;
+    document.querySelectorAll('.modal-gallery-thumb').forEach(t => t.classList.remove('active'));
+    if (el) el.classList.add('active');
+};

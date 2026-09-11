@@ -1,0 +1,277 @@
+[
+  {
+    "slug": "8.700bx",
+    "codigo": "TKA 8.700",
+    "linha": "BX",
+    "descricao": "O Guindaste TKA 8.700 BX foi desenvolvido para versatilidade ágil e montagem inteligente na carroceria. Ideal para logística de insumos agrícolas, movimentação de big bags e materiais de construção, aliando baixo peso próprio (970 kg) à força de 4.500 kg.",
+    "specs": {
+      "capacidadeMaxima": "4.500Kg",
+      "pesoProprio": "970Kg",
+      "extensoesHidraulicas": 3,
+      "extensoesManuais": 1,
+      "maximoVertical": "10,09m",
+      "maximoHorizontal": "8,2m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "X6TAlBgXfcWBSlAUPBS6",
+          "possui": true
+        },
+        {
+          "id": "QrE2WAuW2d69G863szyR",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/8.700bx/foto-1.png",
+      "assets/tka-oficial/8.700bx/foto-2.png",
+      "assets/tka-oficial/8.700bx/foto-3.png",
+      "assets/tka-oficial/8.700bx/foto-4.png"
+    ],
+    "grafico": "assets/tka-oficial/8.700bx/grafico-de-carga.png",
+    "destaque_hero": true
+  },
+  {
+    "slug": "55.900",
+    "codigo": "TKA 55.900",
+    "linha": "Trave",
+    "descricao": "O Guindaste TKA 55.900 entrega momento de força superior para grandes cargas e logística extrapesada. Com 6 lanças hidráulicas e alcance horizontal de 22,4 m (alcance vertical de 25,8 m), é referência em produtividade com garantia de fábrica.",
+    "specs": {
+      "capacidadeMaxima": "13.700Kg",
+      "pesoProprio": "5.630Kg",
+      "extensoesHidraulicas": "6",
+      "extensoesManuais": "3",
+      "maximoVertical": "25,8m",
+      "maximoHorizontal": "22,4m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/55.900/foto-1.png",
+      "assets/tka-oficial/55.900/foto-2.png",
+      "assets/tka-oficial/55.900/foto-3.png",
+      "assets/tka-oficial/55.900/foto-4.png"
+    ],
+    "grafico": "assets/tka-oficial/55.900/grafico-de-carga.png",
+    "destaque_hero": true
+  },
+  {
+    "slug": "45.700",
+    "codigo": "TKA 45.700",
+    "linha": "Trave",
+    "descricao": "O Guindaste TKA 45.700 (Linha Trave) combina alta capacidade com precisão milimétrica. Possui 4 lanças hidráulicas e 3 manuais, alcance vertical de 22,8 m e patolas com abertura de 6,1 m, assegurando máxima estabilidade em içamentos severos.",
+    "specs": {
+      "capacidadeMaxima": "10.130Kg",
+      "pesoProprio": "4.425Kg",
+      "extensoesHidraulicas": 4,
+      "extensoesManuais": 3,
+      "maximoVertical": "22,8m",
+      "maximoHorizontal": "19,0m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "PyCaseWki67ttY12hOWm",
+          "possui": true
+        },
+        {
+          "id": "n6r7v1KoCTYr8gtdYVnr",
+          "possui": false
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "9G8luGSgIQYHyYmxlF03",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/45.700/foto-1.png",
+      "assets/tka-oficial/45.700/foto-2.png",
+      "assets/tka-oficial/45.700/foto-3.png"
+    ],
+    "grafico": "assets/tka-oficial/45.700/grafico-de-carga.png",
+    "destaque_hero": true
+  },
+  {
+    "slug": "40.900",
+    "codigo": "TKA 40.900",
+    "linha": "Trave",
+    "descricao": "O Guindaste TKA 40.900 (Linha Trave) é projetado para máxima eficiência e estabilidade em operações pesadas na construção civil, infraestrutura e locação. Construído com aços especiais de alta resistência, patolas com abertura de 6,0 m e capacidade máxima de 9.500 kg.",
+    "specs": {
+      "capacidadeMaxima": "9.500Kg",
+      "pesoProprio": "3.680Kg",
+      "extensoesHidraulicas": 5,
+      "extensoesManuais": 3,
+      "maximoVertical": "23,8m",
+      "maximoHorizontal": "20,6m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "6B5prxAPgobkY2PopVT4",
+          "possui": true
+        },
+        {
+          "id": "c7mK3Xa9g5ZZKf5qpFzS",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "q63Fk7hWzN5wIW0yoq4n",
+          "possui": true
+        },
+        {
+          "id": "D8ZmOvvQN8HZLIQHcAXL",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/40.900/foto-1.png",
+      "assets/tka-oficial/40.900/foto-2.png",
+      "assets/tka-oficial/40.900/foto-3.png",
+      "assets/tka-oficial/40.900/foto-4.png"
+    ],
+    "grafico": "assets/tka-oficial/40.900/grafico-de-carga.png",
+    "destaque_hero": true
+  }
+]

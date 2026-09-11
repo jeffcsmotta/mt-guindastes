@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tka-page-title">Guindaste TKA | MT Guindastes — Revendedor Autorizado</title>
+    <meta name="description" id="tka-meta-desc" content="Especificações técnicas completas, gráficos de carga e cotação de guindastes TKA novos direto de fábrica com a MT Guindastes.">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=mt4">
+    <link rel="stylesheet" href="mt-theme.css?v=mt4">
+    <link rel="stylesheet" href="mt-rails.css?v=mt4">
+    <style>
+        .tka-detail-page {
+            background: #090D14;
+            color: #F8FAFC;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+        .tka-nav-bar {
+            background: #0E141F;
+            border-bottom: 1px solid #222C3D;
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 90;
+        }
+        .tka-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .btn-back-catalog {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #94A3B8;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .btn-back-catalog:hover {
+            color: #EA580C;
+        }
+        .tka-header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(234, 88, 12, 0.12);
+            border: 1px solid rgba(234, 88, 12, 0.4);
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #FFEDD5;
+        }
+        .tka-product-hero {
+            padding: 40px 0 20px;
+        }
+        .tka-grid-hero {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .tka-gallery-box {
+            background: #0E141F;
+            border: 1px solid #222C3D;
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        .tka-main-img-wrap {
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tka-main-img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+        }
+        .tka-thumbs-row {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+        }
+        .tka-thumb {
+            width: 80px;
+            height: 64px;
+            border-radius: var(--radius-sm);
+            border: 2px solid #222C3D;
+            background: #151D2A;
+            padding: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+        .tka-thumb:hover, .tka-thumb.active {
+            border-color: #EA580C;
+            background: rgba(234, 88, 12, 0.1);
+        }
+        .tka-info-card {
+            background: #0E141F;
+            border: 1px solid #222C3D;
+            border-radius: var(--radius-lg);
+            padding: 32px;
+        }
+        .tka-sub-tag {
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            color: #EA580C;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .tka-title {
+            font-family: var(--font-heading);
+            font-size: 2.3rem;
+            font-weight: 900;
+            line-height: 1.15;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+        .tka-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #94A3B8;
+            margin-bottom: 24px;
+        }
+        .tka-specs-strip {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+        .tka-spec-item {
+            background: #151D2A;
+            border: 1px solid #222C3D;
+            border-radius: var(--radius-sm);
+            padding: 12px 14px;
+        }
+        .tka-spec-k {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #64748B;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .tka-spec-v {
+            font-family: var(--font-mono);
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #FFEDD5;
+        }
+        .tka-cta-box {
+            background: linear-gradient(135deg, rgba(234,88,12,0.12), rgba(15,23,42,0.8));
+            border: 1px solid rgba(234,88,12,0.4);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .tka-cta-title {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .btn-whatsapp-quote {
+            background: #22C55E;
+            color: #FFFFFF;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            font-weight: 800;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+        }
+        .btn-whatsapp-quote:hover {
+            background: #16A34A;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.45);
+        }
+        .btn-whatsapp-quote svg {
+            fill: currentColor;
+        }
+        .tka-load-chart-section {
+            margin-top: 48px;
+            background: #0E141F;
+            border: 1px solid #222C3D;
+            border-radius: var(--radius-lg);
+            padding: 32px;
+        }
+        .section-headline {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-sub {
+            font-size: 0.88rem;
+            color: #64748B;
+            margin-bottom: 24px;
+        }
+        .chart-img-wrap {
+            background: #FFFFFF;
+            border-radius: var(--radius-md);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .chart-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-sm);
+        }
+        @media (max-width: 900px) {
+            .tka-grid-hero {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .tka-main-img-wrap {
+                height: 260px;
+            }
+            .tka-specs-strip {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="tka-detail-page">
+
+    <!-- Topbar com Selo e Voltar -->
+    <header class="tka-nav-bar">
+        <div class="container tka-nav-inner">
+            <a href="index.html" class="btn-back-catalog">
+                <i data-lucide="arrow-left" style="width:18px;height:18px;"></i>
+                <span>Voltar ao Catálogo de Peças &amp; Usados</span>
+            </a>
+            <div class="tka-header-badge">
+                <img src="assets/logo-tka-oficial.svg" alt="TKA" style="height:18px; width:auto;">
+                <span>Revenda Autorizada TKA</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container tka-product-hero">
+        <div class="tka-grid-hero">
+            <!-- Galeria de Fotos em Alta Resolução -->
+            <div class="tka-gallery-box">
+                <div class="tka-main-img-wrap">
+                    <img id="tka-main-photo" src="" alt="Guindaste TKA" class="tka-main-img">
+                </div>
+                <div class="tka-thumbs-row" id="tka-thumbs-container"></div>
+            </div>
+
+            <!-- Ficha Técnica & Cotação -->
+            <div class="tka-info-card">
+                <span class="tka-sub-tag" id="tka-line-tag">Guindaste Articulado TKA</span>
+                <h1 class="tka-title" id="tka-model-title">Carregando Modelo...</h1>
+                <p class="tka-desc" id="tka-model-desc">Engenharia brasileira com presença em mais de 25 países. Fabricação em aços estruturais de alta resistência com garantia oficial de fábrica.</p>
+
+                <div class="tka-specs-strip" id="tka-specs-list">
+                    <!-- Injetado via JS -->
+                </div>
+
+                <div class="tka-cta-box">
+                    <div class="tka-cta-title">Consultoria Técnica &amp; Estudo de Integração Veicular:</div>
+                    <p style="font-size:0.82rem; color:#CBD5E1; margin:0;">Fale direto com o Marcelo para receber a proposta técnica do guindaste, estudo de sobrechassi e dimensionamento para o seu caminhão.</p>
+                    <a id="tka-whatsapp-cta" href="#" target="_blank" rel="noopener" class="btn-whatsapp-quote">
+                        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        <span>Solicitar Cotação Direta de Fábrica</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção do Gráfico / Diagrama de Carga Oficial -->
+        <section class="tka-load-chart-section" id="tka-chart-section" style="display:none;">
+            <div class="section-headline">
+                <i data-lucide="bar-chart-3" style="color:#EA580C;"></i>
+                <span>Diagrama de Carga &amp; Alcance Operacional</span>
+            </div>
+            <p class="section-sub">Curva técnica homologada de momento de carga e extensões hidráulicas/manuais.</p>
+            <div class="chart-img-wrap">
+                <img id="tka-chart-img" src="" alt="Gráfico de carga TKA" class="chart-img">
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" style="margin-top:60px; background:#070A0F; border-top:1px solid #1E293B;">
+        <div class="container">
+            <div class="footer-bottom">
+                <div>MT Guindastes · CNPJ 44.652.208/0001-60 · Caxias do Sul/RS — Revendedora oficial TKA Guindastes</div>
+                <div>Desenvolvido por <a href="proposta.html" style="color:var(--secondary); font-weight:700; text-decoration:none;">Onira Labs (Jeff Motta)</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const WHATSAPP_PHONE = '5554999972976';
+        const urlParams = new URLSearchParams(window.location.search);
+        const slug = urlParams.get('slug') || '40.900';
+
+        fetch('tka-catalog.json')
+            .then(r => r.json())
+            .then(items => {
+                const item = items.find(i => i.slug === slug) || items[0];
+                if (!item) return;
+
+                document.getElementById('tka-page-title').innerText = `${item.codigo} | MT Guindastes (Revenda Oficial TKA)`;
+                document.getElementById('tka-meta-desc').setAttribute('content', item.descricao || `Especificações completas do guindaste ${item.codigo}`);
+                document.getElementById('tka-model-title').innerText = item.codigo;
+                document.getElementById('tka-line-tag').innerText = `Linha ${item.linha} · Condição Direta de Fábrica`;
+                if (item.descricao) {
+                    document.getElementById('tka-model-desc').innerText = item.descricao;
+                }
+
+                // Fotos
+                const mainPhoto = document.getElementById('tka-main-photo');
+                const thumbsBox = document.getElementById('tka-thumbs-container');
+                if (item.fotos && item.fotos.length) {
+                    mainPhoto.src = item.fotos[0];
+                    thumbsBox.innerHTML = item.fotos.map((f, idx) => `
+                        <img src="${f}" alt="${item.codigo}" class="tka-thumb ${idx === 0 ? 'active' : ''}" onclick="switchPhoto('${f}', this)">
+                    `).join('');
+                }
+
+                // Specs
+                const specsBox = document.getElementById('tka-specs-list');
+                const s = item.specs || {};
+                const specItems = [
+                    { k: 'Capacidade Máxima', v: s.capacidadeMaxima || 'Consulte' },
+                    { k: 'Peso Próprio', v: s.pesoProprio || 'Consulte' },
+                    { k: 'Extensões Hidráulicas', v: s.extensoesHidraulicas ? `${s.extensoesHidraulicas} lanças` : 'Consulte' },
+                    { k: 'Extensões Manuais', v: s.extensoesManuais ? `${s.extensoesManuais} lanças` : 'Consulte' },
+                    { k: 'Máximo Vertical', v: s.maximoVertical || 'Consulte' },
+                    { k: 'Máximo Horizontal', v: s.maximoHorizontal || 'Consulte' }
+                ];
+                specsBox.innerHTML = specItems.map(it => `
+                    <div class="tka-spec-item">
+                        <span class="tka-spec-k">${it.k}</span>
+                        <span class="tka-spec-v">${it.v}</span>
+                    </div>
+                `).join('');
+
+                // Gráfico
+                if (item.grafico) {
+                    document.getElementById('tka-chart-section').style.display = 'block';
+                    document.getElementById('tka-chart-img').src = item.grafico;
+                }
+
+                // WhatsApp CTA
+                const msg = `Olá, Marcelo! Gostaria de uma cotação e estudo de instalação veicular para o *${item.codigo}* (Linha ${item.linha}) que vi no site da MT Guindastes.`;
+                document.getElementById('tka-whatsapp-cta').href = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`;
+
+                if (window.lucide) lucide.createIcons();
+            })
+            .catch(err => {
+                console.error('Erro ao carregar dados TKA:', err);
+            });
+
+        function switchPhoto(src, el) {
+            document.getElementById('tka-main-photo').src = src;
+            document.querySelectorAll('.tka-thumb').forEach(t => t.classList.remove('active'));
+            if (el) el.classList.add('active');
+        }
+    </script>
+</body>
+</html>

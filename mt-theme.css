@@ -1430,3 +1430,372 @@
     height: 165px;
   }
 }
+
+/* ==========================================================================
+   SELO OFICIAL TKA GUINDASTES & HERO DE FÁBRICA
+   ========================================================================== */
+.tka-auth-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #090D14;
+  border: 1.5px solid #1E293B;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+}
+.tka-auth-seal:hover {
+  border-color: #EA580C;
+  transform: translateY(-1px);
+}
+.tka-seal-logo {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+.tka-seal-text {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #F8FAFC;
+  letter-spacing: 0.02em;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.tka-seal-text small {
+  font-size: 0.65rem;
+  color: #FDBA74;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Hero de Ofertas de Fábrica */
+.tka-factory-hero {
+  background: linear-gradient(180deg, #090D14 0%, #0E141F 100%);
+  border-bottom: 2px solid #1E293B;
+  padding: 40px 0 48px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.tka-factory-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+  gap: 20px;
+}
+.hero-header-left {
+  max-width: 680px;
+}
+.hero-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(234, 88, 12, 0.15);
+  border: 1px solid rgba(234, 88, 12, 0.4);
+  color: #FFEDD5;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+.hero-main-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.15;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.hero-main-title span {
+  color: var(--primary);
+}
+.hero-main-subtitle {
+  font-size: 0.95rem;
+  color: #94A3B8;
+  line-height: 1.5;
+}
+.hero-nav-arrows {
+  display: flex;
+  gap: 8px;
+}
+.btn-hero-arrow {
+  background: #151D2A;
+  border: 1px solid #222C3D;
+  color: #FFFFFF;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-hero-arrow:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* Grade de Ofertas TKA Direto da Fábrica */
+.tka-hero-carousel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-behavior: smooth;
+}
+.tka-hero-card {
+  background: #151D2A;
+  border: 1px solid #222C3D;
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.tka-hero-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(234, 88, 12, 0.2);
+}
+.tka-card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #FDBA74;
+}
+.tka-card-img-wrap {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 14px 0;
+}
+.tka-card-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+.tka-hero-card:hover .tka-card-img {
+  transform: scale(1.05);
+}
+.tka-card-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+.tka-card-line {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #94A3B8;
+  margin-bottom: 10px;
+}
+.tka-mini-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.tka-mini-specs span {
+  background: #0E141F;
+  border: 1px solid #222C3D;
+  padding: 3px 7px;
+  border-radius: var(--radius-xs);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  font-family: var(--font-mono);
+}
+.btn-tka-spec {
+  background: #090D14;
+  color: #FFFFFF;
+  border: 1.5px solid #334155;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.tka-hero-card:hover .btn-tka-spec {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   BARRA FLUTUANTE DE COTAÇÃO ACUMULATIVA (FEEDBACK DELIBERADO)
+   ========================================================================== */
+.floating-quote-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120px);
+  background: #0E141F;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-lg);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(234, 88, 12, 0.35);
+  z-index: 95;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 92vw;
+  color: #FFFFFF;
+}
+.floating-quote-bar.show {
+  transform: translateX(-50%) translateY(0);
+}
+.fq-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.fq-icon-box {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+.fq-text h5 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin: 0;
+  color: #FFFFFF;
+}
+.fq-text p {
+  font-size: 0.78rem;
+  color: #94A3B8;
+  margin: 0;
+}
+.fq-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-fq-continue {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #E2E8F0;
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.btn-fq-continue:hover {
+  border-color: #94A3B8;
+  background: rgba(255, 255, 255, 0.05);
+}
+.btn-fq-review {
+  background: #22C55E;
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.btn-fq-review:hover {
+  background: #16A34A;
+  transform: translateY(-1px);
+}
+
+/* Galeria do Modal de Peças & Usados */
+.modal-gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.modal-gallery-thumb {
+  width: 60px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--radius-xs);
+  border: 1.5px solid #E2E8F0;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.modal-gallery-thumb:hover, .modal-gallery-thumb.active {
+  border-color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .tka-hero-carousel {
+    grid-template-columns: repeat(2, 280px);
+  }
+  .hero-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 640px) {
+  .tka-hero-carousel {
+    grid-template-columns: repeat(4, 260px);
+  }
+  .floating-quote-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    bottom: 12px;
+    padding: 12px;
+  }
+  .fq-actions {
+    justify-content: space-between;
+  }
+}
+

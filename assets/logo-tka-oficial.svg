@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" fill="none" class="tka-official-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" fill="none">
   <!-- Colchete Esquerdo -->
-  <path d="M48 10 H16 V80 H48 V68 H30 V22 H48 V10 Z" fill="#EA580C" />
+  <path d="M48 10 H16 V80 H48 V66 H32 V24 H48 V10 Z" fill="#FFEDD5" />
   <!-- T -->
   <path d="M68 24 H124 V38 H104 V76 H88 V38 H68 V24 Z" fill="#FFFFFF" />
   <!-- K -->
-  <path d="M136 24 H152 V46 L184 24 H204 L168 49 L206 76 H185 L152 53 V76 H136 V24 Z" fill="#FFFFFF" />
+  <path d="M136 24 H154 V46 L186 24 H208 L170 50 L210 76 H188 L154 53 V76 H136 V24 Z" fill="#FFFFFF" />
   <!-- A -->
-  <path d="M232 24 H250 L278 76 H260 L253 62 H229 L222 76 H204 L232 24 Z M241 38 L233 52 H249 L241 38 Z" fill="#FFFFFF" />
+  <path d="M232 24 H252 L280 76 H260 L254 62 H230 L224 76 H204 L232 24 Z M242 36 L234 52 H250 L242 36 Z" fill="#FFFFFF" />
   <!-- Colchete Direito -->
-  <path d="M292 10 H324 V80 H292 V68 H310 V22 H292 V10 Z" fill="#EA580C" />
+  <path d="M292 10 H324 V80 H292 V66 H308 V24 H292 V10 Z" fill="#FFEDD5" />
 </svg>
