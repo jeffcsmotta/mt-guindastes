@@ -18,21 +18,24 @@ Desenvolvimento e implantação da seção `/pecas` no site institucional da MT 
 - **Conversão:** WhatsApp Click-to-Chat com CEP obrigatório + CNPJ/nome opcionais. Sem pagamento pelo site.
 - **Pix:** em avaliação nas peças white-label. Até decisão, `descontoPixPercent = 0` desliga todo bloco Pix da vitrine e do modal.
 
-## Regra comercial tri-modal (decisão Jeff)
+## Regra comercial e arquitetura (Atualizado)
 
-- **Peça white-label MT:** preço de referência visível + WhatsApp com CEP. Pix desligado até avaliação.
-- **Usado:** preço visível + detalhe + WhatsApp com CEP. Sem Pix, sem carrinho somado.
-- **TKA novo (representante autorizado):** sempre sob consulta (`preco = 0`). Sem total, sem carrinho, só cotação consultiva.
-- **Carrinho:** opcional e restrito a peças, se um dia habilitado. Nunca soma usado ou TKA novo.
+- **Selo Oficial & Autoridade:** Revendedor Autorizado TKA Guindastes (SC e Litoral RS) com logo original no cabeçalho.
+- **Hero de Fábrica:** Carrossel industrial de modelos novos TKA direto de fábrica (TKA 40.900, 45.700, 55.900, 8.700 BX).
+- **Fichas Técnicas Dedicadas TKA (`tka-produto.html`):** Gráficos e curvas de carga oficiais, especificações veiculares completas e WhatsApp para estudo de engenharia.
+- **Peças & Acessórios MT (Base Angra Metal):** Preço de referência visível + acúmulo deliberado na cotação via Barra Flutuante e Prancheta/Drawer.
+- **Usados do Pátio:** Preço visível + galeria de fotos + giro semanal com WhatsApp direto com o Marcelo (sem somar na sacola).
 - **Convenção de preço:** `price > 0` = pronta entrega com referência; `price = 0` = sob consulta.
 
 ## Fonte versionada
 
-- `catalog_mt.json` — catálogo tri-modal (TKA do site + Angra re-marcada MT + ficha de usado). Fonte da verdade no monorepo; Framer CMS como render.
+- `catalog_mt.json` — catálogo de peças Angra Metal e ficha de usados.
+- `tka-catalog.json` — catálogo técnico de fábrica TKA Guindastes com curvas de carga e fotos oficiais de operação.
+- `clientes/mt-guindastes/tka-produto.html` — template de produto TKA padrão fábrica.
 
 ## Status atual
 
-`[proposta-enviada]` — Proposta comercial gerada com escopo técnico e sugestão de valor (R$ 3.800,00). Aguardando retorno de aprovação do cliente para início do setup.
+`[deploy-pronto]` — Reposicionamento concluído com Selo Oficial TKA, Hero de Ofertas de Fábrica, páginas técnicas dedicadas, reestruturação da vitrine de usados e acessórios Angra, e barra flutuante de acúmulo deliberado.
 
 ## Links publicados
 
