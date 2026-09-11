@@ -11,19 +11,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css?v=mt7">
-    <link rel="stylesheet" href="mt-theme.css?v=mt7">
-    <link rel="stylesheet" href="mt-rails.css?v=mt7">
+    <link rel="stylesheet" href="style.css?v=mt8">
+    <link rel="stylesheet" href="mt-theme.css?v=mt8">
+    <link rel="stylesheet" href="mt-rails.css?v=mt8">
 </head>
 <body>
 
     <!-- Header Navigation -->
     <header class="site-header" id="site-header">
         <div class="container nav-container">
-            <a href="index.html" class="brand-wrapper" aria-label="Página inicial da MT Guindastes">
-                <img src="assets/logo_branco.png" alt="MT Guindastes" class="brand-logo-img">
-                <h1 class="sr-only">MT Guindastes — Peças e Implementos</h1>
-            </a>
+            <div style="display:flex; align-items:center; gap:16px;">
+                <a href="index.html" class="brand-wrapper" aria-label="Página inicial da MT Guindastes">
+                    <img src="assets/logo_branco.png" alt="MT Guindastes" class="brand-logo-img">
+                    <h1 class="sr-only">MT Guindastes — Peças e Implementos</h1>
+                </a>
+                <a href="#tka-factory" class="tka-auth-seal-header" title="Revendedor Autorizado TKA Guindastes">
+                    <img src="assets/logo-tka-oficial.svg" alt="TKA" class="tka-seal-logo">
+                    <span class="tka-seal-text">
+                        <span>Revenda Autorizada TKA</span>
+                        <small>SC &amp; Litoral RS</small>
+                    </span>
+                </a>
+            </div>
 
             <div class="nav-actions">
                 <a href="proposta.html" class="nav-link-btn"><i data-lucide="file-text" style="width:14px;height:14px;"></i> <span>Proposta Jefferson</span></a>
@@ -48,7 +57,7 @@
             <div class="hero-header-row">
                 <div class="hero-header-left">
                     <div class="hero-badges-group">
-                        <div class="tka-hero-auth-badge">
+                        <div class="tka-hero-auth-badge mobile-only-badge">
                             <img src="assets/logo-tka-oficial.svg" alt="TKA Guindastes" class="tka-hero-seal-img">
                             <div class="tka-hero-seal-copy">
                                 <span class="tka-hero-seal-status">Revenda Autorizada TKA</span>
@@ -318,7 +327,7 @@
     <!-- Toast -->
     <div class="toast-container" id="toast-container"></div>
 
-    <script src="app.js?v=mt7"></script>
+    <script src="app.js?v=mt8"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
