@@ -600,6 +600,17 @@
             if (window.lucide) lucide.createIcons();
         })();
     </script>
+    <!-- Radar invisível de telemetria Onira -->
+    <script>
+        window.ONIRA_PROPOSAL_CONFIG = {
+            clientSlug: "mt-guindastes",
+            clientName: "MT Guindastes & Onira.fly",
+            webhookUrl: "",
+            supabaseUrl: "", // Telemetria real (Supabase)
+            supabaseAnonKey: "" // ANON key. NUNCA service_role.
+        };
+    </script>
+    <script src="assets/proposal-tracker.js" defer></script>
 </body>
 
 </html>
