@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Fábrica TKA | MT Guindastes — Revendedor Autorizado</title>
+    <meta name="description" content="Catálogo completo de guindastes articulados TKA novos direto de fábrica: linhas Trave, Canivete, BX, Fly Jib e cestos aéreos. Cotação com a MT Guindastes, revenda autorizada SC e Litoral RS.">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=mt8">
+    <link rel="stylesheet" href="mt-theme.css?v=mt8">
+    <link rel="stylesheet" href="mt-rails.css?v=mt8">
+    <style>
+        .tka-catalog-page { background: #090D14; color: #F8FAFC; min-height: 100vh; padding-bottom: 80px; }
+        .tka-cat-hero { padding: 36px 0 8px; }
+        .tka-cat-title { font-family: var(--font-heading); font-size: 2rem; font-weight: 900; color: #FFF; margin: 10px 0 6px; }
+        .tka-cat-sub { color: #94A3B8; font-size: 0.95rem; max-width: 640px; line-height: 1.6; }
+        .tka-cat-layout { display: grid; grid-template-columns: 280px 1fr; gap: 28px; margin-top: 28px; align-items: start; }
+        .tka-filters { background: #0E141F; border: 1px solid #222C3D; border-radius: var(--radius-lg); padding: 22px; position: sticky; top: 76px; display: flex; flex-direction: column; gap: 20px; }
+        .tka-filter-group label.f-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; display: block; margin-bottom: 10px; }
+        .tka-search { width: 100%; background: #151D2A; border: 1px solid #222C3D; border-radius: var(--radius-sm); color: #F8FAFC; padding: 11px 13px; font-size: 0.88rem; font-family: var(--font-body); }
+        .tka-search:focus { outline: none; border-color: #EA580C; }
+        .tka-check { display: flex; align-items: center; gap: 9px; padding: 6px 0; font-size: 0.88rem; color: #CBD5E1; cursor: pointer; }
+        .tka-check input { accent-color: #EA580C; width: 16px; height: 16px; cursor: pointer; }
+        .tka-check .cnt { margin-left: auto; font-family: var(--font-mono); font-size: 0.72rem; color: #64748B; background: #151D2A; padding: 1px 7px; border-radius: 99px; }
+        .tka-select { width: 100%; background: #151D2A; border: 1px solid #222C3D; border-radius: var(--radius-sm); color: #F8FAFC; padding: 10px 12px; font-size: 0.88rem; font-family: var(--font-body); }
+        .tka-filter-toggle { display: none; width: 100%; background: #0E141F; border: 1px solid #222C3D; color: #FFF; border-radius: var(--radius-sm); padding: 13px; font-weight: 800; font-size: 0.9rem; align-items: center; justify-content: center; gap: 8px; cursor: pointer; margin-top: 20px; }
+        .tka-results-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+        .tka-results-count { font-family: var(--font-mono); font-size: 0.82rem; color: #94A3B8; }
+        .tka-results-count strong { color: #FDBA74; }
+        .tka-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
+        .tka-model-card { background: #0E141F; border: 1px solid #222C3D; border-radius: var(--radius-lg); overflow: hidden; text-decoration: none; color: inherit; transition: all 0.2s ease; display: flex; flex-direction: column; }
+        .tka-model-card:hover { border-color: rgba(234,88,12,0.55); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.45); }
+        .tka-model-img { height: 168px; display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse at center, #1a2436 0%, #0b0f17 75%); padding: 14px; position: relative; }
+        .tka-model-img img { max-height: 100%; max-width: 100%; object-fit: contain; filter: drop-shadow(0 10px 18px rgba(0,0,0,0.6)); }
+        .tka-model-linha { position: absolute; top: 10px; left: 10px; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(234,88,12,0.16); border: 1px solid rgba(234,88,12,0.5); color: #FDBA74; padding: 3px 9px; border-radius: 99px; }
+        .tka-model-lanc { position: absolute; top: 10px; right: 10px; font-size: 0.66rem; font-weight: 800; text-transform: uppercase; background: #EA580C; color: #FFF; padding: 3px 9px; border-radius: 99px; }
+        .tka-model-body { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+        .tka-model-name { font-family: var(--font-heading); font-weight: 800; font-size: 1.08rem; color: #FFF; }
+        .tka-model-specs { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tka-model-specs span { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; color: #CBD5E1; background: #151D2A; border: 1px solid #222C3D; padding: 3px 8px; border-radius: 6px; }
+        .tka-model-cta { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 7px; color: #FB923C; font-weight: 800; font-size: 0.84rem; }
+        .tka-empty { grid-column: 1 / -1; text-align: center; padding: 70px 20px; color: #64748B; }
+        .tka-side-cta { background: linear-gradient(135deg, rgba(234,88,12,0.14), rgba(15,23,42,0.9)); border: 1px solid rgba(234,88,12,0.4); border-radius: var(--radius-md); padding: 16px; font-size: 0.82rem; color: #CBD5E1; line-height: 1.55; }
+        .tka-side-cta strong { color: #FFF; display: block; margin-bottom: 6px; font-size: 0.88rem; }
+        .tka-side-cta a { display: inline-flex; align-items: center; gap: 7px; margin-top: 10px; background: #22C55E; color: #FFF; font-weight: 800; font-size: 0.82rem; text-decoration: none; padding: 10px 14px; border-radius: var(--radius-sm); }
+        @media (max-width: 960px) {
+            .tka-cat-layout { grid-template-columns: 1fr; }
+            .tka-filters { position: static; display: none; }
+            .tka-filters.open { display: flex; }
+            .tka-filter-toggle { display: inline-flex; }
+        }
+    </style>
+</head>
+<body class="tka-catalog-page">
+
+    <header class="tka-nav-bar" style="background:#0E141F;border-bottom:1px solid #222C3D;padding:14px 0;position:sticky;top:0;z-index:90;">
+        <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
+            <a href="index.html" class="btn-back-catalog" style="display:inline-flex;align-items:center;gap:10px;color:#E2E8F0;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;padding:8px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:rgba(245,81,29,0.18);border:1px solid rgba(245,81,29,0.45);color:#F5511D;"><i data-lucide="arrow-left" style="width:14px;height:14px;"></i></span>
+                <span>Voltar ao Início</span>
+            </a>
+            <div style="display:inline-flex;align-items:center;gap:10px;background:#0B1019;border:1px solid rgba(234,88,12,0.35);padding:5px 14px;border-radius:99px;">
+                <img src="assets/logo-tka-oficial.svg" alt="TKA" style="height:16px;width:auto;">
+                <span style="font-size:0.78rem;font-weight:800;color:#FFF;">Revenda Autorizada TKA</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;font-weight:700;color:#FDBA74;background:rgba(234,88,12,0.18);padding:1px 6px;border-radius:4px;">SC &amp; LITORAL RS</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="tka-cat-hero">
+            <span style="font-size:0.8rem;font-weight:800;letter-spacing:0.08em;color:#EA580C;text-transform:uppercase;">Linha de fábrica · Novos com garantia</span>
+            <h1 class="tka-cat-title">Catálogo de Fábrica TKA</h1>
+            <p class="tka-cat-sub">Guindastes articulados direto de fábrica — linhas Trave, Canivete, BX, Fly Jib e cestos aéreos. Use os filtros para encontrar o modelo ideal e abra a ficha técnica completa para cotação com estudo veicular.</p>
+        </div>
+
+        <button type="button" class="tka-filter-toggle" id="filter-toggle">
+            <i data-lucide="sliders-horizontal" style="width:17px;height:17px;"></i>
+            <span>Filtros</span>
+        </button>
+
+        <div class="tka-cat-layout">
+            <aside class="tka-filters" id="filters-panel" aria-label="Filtros do catálogo">
+                <div class="tka-filter-group">
+                    <label class="f-label" for="f-busca">Busca do modelo</label>
+                    <input type="text" id="f-busca" class="tka-search" placeholder="Ex: 45.700, Fly, cesto 13.5...">
+                </div>
+                <div class="tka-filter-group">
+                    <label class="f-label">Filtrar por linha</label>
+                    <div id="f-linhas"></div>
+                </div>
+                <div class="tka-filter-group">
+                    <label class="f-label" for="f-cap">Capacidade máxima</label>
+                    <select id="f-cap" class="tka-select">
+                        <option value="">Todas</option>
+                        <option value="0-5000">Até 5 t</option>
+                        <option value="5000-10000">5 a 10 t</option>
+                        <option value="10000-15000">10 a 15 t</option>
+                        <option value="15000-999999">Acima de 15 t</option>
+                    </select>
+                </div>
+                <div class="tka-filter-group">
+                    <label class="f-label" for="f-alc">Alcance horizontal mínimo</label>
+                    <select id="f-alc" class="tka-select">
+                        <option value="">Qualquer</option>
+                        <option value="10">A partir de 10 m</option>
+                        <option value="15">A partir de 15 m</option>
+                        <option value="20">A partir de 20 m</option>
+                        <option value="25">A partir de 25 m</option>
+                    </select>
+                </div>
+                <div class="tka-filter-group">
+                    <label class="f-label" for="f-ord">Ordenar por</label>
+                    <select id="f-ord" class="tka-select">
+                        <option value="cap">Capacidade</option>
+                        <option value="alc">Alcance horizontal</option>
+                        <option value="az">Nome (A–Z)</option>
+                    </select>
+                </div>
+                <div class="tka-side-cta">
+                    <strong>Não sabe qual modelo?</strong>
+                    Fale com o Marcelo e receba o estudo de montagem para o seu caminhão.
+                    <a href="https://wa.me/5554999972976?text=Ol%C3%A1%2C%20Marcelo!%20Vim%20pelo%20cat%C3%A1logo%20TKA%20da%20MT%20e%20preciso%20de%20ajuda%20para%20escolher%20o%20modelo%20ideal." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+                </div>
+            </aside>
+
+            <section>
+                <div class="tka-results-head">
+                    <span class="tka-results-count" id="results-count"></span>
+                </div>
+                <div class="tka-grid" id="tka-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer" style="margin-top:60px;background:#070A0F;border-top:1px solid #1E293B;">
+        <div class="container">
+            <div class="footer-bottom">
+                <div>MT Guindastes · CNPJ 44.652.208/0001-60 · Caxias do Sul/RS — Revendedora oficial TKA Guindastes</div>
+                <div>Desenvolvido por <a href="proposta.html" style="color:var(--secondary);font-weight:700;text-decoration:none;">Onira Labs (Jeff Motta)</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const state = { busca: '', linhas: new Set(), cap: '', alc: '', ord: 'cap' };
+        let ITEMS = [];
+
+        function numCap(s) {
+            if (!s) return 0;
+            const t = String(s).toLowerCase().replace(/\s/g, '');
+            const m = t.match(/([\d.,]+)/);
+            if (!m) return 0;
+            let v = parseFloat(m[1].replace(/\./g, '').replace(',', '.'));
+            if (t.includes('ton')) v *= 1000;
+            return v || 0;
+        }
+        function numAlc(s) {
+            if (!s) return 0;
+            const m = String(s).replace(',', '.').match(/([\d.]+)/);
+            return m ? parseFloat(m[1]) : 0;
+        }
+        function linhaBase(it) {
+            const l = (it.linha || '').toLowerCase();
+            if (l.includes('cesto')) return 'Cesto Aéreo';
+            if (l.includes('fly')) return 'Fly Jib';
+            if (l.includes('canivete')) return 'Canivete';
+            if (l.includes('bx')) return 'BX';
+            return 'Trave';
+        }
+        function miniSpecs(it) {
+            const s = it.specs || {};
+            if (it.categoria === 'cesto') {
+                return [s.capacidadeMaxima, s.maximoHorizontal ? 'Alc. ' + s.maximoHorizontal : '', s.pesoProprio ? 'Peso ' + s.pesoProprio : ''].filter(Boolean);
+            }
+            const h = typeof s.extensoesHidraulicas === 'string' ? s.extensoesHidraulicas : (s.extensoesHidraulicas ? s.extensoesHidraulicas + 'H' : '');
+            const mn = typeof s.extensoesManuais === 'string' ? s.extensoesManuais : (s.extensoesManuais ? s.extensoesManuais + 'M' : '');
+            const cfg = [h, mn].filter(Boolean).join(' + ');
+            return ['Cap. ' + (s.capacidadeMaxima || '?'), cfg, 'Vert. ' + (s.maximoVertical || '?'), 'Horiz. ' + (s.maximoHorizontal || '?')].filter(Boolean);
+        }
+
+        function filtrados() {
+            let list = ITEMS.filter(it => {
+                if (state.linhas.size && !state.linhas.has(linhaBase(it))) return false;
+                if (state.busca) {
+                    const hay = (it.codigo + ' ' + it.linha + ' ' + (it.descricao || '')).toLowerCase();
+                    if (!hay.includes(state.busca)) return false;
+                }
+                if (state.cap) {
+                    const [a, b] = state.cap.split('-').map(Number);
+                    const v = numCap(it.specs && it.specs.capacidadeMaxima);
+                    if (v < a || v > b) return false;
+                }
+                if (state.alc && numAlc(it.specs && it.specs.maximoHorizontal) < Number(state.alc)) return false;
+                return true;
+            });
+            if (state.ord === 'az') list.sort((a, b) => a.codigo.localeCompare(b.codigo));
+            else if (state.ord === 'alc') list.sort((a, b) => numAlc(b.specs && b.specs.maximoHorizontal) - numAlc(a.specs && a.specs.maximoHorizontal));
+            else list.sort((a, b) => numCap(b.specs && b.specs.capacidadeMaxima) - numCap(a.specs && a.specs.capacidadeMaxima));
+            return list;
+        }
+
+        function render() {
+            const list = filtrados();
+            document.getElementById('results-count').innerHTML = 'Exibindo <strong>' + list.length + '</strong> de ' + ITEMS.length + ' modelos de fábrica';
+            const grid = document.getElementById('tka-grid');
+            if (!list.length) {
+                grid.innerHTML = '<div class="tka-empty"><h3 style="color:#E2E8F0;margin-bottom:8px;">Nenhum modelo encontrado</h3><p>Ajuste os filtros ou fale direto com o Marcelo no WhatsApp.</p></div>';
+                return;
+            }
+            grid.innerHTML = list.map(it => {
+                const img = (it.fotos && it.fotos[0]) || '';
+                return '<a class="tka-model-card" href="tka-produto.html?slug=' + encodeURIComponent(it.slug) + '">' +
+                    '<div class="tka-model-img">' +
+                    (img ? '<img src="' + img + '" alt="' + it.codigo + '" loading="lazy">' : '') +
+                    '<span class="tka-model-linha">' + it.linha + '</span>' +
+                    (it.lancamento ? '<span class="tka-model-lanc">Lançamento</span>' : '') +
+                    '</div>' +
+                    '<div class="tka-model-body">' +
+                    '<div class="tka-model-name">' + it.codigo + '</div>' +
+                    '<div class="tka-model-specs">' + miniSpecs(it).map(s => '<span>' + s + '</span>').join('') + '</div>' +
+                    '<span class="tka-model-cta">Ver ficha técnica <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></span>' +
+                    '</div></a>';
+            }).join('');
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function renderLinhas() {
+            const ordem = ['Trave', 'Canivete', 'BX', 'Fly Jib', 'Cesto Aéreo'];
+            const box = document.getElementById('f-linhas');
+            box.innerHTML = ordem.map(l => {
+                const n = ITEMS.filter(it => linhaBase(it) === l).length;
+                return '<label class="tka-check"><input type="checkbox" value="' + l + '"> ' + l + ' <span class="cnt">' + n + '</span></label>';
+            }).join('');
+            box.querySelectorAll('input').forEach(inp => inp.addEventListener('change', () => {
+                if (inp.checked) state.linhas.add(inp.value); else state.linhas.delete(inp.value);
+                render();
+            }));
+        }
+
+        document.getElementById('f-busca').addEventListener('input', e => { state.busca = e.target.value.toLowerCase().trim(); render(); });
+        document.getElementById('f-cap').addEventListener('change', e => { state.cap = e.target.value; render(); });
+        document.getElementById('f-alc').addEventListener('change', e => { state.alc = e.target.value; render(); });
+        document.getElementById('f-ord').addEventListener('change', e => { state.ord = e.target.value; render(); });
+        document.getElementById('filter-toggle').addEventListener('click', () => document.getElementById('filters-panel').classList.toggle('open'));
+
+        fetch('tka-catalog.json')
+            .then(r => r.json())
+            .then(items => { ITEMS = items; renderLinhas(); render(); if (window.lucide) lucide.createIcons(); })
+            .catch(err => console.error('Erro ao carregar catálogo TKA:', err));
+    </script>
+</body>
+</html>

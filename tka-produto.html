@@ -311,11 +311,11 @@
     <!-- Topbar com Selo e Voltar -->
     <header class="tka-nav-bar">
         <div class="container tka-nav-inner">
-            <a href="index.html" class="btn-back-catalog">
+            <a href="tka-catalogo.html" class="btn-back-catalog">
                 <span class="btn-back-arrow-icon">
                     <i data-lucide="arrow-left" style="width:14px;height:14px;"></i>
                 </span>
-                <span>Voltar ao Catálogo de Peças &amp; Usados</span>
+                <span>Voltar ao Catálogo TKA</span>
             </a>
             <div class="tka-header-badge">
                 <img src="assets/logo-tka-oficial.svg" alt="TKA" style="height:16px; width:auto;">
@@ -368,6 +368,39 @@
             <div class="chart-img-wrap">
                 <img id="tka-chart-img" src="" alt="Gráfico de carga TKA" class="chart-img">
             </div>
+            <div id="tka-chart-pdfs" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;"></div>
+        </section>
+
+        <!-- Especificações complementares de fábrica -->
+        <section class="tka-load-chart-section" id="tka-extra-section" style="display:none;">
+            <div class="section-headline">
+                <i data-lucide="clipboard-list" style="color:#EA580C;"></i>
+                <span>Dados Técnicos Complementares</span>
+            </div>
+            <p class="section-sub">Informações oficiais de fábrica para dimensionamento e estudo veicular.</p>
+            <div id="tka-extra-table" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;"></div>
+        </section>
+
+        <!-- Vídeo oficial -->
+        <section class="tka-load-chart-section" id="tka-video-section" style="display:none;">
+            <div class="section-headline">
+                <i data-lucide="play-circle" style="color:#EA580C;"></i>
+                <span>Vídeo Oficial de Fábrica</span>
+            </div>
+            <p class="section-sub">Operação e detalhes do equipamento.</p>
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--radius-md);">
+                <iframe id="tka-video-frame" src="" title="Vídeo oficial TKA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+            </div>
+        </section>
+
+        <!-- Outros modelos -->
+        <section class="tka-load-chart-section" id="tka-related-section" style="display:none;">
+            <div class="section-headline">
+                <i data-lucide="layout-grid" style="color:#EA580C;"></i>
+                <span>Outros Modelos da Fábrica</span>
+            </div>
+            <p class="section-sub">Compare com equipamentos da mesma aplicação.</p>
+            <div id="tka-related-row" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;"></div>
         </section>
     </main>
 
@@ -409,17 +442,33 @@
                     `).join('');
                 }
 
-                // Specs
+                // Specs (guindaste x cesto)
                 const specsBox = document.getElementById('tka-specs-list');
                 const s = item.specs || {};
-                const specItems = [
-                    { k: 'Capacidade Máxima', v: s.capacidadeMaxima || 'Consulte' },
-                    { k: 'Peso Próprio', v: s.pesoProprio || 'Consulte' },
-                    { k: 'Extensões Hidráulicas', v: s.extensoesHidraulicas ? `${s.extensoesHidraulicas} lanças` : 'Consulte' },
-                    { k: 'Extensões Manuais', v: s.extensoesManuais ? `${s.extensoesManuais} lanças` : 'Consulte' },
-                    { k: 'Máximo Vertical', v: s.maximoVertical || 'Consulte' },
-                    { k: 'Máximo Horizontal', v: s.maximoHorizontal || 'Consulte' }
-                ];
+                const fmtL = (v, suf) => {
+                    if (typeof v === 'string' && v) return v;
+                    if (typeof v === 'number' && v > 0) return v + ' ' + suf;
+                    return 'Consulte';
+                };
+                let specItems;
+                if (item.categoria === 'cesto') {
+                    const giro = item.specs_tecnicas && item.specs_tecnicas.anguloGiro ? item.specs_tecnicas.anguloGiro + '°' : 'Consulte';
+                    specItems = [
+                        { k: 'Capacidade do Cesto', v: s.capacidadeMaxima || 'Consulte' },
+                        { k: 'Peso do Equipamento', v: s.pesoProprio || 'Consulte' },
+                        { k: 'Alcance Horizontal', v: s.maximoHorizontal || 'Consulte' },
+                        { k: 'Ângulo de Giro', v: giro }
+                    ];
+                } else {
+                    specItems = [
+                        { k: 'Capacidade Máxima', v: s.capacidadeMaxima || 'Consulte' },
+                        { k: 'Peso Próprio', v: s.pesoProprio || 'Consulte' },
+                        { k: 'Extensões Hidráulicas', v: fmtL(s.extensoesHidraulicas, 'lanças') },
+                        { k: 'Extensões Manuais', v: fmtL(s.extensoesManuais, 'lanças') },
+                        { k: 'Máximo Vertical', v: s.maximoVertical || 'Consulte' },
+                        { k: 'Máximo Horizontal', v: s.maximoHorizontal || 'Consulte' }
+                    ];
+                }
                 specsBox.innerHTML = specItems.map(it => `
                     <div class="tka-spec-item">
                         <span class="tka-spec-k">${it.k}</span>
@@ -427,14 +476,55 @@
                     </div>
                 `).join('');
 
-                // Gráfico
+                // Gráfico + PDFs oficiais
                 if (item.grafico) {
                     document.getElementById('tka-chart-section').style.display = 'block';
                     document.getElementById('tka-chart-img').src = item.grafico;
+                    const pdfBox = document.getElementById('tka-chart-pdfs');
+                    let pdfBtns = '';
+                    if (item.grafico_pdf) pdfBtns += `<a href="${item.grafico_pdf}" target="_blank" rel="noopener" class="btn-back-catalog" style="text-decoration:none;"><i data-lucide="file-text" style="width:15px;height:15px;color:#F5511D;"></i><span>Baixar diagrama (PDF)</span></a>`;
+                    if (item.grafico_pdf_libra) pdfBtns += `<a href="${item.grafico_pdf_libra}" target="_blank" rel="noopener" class="btn-back-catalog" style="text-decoration:none;"><i data-lucide="file-text" style="width:15px;height:15px;color:#F5511D;"></i><span>Diagrama em libras (PDF)</span></a>`;
+                    pdfBox.innerHTML = pdfBtns;
+                }
+
+                // Tabela técnica complementar
+                const CESTO_LABELS = { capacidadeCesto: 'Capacidade do cesto (kg)', alcanceMaximoHorizontal: 'Alcance máx. horizontal (m)', anguloGiro: 'Ângulo de giro (°)', estabilizadoresPadraoA: 'Estabilizadores padrão (tipo A)', pesoEquipamentoEstabilizadores: 'Peso com estabilizadores (kg)', complementoEquipamento: 'Complemento do equipamento (m)', alturaEmTransporte: 'Altura em transporte (m)', pbtMinimoExigido: 'PBT mínimo exigido (kg)' };
+                if (item.specs_tecnicas && Object.keys(item.specs_tecnicas).length) {
+                    document.getElementById('tka-extra-section').style.display = 'block';
+                    document.getElementById('tka-extra-table').innerHTML = Object.entries(item.specs_tecnicas).map(([k, v]) => `
+                        <div class="tka-spec-item">
+                            <span class="tka-spec-k">${CESTO_LABELS[k] || k}</span>
+                            <span class="tka-spec-v" style="font-size:0.95rem;">${v}</span>
+                        </div>
+                    `).join('');
+                }
+
+                // Vídeo oficial (watch, youtu.be ou shorts)
+                if (item.video) {
+                    const m = String(item.video).match(/(?:[?&]v=|youtu\.be\/|shorts\/)([\w-]{6,})/);
+                    if (m) {
+                        document.getElementById('tka-video-section').style.display = 'block';
+                        document.getElementById('tka-video-frame').src = 'https://www.youtube-nocookie.com/embed/' + m[1];
+                    }
+                }
+
+                // Relacionados (mesma categoria)
+                const rel = items.filter(i => i.slug !== item.slug && (i.categoria || 'guindaste') === (item.categoria || 'guindaste')).slice(0, 4);
+                if (rel.length) {
+                    document.getElementById('tka-related-section').style.display = 'block';
+                    document.getElementById('tka-related-row').innerHTML = rel.map(r => `
+                        <a href="tka-produto.html?slug=${encodeURIComponent(r.slug)}" style="text-decoration:none;background:#151D2A;border:1px solid #222C3D;border-radius:var(--radius-sm);padding:12px;display:flex;flex-direction:column;gap:8px;align-items:center;">
+                            ${r.fotos && r.fotos[0] ? `<img src="${r.fotos[0]}" alt="${r.codigo}" loading="lazy" style="max-height:90px;max-width:100%;object-fit:contain;">` : ''}
+                            <span style="font-family:var(--font-heading);font-weight:800;font-size:0.86rem;color:#FFF;">${r.codigo}</span>
+                            <span style="font-size:0.7rem;color:#94A3B8;">${r.linha}</span>
+                        </a>
+                    `).join('');
                 }
 
                 // WhatsApp CTA
-                const msg = `Olá, Marcelo! Gostaria de uma cotação e estudo de instalação veicular para o *${item.codigo}* (Linha ${item.linha}) que vi no site da MT Guindastes.`;
+                const msg = item.categoria === 'cesto'
+                    ? `Olá, Marcelo! Gostaria de uma cotação do *${item.codigo}* (Cesto Aéreo TKA) que vi no site da MT Guindastes, com verificação de compatibilidade.`
+                    : `Olá, Marcelo! Gostaria de uma cotação e estudo de instalação veicular para o *${item.codigo}* (Linha ${item.linha}) que vi no site da MT Guindastes.`;
                 document.getElementById('tka-whatsapp-cta').href = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`;
 
                 if (window.lucide) lucide.createIcons();

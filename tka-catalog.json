@@ -1,9 +1,99 @@
 [
   {
+    "slug": "6.700",
+    "codigo": "TKA 6.700",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 6.700 (Linha Canivete) foi projetado para operações portuárias e marítimas. Conta com capacidade máxima de 2.670Kg, peso próprio de 1.100Kg, 3 lanças hidráulicas e 1 manuais, alcance vertical de 13,8m, alcance horizontal de 10,9m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "2.670Kg",
+      "pesoProprio": "1.100Kg",
+      "extensoesHidraulicas": 3,
+      "extensoesManuais": 1,
+      "maximoVertical": "13,8m",
+      "maximoHorizontal": "10,9m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "X6TAlBgXfcWBSlAUPBS6",
+          "possui": false
+        },
+        {
+          "id": "1eeZ0KrD9M5rcpBQf4XN",
+          "possui": false
+        },
+        {
+          "id": "8oMocG4UsjUjIvHNnVLR",
+          "possui": false
+        },
+        {
+          "id": "iAw8gpKcOzEEpZnLsGyR",
+          "possui": true
+        },
+        {
+          "id": "1LVYQFiu86ODmTodb0F3",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/6.700/foto-1.jpg",
+      "assets/tka-oficial/6.700/foto-3.jpg",
+      "assets/tka-oficial/6.700/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/6.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/6.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/6.700/grafico-de-carga-libra.pdf",
+    "video": "https://www.youtube.com/watch?v=SiNhwcgfHjE",
+    "setores": [
+      "06_maritimo"
+    ]
+  },
+  {
     "slug": "8.700bx",
     "codigo": "TKA 8.700",
     "linha": "BX",
-    "descricao": "O Guindaste TKA 8.700 BX foi desenvolvido para versatilidade ágil e montagem inteligente na carroceria. Ideal para logística de insumos agrícolas, movimentação de big bags e materiais de construção, aliando baixo peso próprio (970 kg) à força de 4.500 kg.",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 8.700 (Linha BX) foi projetado para operações agrícolas e logística de insumos. Conta com capacidade máxima de 4.500Kg, peso próprio de 970Kg, 3 lanças hidráulicas e 1 manuais, alcance vertical de 10,09m, alcance horizontal de 8,2m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
     "specs": {
       "capacidadeMaxima": "4.500Kg",
       "pesoProprio": "970Kg",
@@ -60,26 +150,181 @@
       ]
     },
     "fotos": [
-      "assets/tka-oficial/8.700bx/foto-1.png",
-      "assets/tka-oficial/8.700bx/foto-2.png",
-      "assets/tka-oficial/8.700bx/foto-3.png",
-      "assets/tka-oficial/8.700bx/foto-4.png"
+      "assets/tka-oficial/8.700bx/foto-1.jpg",
+      "assets/tka-oficial/8.700bx/foto-2.jpg",
+      "assets/tka-oficial/8.700bx/foto-3.jpg",
+      "assets/tka-oficial/8.700bx/foto-4.jpg"
     ],
+    "destaque_hero": true,
     "grafico": "assets/tka-oficial/8.700bx/grafico-de-carga.png",
-    "destaque_hero": true
+    "grafico_pdf": "assets/tka-oficial/8.700bx/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/8.700bx/grafico-de-carga-libra.pdf",
+    "video": "https://www.youtube.com/watch?v=bWGFGr4wjjQ",
+    "setores": [
+      "01_agricola"
+    ]
   },
   {
-    "slug": "55.900",
-    "codigo": "TKA 55.900",
+    "slug": "8.700",
+    "codigo": "TKA 8.700",
     "linha": "Trave",
-    "descricao": "O Guindaste TKA 55.900 entrega momento de força superior para grandes cargas e logística extrapesada. Com 6 lanças hidráulicas e alcance horizontal de 22,4 m (alcance vertical de 25,8 m), é referência em produtividade com garantia de fábrica.",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 8.700 (Linha Trave) foi projetado para içamento de grandes cargas com máxima estabilidade, atendendo construção civil, infraestrutura e locação. Conta com capacidade máxima de 2.000Kg, peso próprio de 1.210Kg, 3 lanças hidráulicas e 1 manuais, alcance vertical de 13,5m, alcance horizontal de 10,2m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
     "specs": {
-      "capacidadeMaxima": "13.700Kg",
-      "pesoProprio": "5.630Kg",
-      "extensoesHidraulicas": "6",
-      "extensoesManuais": "3",
-      "maximoVertical": "25,8m",
-      "maximoHorizontal": "22,4m",
+      "capacidadeMaxima": "2.000Kg",
+      "pesoProprio": "1.210Kg",
+      "extensoesHidraulicas": 3,
+      "extensoesManuais": 1,
+      "maximoVertical": "13,5m",
+      "maximoHorizontal": "10,2m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "X6TAlBgXfcWBSlAUPBS6",
+          "possui": true
+        },
+        {
+          "id": "QrE2WAuW2d69G863szyR",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/8.700/foto-1.jpg",
+      "assets/tka-oficial/8.700/foto-2.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/8.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/8.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/8.700/grafico-de-carga-libra.pdf"
+  },
+  {
+    "slug": "10.700",
+    "codigo": "TKA 10.700",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 10.700 (Linha Trave) foi projetado para operações agrícolas e logística de insumos. Conta com capacidade máxima de 2.750Kg, peso próprio de 1.415Kg, 3 lanças hidráulicas e 2 manuais, alcance vertical de 14,5m, alcance horizontal de 11,2m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "2.750Kg",
+      "pesoProprio": "1.415Kg",
+      "extensoesHidraulicas": 3,
+      "extensoesManuais": 2,
+      "maximoVertical": "14,5m",
+      "maximoHorizontal": "11,2m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "qgRF8AQPcfulalKnNAFl",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "tPtPWwbHAnbuVQTTRlw5",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/10.700/foto-1.jpg",
+      "assets/tka-oficial/10.700/foto-2.jpg",
+      "assets/tka-oficial/10.700/foto-3.jpg",
+      "assets/tka-oficial/10.700/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/10.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/10.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/10.700/grafico-de-carga-libra.pdf",
+    "setores": [
+      "01_agricola"
+    ]
+  },
+  {
+    "slug": "10.900",
+    "codigo": "TKA 10.900",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 10.900 (Linha Canivete) foi projetado para operações portuárias e marítimas. Conta com capacidade máxima de 4.000Kg, peso próprio de 1.320Kg, 4 lanças hidráulicas e 0 manuais, alcance vertical de 13,6m, alcance horizontal de 10,07m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "4.000Kg",
+      "pesoProprio": "1.320Kg",
+      "extensoesHidraulicas": 4,
+      "extensoesManuais": 0,
+      "maximoVertical": "13,6m",
+      "maximoHorizontal": "10,07m",
       "monteOSeu": true,
       "acessoriosOpcionais": [
         {
@@ -103,6 +348,103 @@
           "possui": true
         },
         {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "E5gmTBkSRGLi5nngwLCV",
+          "possui": true
+        },
+        {
+          "id": "QH6Mp4lxZF0pCclV5mtk",
+          "possui": true
+        },
+        {
+          "id": "MbaNakEt1c4ooEWTDxOe",
+          "possui": true
+        },
+        {
+          "id": "jFN5AVPbgWgug7bUhOMF",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/10.900/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/10.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/10.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/10.900/grafico-de-carga-libra.pdf",
+    "setores": [
+      "06_maritimo"
+    ]
+  },
+  {
+    "slug": "12.700",
+    "codigo": "TKA 12.700",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 12.700 (Linha Trave) foi projetado para operações agrícolas e logística de insumos e mineração e movimentação extrapesada. Conta com capacidade máxima de 3.420Kg, peso próprio de 1.655Kg, 3 lanças hidráulicas e 2 manuais, alcance vertical de 14,5m, alcance horizontal de 11,3m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "3.420Kg",
+      "pesoProprio": "1.655Kg",
+      "extensoesHidraulicas": 3,
+      "extensoesManuais": 2,
+      "maximoVertical": "14,5m",
+      "maximoHorizontal": "11,3m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "wRctUF4PbssWGJreb4im",
+          "possui": true
+        },
+        {
+          "id": "7zc2JrLqpqT8GxmIVK2x",
+          "possui": false
+        },
+        {
+          "id": "7euCRGHctF40pqHBUBrM",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
           "id": "07zbxbzcU4UAaEKs7Xxq",
           "possui": true
         },
@@ -117,34 +459,677 @@
       ]
     },
     "fotos": [
-      "assets/tka-oficial/55.900/foto-1.png",
-      "assets/tka-oficial/55.900/foto-2.png",
-      "assets/tka-oficial/55.900/foto-3.png",
-      "assets/tka-oficial/55.900/foto-4.png"
+      "assets/tka-oficial/12.700/foto-1.jpg",
+      "assets/tka-oficial/12.700/foto-2.jpg",
+      "assets/tka-oficial/12.700/foto-3.jpg",
+      "assets/tka-oficial/12.700/foto-4.jpg"
     ],
-    "grafico": "assets/tka-oficial/55.900/grafico-de-carga.png",
-    "destaque_hero": true
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/12.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/12.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/12.700/grafico-de-carga-libra.pdf",
+    "setores": [
+      "01_agricola",
+      "03_mineracao"
+    ]
   },
   {
-    "slug": "45.700",
-    "codigo": "TKA 45.700",
-    "linha": "Trave",
-    "descricao": "O Guindaste TKA 45.700 (Linha Trave) combina alta capacidade com precisão milimétrica. Possui 4 lanças hidráulicas e 3 manuais, alcance vertical de 22,8 m e patolas com abertura de 6,1 m, assegurando máxima estabilidade em içamentos severos.",
+    "slug": "12.900",
+    "codigo": "TKA 12.900",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 12.900 (Linha Canivete) foi projetado para operações portuárias e marítimas. Conta com capacidade máxima de 5.950Kg, peso próprio de 1.560 kg, 4 lanças hidráulicas e 1 manuais, alcance vertical de 17,3m, alcance horizontal de 14,2m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
     "specs": {
-      "capacidadeMaxima": "10.130Kg",
-      "pesoProprio": "4.425Kg",
+      "capacidadeMaxima": "5.950Kg",
+      "pesoProprio": "1.560 kg",
       "extensoesHidraulicas": 4,
-      "extensoesManuais": 3,
-      "maximoVertical": "22,8m",
-      "maximoHorizontal": "19,0m",
+      "extensoesManuais": 1,
+      "maximoVertical": "17,3m",
+      "maximoHorizontal": "14,2m",
       "monteOSeu": true,
       "acessoriosOpcionais": [
         {
-          "id": "PyCaseWki67ttY12hOWm",
+          "id": "BBOvq8tPQ1QspOhkAhqK",
           "possui": true
         },
         {
-          "id": "n6r7v1KoCTYr8gtdYVnr",
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "1eeZ0KrD9M5rcpBQf4XN",
+          "possui": true
+        },
+        {
+          "id": "2QkzxNQZZ1VfyhePiLrS",
+          "possui": true
+        },
+        {
+          "id": "MgzUZY9n25BYIYq5cvAC",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/12.900/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/12.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/12.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/12.900/grafico-de-carga-libra.pdf",
+    "setores": [
+      "06_maritimo"
+    ]
+  },
+  {
+    "slug": "15.900",
+    "codigo": "TKA 15.900",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 15.900 (Linha Canivete) foi projetado para operações agrícolas e logística de insumos e operações portuárias e marítimas. Conta com capacidade máxima de 5.700Kg, peso próprio de 2.090Kg, 4 lanças hidráulicas e 2 manuais, alcance vertical de 19,6m, alcance horizontal de 16,3m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "5.700Kg",
+      "pesoProprio": "2.090Kg",
+      "extensoesHidraulicas": 4,
+      "extensoesManuais": 2,
+      "maximoVertical": "19,6m",
+      "maximoHorizontal": "16,3m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "DmjZEj4b7LV9tvqkYLPs",
+          "possui": true
+        },
+        {
+          "id": "jdu4EhITZaUuFmIw84H7",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/15.900/foto-1.jpg",
+      "assets/tka-oficial/15.900/foto-2.jpg",
+      "assets/tka-oficial/15.900/foto-3.jpg",
+      "assets/tka-oficial/15.900/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/15.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/15.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/15.900/grafico-de-carga-libra.pdf",
+    "setores": [
+      "01_agricola",
+      "06_maritimo"
+    ]
+  },
+  {
+    "slug": "16.900",
+    "codigo": "TKA 16.900",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 16.900 (Linha Trave) foi projetado para operações agrícolas e logística de insumos, locadoras e operação contínua e eletrificação e trabalhos em altura. Conta com capacidade máxima de 3.975Kg, peso próprio de 2.425Kg, 4 lanças hidráulicas e 2 manuais, alcance vertical de 18,8m, alcance horizontal de 15,7m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "3.975Kg",
+      "pesoProprio": "2.425Kg",
+      "extensoesHidraulicas": 4,
+      "extensoesManuais": 2,
+      "maximoVertical": "18,8m",
+      "maximoHorizontal": "15,7m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "PveYnBmxnQcvmFvtgW15",
+          "possui": true
+        },
+        {
+          "id": "LG61pKBmgCf3DSsJWFtE",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/16.900/foto-1.jpg",
+      "assets/tka-oficial/16.900/foto-2.jpg",
+      "assets/tka-oficial/16.900/foto-3.jpg",
+      "assets/tka-oficial/16.900/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/16.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/16.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/16.900/grafico-de-carga-libra.pdf",
+    "setores": [
+      "01_agricola",
+      "04_locacao",
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "17.900",
+    "codigo": "TKA 17.900",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 17.900 (Linha Canivete) foi projetado para operações agrícolas e logística de insumos, construção civil e infraestrutura e operações portuárias e marítimas. Conta com capacidade máxima de 7.000Kg, peso próprio de 2.420Kg, 4 lanças hidráulicas e 2 manuais, alcance vertical de 19,6m, alcance horizontal de 16,3m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "7.000Kg",
+      "pesoProprio": "2.420Kg",
+      "extensoesHidraulicas": 4,
+      "extensoesManuais": 2,
+      "maximoVertical": "19,6m",
+      "maximoHorizontal": "16,3m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "EJcQStFBLjpHRDIYaJwC",
+          "possui": true
+        },
+        {
+          "id": "8zMRSZG3rwAixzn0Ztb2",
+          "possui": false
+        },
+        {
+          "id": "kAiUasviZs3fTdxC9qNF",
+          "possui": true
+        },
+        {
+          "id": "fLpAszKVWzt2oamYEtru",
+          "possui": false
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/17.900/foto-1.jpg",
+      "assets/tka-oficial/17.900/foto-2.jpg",
+      "assets/tka-oficial/17.900/foto-3.jpg",
+      "assets/tka-oficial/17.900/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/17.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/17.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/17.900/grafico-de-carga-libra.pdf",
+    "setores": [
+      "01_agricola",
+      "02_construcao",
+      "06_maritimo"
+    ]
+  },
+  {
+    "slug": "18.900",
+    "codigo": "TKA 18.900",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 18.900 (Linha Canivete) foi compacto e versátil, ideal para operação em espaços restritos com variação de altura, atendendo construção, agro e locação. Conta com capacidade máxima de 7.250Kg, peso próprio de 2.570Kg, 5 lanças hidráulicas e 2 manuais, alcance vertical de 22,2m, alcance horizontal de 18,7m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "7.250Kg",
+      "pesoProprio": "2.570Kg",
+      "extensoesHidraulicas": 5,
+      "extensoesManuais": 2,
+      "maximoVertical": "22,2m",
+      "maximoHorizontal": "18,7m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "VrnuQo9duhXzMP6MUl3w",
+          "possui": false
+        },
+        {
+          "id": "Yn3wQA54ZyeLT2ZRLEa9",
+          "possui": true
+        },
+        {
+          "id": "oBAZaURTcoyB8Bk60gYS",
+          "possui": false
+        },
+        {
+          "id": "R1bfuFic8rUGrefSnr5c",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "D4iROPHMsKqHeeRhzcI4",
+          "possui": true
+        },
+        {
+          "id": "wwtO3H8SWPpOoet22vGG",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/18.900/foto-1.jpg",
+      "assets/tka-oficial/18.900/foto-2.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/18.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/18.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/18.900/grafico-de-carga-libra.pdf"
+  },
+  {
+    "slug": "20.700",
+    "codigo": "TKA 20.700",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 20.700 (Linha Trave) foi projetado para mineração e movimentação extrapesada, operações portuárias e marítimas e eletrificação e trabalhos em altura. Conta com capacidade máxima de 5.060Kg, peso próprio de 2.600Kg, 4 lanças hidráulicas e 3 manuais, alcance vertical de 22,2m, alcance horizontal de 18,7m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "5.060Kg",
+      "pesoProprio": "2.600Kg",
+      "extensoesHidraulicas": 4,
+      "extensoesManuais": 3,
+      "maximoVertical": "22,2m",
+      "maximoHorizontal": "18,7m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "R78T4Yu4HFlRSwcxFzf1",
+          "possui": true
+        },
+        {
+          "id": "lfjObcVartWL55WtxWqn",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/20.700/foto-1.jpg",
+      "assets/tka-oficial/20.700/foto-2.jpg",
+      "assets/tka-oficial/20.700/foto-3.jpg",
+      "assets/tka-oficial/20.700/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/20.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/20.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/20.700/grafico-de-carga-libra.pdf",
+    "video": "https://youtu.be/JFKBeHrjix4",
+    "setores": [
+      "03_mineracao",
+      "06_maritimo",
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "23.700",
+    "codigo": "TKA 23.700",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 23.700 (Linha Canivete) foi projetado para locadoras e operação contínua e eletrificação e trabalhos em altura. Conta com capacidade máxima de 9.335Kg, peso próprio de 3.010Kg, 5 lanças hidráulicas e 2 manuais, alcance vertical de 21,5m, alcance horizontal de 18,2m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "9.335Kg",
+      "pesoProprio": "3.010Kg",
+      "extensoesHidraulicas": 5,
+      "extensoesManuais": 2,
+      "maximoVertical": "21,5m",
+      "maximoHorizontal": "18,2m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "nJojGSoNtRtkjluQAyyj",
+          "possui": true
+        },
+        {
+          "id": "7iVhUzSYzmFqcJyXsgPJ",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/23.700/foto-1.jpg",
+      "assets/tka-oficial/23.700/foto-2.jpg",
+      "assets/tka-oficial/23.700/foto-3.jpg",
+      "assets/tka-oficial/23.700/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/23.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/23.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/23.700/grafico-de-carga-libra.pdf",
+    "video": "https://www.youtube.com/watch?v=mNeFtvwTlx0",
+    "setores": [
+      "04_locacao",
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "30.700",
+    "codigo": "TKA 30.700",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 30.700 (Linha Trave) foi projetado para içamento de grandes cargas com máxima estabilidade, atendendo construção civil, infraestrutura e locação. Conta com capacidade máxima de 5.800Kg, peso próprio de 3.495Kg, 5 lanças hidráulicas e 2 manuais, alcance vertical de 21,8m, alcance horizontal de 18,3m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "5.800Kg",
+      "pesoProprio": "3.495Kg",
+      "extensoesHidraulicas": 5,
+      "extensoesManuais": 2,
+      "maximoVertical": "21,8m",
+      "maximoHorizontal": "18,3m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "DBkMKnZQ0cL8jEDZrjmT",
+          "possui": true
+        },
+        {
+          "id": "pfNFiN8J35crAb0Qj8JG",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/30.700/foto-1.jpg",
+      "assets/tka-oficial/30.700/foto-2.jpg",
+      "assets/tka-oficial/30.700/foto-3.jpg",
+      "assets/tka-oficial/30.700/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/30.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/30.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/30.700/grafico-de-carga-libra.pdf"
+  },
+  {
+    "slug": "30.900",
+    "codigo": "TKA 30.900",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 30.900 (Linha Canivete) foi projetado para locadoras e operação contínua. Conta com capacidade máxima de 10.250, peso próprio de 3.740KG, 5 lanças hidráulicas e 3 manuais, alcance vertical de 23,8m, alcance horizontal de 20,7m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "10.250",
+      "pesoProprio": "3.740KG",
+      "extensoesHidraulicas": 5,
+      "extensoesManuais": 3,
+      "maximoVertical": "23,8m",
+      "maximoHorizontal": "20,7m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "DBkMKnZQ0cL8jEDZrjmT",
+          "possui": true
+        },
+        {
+          "id": "pfNFiN8J35crAb0Qj8JG",
           "possui": false
         },
         {
@@ -180,7 +1165,76 @@
           "possui": true
         },
         {
-          "id": "9G8luGSgIQYHyYmxlF03",
+          "id": "kU1XvHxPIuJz1mirlTiL",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/30.900/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/30.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/30.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/30.900/grafico-de-carga-libra.pdf",
+    "setores": [
+      "04_locacao"
+    ]
+  },
+  {
+    "slug": "38.900",
+    "codigo": "TKA 38.900",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 38.900 (Linha Canivete) foi projetado para mineração e movimentação extrapesada e construção civil e infraestrutura. Conta com capacidade máxima de 18.350Kg, peso próprio de 4.425Kg, 6 lanças hidráulicas e 2 manuais, alcance vertical de 24,5m, alcance horizontal de 20,9m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "18.350Kg",
+      "pesoProprio": "4.425Kg",
+      "extensoesHidraulicas": 6,
+      "extensoesManuais": 2,
+      "maximoVertical": "24,5m",
+      "maximoHorizontal": "20,9m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "HVYXt8AbIdHBxJzG0Jg4",
+          "possui": true
+        },
+        {
+          "id": "4QvQvATkFJQoMmWb9vep",
           "possui": true
         },
         {
@@ -190,18 +1244,24 @@
       ]
     },
     "fotos": [
-      "assets/tka-oficial/45.700/foto-1.png",
-      "assets/tka-oficial/45.700/foto-2.png",
-      "assets/tka-oficial/45.700/foto-3.png"
+      "assets/tka-oficial/38.900/foto-1.jpg"
     ],
-    "grafico": "assets/tka-oficial/45.700/grafico-de-carga.png",
-    "destaque_hero": true
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/38.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/38.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/38.900/grafico-de-carga-libra.pdf",
+    "setores": [
+      "03_mineracao",
+      "02_construcao"
+    ]
   },
   {
     "slug": "40.900",
     "codigo": "TKA 40.900",
     "linha": "Trave",
-    "descricao": "O Guindaste TKA 40.900 (Linha Trave) é projetado para máxima eficiência e estabilidade em operações pesadas na construção civil, infraestrutura e locação. Construído com aços especiais de alta resistência, patolas com abertura de 6,0 m e capacidade máxima de 9.500 kg.",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 40.900 (Linha Trave) foi projetado para içamento de grandes cargas com máxima estabilidade, atendendo construção civil, infraestrutura e locação. Conta com capacidade máxima de 9.500Kg, peso próprio de 3.680Kg, 5 lanças hidráulicas e 3 manuais, alcance vertical de 23,8m, alcance horizontal de 20,6m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
     "specs": {
       "capacidadeMaxima": "9.500Kg",
       "pesoProprio": "3.680Kg",
@@ -266,12 +1326,1905 @@
       ]
     },
     "fotos": [
-      "assets/tka-oficial/40.900/foto-1.png",
-      "assets/tka-oficial/40.900/foto-2.png",
-      "assets/tka-oficial/40.900/foto-3.png",
-      "assets/tka-oficial/40.900/foto-4.png"
+      "assets/tka-oficial/40.900/foto-1.jpg",
+      "assets/tka-oficial/40.900/foto-2.jpg",
+      "assets/tka-oficial/40.900/foto-3.jpg",
+      "assets/tka-oficial/40.900/foto-4.jpg"
     ],
+    "destaque_hero": true,
     "grafico": "assets/tka-oficial/40.900/grafico-de-carga.png",
-    "destaque_hero": true
+    "grafico_pdf": "assets/tka-oficial/40.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/40.900/grafico-de-carga-libra.pdf",
+    "video": "https://www.youtube.com/watch?v=vVprcMdk9Bc"
+  },
+  {
+    "slug": "41.900",
+    "codigo": "TKA 41.900",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 41.900 (Linha Trave) foi projetado para operações agrícolas e logística de insumos, construção civil e infraestrutura, locadoras e operação contínua e operações portuárias e marítimas. Conta com capacidade máxima de 9.500kg, peso próprio de 3.680kg, 5 lanças hidráulicas e 3 manuais, alcance vertical de 23,8m, alcance horizontal de 20,6m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "9.500kg",
+      "pesoProprio": "3.680kg",
+      "extensoesHidraulicas": 5,
+      "extensoesManuais": 3,
+      "maximoVertical": "23,8m",
+      "maximoHorizontal": "20,6m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/41.900/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico_pdf": "assets/tka-oficial/41.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/41.900/grafico-de-carga-libra.pdf",
+    "setores": [
+      "01_agricola",
+      "02_construcao",
+      "04_locacao",
+      "06_maritimo"
+    ]
+  },
+  {
+    "slug": "45.700",
+    "codigo": "TKA 45.700",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 45.700, modelo Trave, foi projetado para operações que exigem alto alcance e com grande capacidade de carga, sendo a solução para operações que exigem precisão, confiabilidade e alta disponibilidade operacional. Desenvolvido com engenharia avançada e aço de alta resistência, este equipamento combina robustez estrutural com excelente agilidade de manobra, sendo perfeito para aplicação na construção civil, logística pesada e mineração onde é necessário força e precisão. Maior Estabilidade da Categoria: Patolas com abertura de 6,1 m, garantindo alto nível de estabilidade e segurança em operações com grande alcance. Engenharia de Alcance: Conta com quatro lanças hidráulicas e três manuais, proporcionando uma operação amplo e versátil para diferentes tipos de serviços. Tecnologia Fly Jib: Compatível com acessório opcional Fly Jib, permitindo ampliar o alcance vertical e horizontal e facilitando operações em locais confinados ou sobre obstáculos. Confiabilidade TKA: Projeto pensado para eficiência e alta resistência, garantindo operação estável mesmo em condições severas de uso.",
+    "descricao_fonte": "oficial",
+    "specs": {
+      "capacidadeMaxima": "10.130Kg",
+      "pesoProprio": "4.425Kg",
+      "extensoesHidraulicas": 4,
+      "extensoesManuais": 3,
+      "maximoVertical": "22,8m",
+      "maximoHorizontal": "19,0m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "PyCaseWki67ttY12hOWm",
+          "possui": true
+        },
+        {
+          "id": "n6r7v1KoCTYr8gtdYVnr",
+          "possui": false
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "9G8luGSgIQYHyYmxlF03",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/45.700/foto-1.jpg",
+      "assets/tka-oficial/45.700/foto-2.jpg",
+      "assets/tka-oficial/45.700/foto-3.jpg"
+    ],
+    "destaque_hero": true,
+    "grafico": "assets/tka-oficial/45.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/45.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/45.700/grafico-de-carga-libra.pdf",
+    "specs_tecnicas": {
+      "Momento máximo de carga": "10,1 ton a 4,5 m •",
+      "Alcance máx. horizontal": "19 m •",
+      "Alcance máx. vertical": "22,8 m •",
+      "Abertura de patolas": "6,1 m •",
+      "Peso próprio": "(4H3M): 4.425 kg •",
+      "Torque de giro": "4,83 tf.m •",
+      "Pressão de trabalho": "260 bar •",
+      "Ângulo de giro": "370° •",
+      "PBT mínimo para instalação": "23.000 kg Ao escolher o Guindaste TKA 45.700 , o operador investe em um equipamento com alto valor de revenda (TKA Vale Ouro) , respaldado por uma rede de assistência técnica presente em mais de 25 países. É a engenharia brasileira com presença global, focada em transformar complexidade em produtividade e segurança."
+    },
+    "video": "https://youtu.be/i21pkOGFH00",
+    "setores": [
+      "03_mineracao",
+      "02_construcao",
+      "04_locacao"
+    ]
+  },
+  {
+    "slug": "48.700",
+    "codigo": "TKA 48.700",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 48.700 (Linha Trave) foi projetado para içamento de grandes cargas com máxima estabilidade, atendendo construção civil, infraestrutura e locação. Conta com capacidade máxima de 10.840Kg, peso próprio de 4.835Kg, 6 lanças hidráulicas e 2 manuais, alcance vertical de 23,5m, alcance horizontal de 19,9m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "10.840Kg",
+      "pesoProprio": "4.835Kg",
+      "extensoesHidraulicas": 6,
+      "extensoesManuais": 2,
+      "maximoVertical": "23,5m",
+      "maximoHorizontal": "19,9m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "ZJjHkpCVEG3JWg1BMAD5",
+          "possui": true
+        },
+        {
+          "id": "O7Wqm5qUb7l7o3zRaMZH",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/48.700/foto-1.jpg",
+      "assets/tka-oficial/48.700/foto-2.jpg",
+      "assets/tka-oficial/48.700/foto-3.jpg",
+      "assets/tka-oficial/48.700/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/48.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/48.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/48.700/grafico-de-carga-libra.pdf",
+    "video": "https://youtu.be/Z2VqIh0_XJ8"
+  },
+  {
+    "slug": "50.700",
+    "codigo": "TKA 50.700",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 50.700 (Linha Canivete) foi projetado para mineração e movimentação extrapesada. Conta com capacidade máxima de 24.000Kg, peso próprio de 5.850Kg, 6 lanças hidráulicas e 3 manuais, alcance vertical de 26,7m, alcance horizontal de 22,9m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "24.000Kg",
+      "pesoProprio": "5.850Kg",
+      "extensoesHidraulicas": 6,
+      "extensoesManuais": 3,
+      "maximoVertical": "26,7m",
+      "maximoHorizontal": "22,9m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "T8PrxJT47GOzHDLm0RZL",
+          "possui": false
+        },
+        {
+          "id": "i69NVgwHZ3adLOMv2TXT",
+          "possui": true
+        },
+        {
+          "id": "Yb9ZnZp1gqOF3iw0iVwC",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/50.700/foto-1.jpg",
+      "assets/tka-oficial/50.700/foto-2.jpg",
+      "assets/tka-oficial/50.700/foto-3.jpg",
+      "assets/tka-oficial/50.700/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/50.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/50.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/50.700/grafico-de-carga-libra.pdf",
+    "video": "https://www.youtube.com/watch?v=7MG-tMiYIt0",
+    "setores": [
+      "03_mineracao"
+    ]
+  },
+  {
+    "slug": "50.700-fly",
+    "codigo": "TKA 50.700 Fly Jib",
+    "linha": "Canivete + Fly Jib",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 50.700 Fly Jib (Linha Canivete) foi compacto e versátil, ideal para operação em espaços restritos com variação de altura, atendendo construção, agro e locação. Conta com capacidade máxima de 20.880Kg, peso próprio de 6.600Kg, configuração hidráulica 6h + 4h da fly + 1m da fly manual(is), alcance vertical de 30,30m, alcance horizontal de 27,63m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "20.880Kg",
+      "pesoProprio": "6.600Kg",
+      "extensoesHidraulicas": "6h + 4h da fly",
+      "extensoesManuais": "1m da fly",
+      "maximoVertical": "30,30m",
+      "maximoHorizontal": "27,63m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": true
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "mQ8FvqT0A34LR2NS1YpA",
+          "possui": true
+        },
+        {
+          "id": "oLVgI6y2WqNXarQAduhv",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/50.700-fly/foto-1.jpg",
+      "assets/tka-oficial/50.700-fly/foto-2.jpg",
+      "assets/tka-oficial/50.700-fly/foto-3.jpg",
+      "assets/tka-oficial/50.700-fly/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/50.700-fly/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/50.700-fly/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/50.700-fly/grafico-de-carga-libra.pdf",
+    "video": "https://www.youtube.com/watch?v=7MG-tMiYIt0"
+  },
+  {
+    "slug": "51.900",
+    "codigo": "TKA 51.900",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 51.900 , modelo Trave, foi desenvolvido para\n enfrentar operações que demandam alto alcance e elevada capacidade de carga,\n entregando precisão, confiabilidade e máxima disponibilidade operacional.\n Construído com tecnologia de ponta e aço de alta resistência, este equipamento\n reúne solidez estrutural e facilidade de manobra, tornando-se a escolha certa\n para obras de construção civil, operações de logística pesada e mineração, onde\n cada movimento exige força e controle. \n\n Maior Estabilidade da Categoria: Patolas com abertura\n de 8 m, garantindo alto nível de estabilidade e segurança em operações com\n grande alcance e cargas elevadas. \n\n Engenharia de Alcance: Conta com seis lanças\n hidráulicas e três manuais, proporcionando uma operação ampla e versátil para\n diferentes tipos de serviços, com alcance horizontal de até 22,2 m e vertical\n de até 25,5 m. \n\n Tecnologia Fly Jib: Compatível com o acessório\n opcional Fly Jib, permitindo ampliar ainda mais o alcance vertical e horizontal\n e facilitando operações em locais confinados ou sobre obstáculos. \n\n Confiabilidade TKA: Projeto pensado para eficiência e\n alta resistência, garantindo operação estável mesmo em condições severas de\n uso, com pressão de trabalho de 275 bar e torque de giro de 5,23 tf.m.",
+    "descricao_fonte": "oficial",
+    "specs": {
+      "capacidadeMaxima": "11.600Kg",
+      "pesoProprio": "4.830Kg",
+      "extensoesHidraulicas": 6,
+      "extensoesManuais": 3,
+      "maximoVertical": "25,5m",
+      "maximoHorizontal": "22,2m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "possui": true,
+          "id": "pnfrTQo5TLQQMeD6kacW"
+        },
+        {
+          "possui": true,
+          "id": "bPU3wFmkqTW5yVlhjFLF"
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "possui": false,
+          "id": "uS233ie0RoB0exSPqSnq"
+        },
+        {
+          "possui": true,
+          "id": "07zbxbzcU4UAaEKs7Xxq"
+        },
+        {
+          "possui": true,
+          "id": "4FZqiCeVYzIW8imbfN0P"
+        },
+        {
+          "possui": true,
+          "id": "S294eP6N1clVqwBr1p6Q"
+        },
+        {
+          "id": "0fPuJwv9lkXMPElmd2Cq",
+          "possui": true
+        },
+        {
+          "possui": true,
+          "id": "QnANOoW2i2KJfjONTLok"
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/51.900/foto-1.jpg",
+      "assets/tka-oficial/51.900/foto-2.jpg",
+      "assets/tka-oficial/51.900/foto-3.jpg",
+      "assets/tka-oficial/51.900/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/51.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/51.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/51.900/grafico-de-carga-libra.pdf",
+    "specs_tecnicas": {
+      "Momento máximo de carga": "11,6 ton a 4 m •",
+      "Alcance máx. horizontal": "22,2 m •",
+      "Alcance máx. vertical": "25,5 m •",
+      "Abertura de patolas": "8 m •",
+      "Peso próprio": "(6H3M): 4.830 kg •",
+      "Torque de giro": "5,23 tf.m •",
+      "Pressão de trabalho": "275 bar •",
+      "Ângulo de giro": "360° •",
+      "PBT mínimo para instalação": "23.000 kg Ao escolher o Guindaste TKA 51.900, o operador investe em um equipamento com alto valor de revenda (TKA Vale Ouro), respaldado por uma rede de assistência técnica presente em mais de 25 países. É a engenharia brasileira com presença global, focada em transformar complexidade em produtividade e segurança."
+    },
+    "video": "https://www.youtube.com/watch?v=M9JdSoCvFpU",
+    "setores": [
+      "02_construcao",
+      "04_locacao"
+    ]
+  },
+  {
+    "slug": "53.900",
+    "codigo": "TKA 53.900",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 53.900 (Linha Canivete) foi projetado para mineração e movimentação extrapesada. Conta com capacidade máxima de 24.000Kg, peso próprio de 6.050Kg, 7 lanças hidráulicas e 2 manuais, alcance vertical de 27,3, alcance horizontal de 23,4. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "24.000Kg",
+      "pesoProprio": "6.050Kg",
+      "extensoesHidraulicas": 7,
+      "extensoesManuais": 2,
+      "maximoVertical": "27,3",
+      "maximoHorizontal": "23,4",
+      "monteOSeu": true,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/53.900/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/53.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/53.900/grafico-de-carga.pdf",
+    "setores": [
+      "03_mineracao"
+    ]
+  },
+  {
+    "slug": "53.900-fly",
+    "codigo": "TKA 53.900 Fly Jib",
+    "linha": "Canivete + Fly Jib",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 53.900 Fly Jib (Linha Canivete) foi projetado para construção civil e infraestrutura. Conta com capacidade máxima de 9.250Kg, peso próprio de 6.670Kg, configuração hidráulica 6h + 5h da fly, alcance vertical de 31,9m, alcance horizontal de 28,0m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "9.250Kg",
+      "pesoProprio": "6.670Kg",
+      "extensoesHidraulicas": "6h + 5h da fly",
+      "extensoesManuais": 0,
+      "maximoVertical": "31,9m",
+      "maximoHorizontal": "28,0m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/53.900-fly/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/53.900-fly/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/53.900-fly/grafico-de-carga.pdf",
+    "setores": [
+      "02_construcao"
+    ]
+  },
+  {
+    "slug": "55.900",
+    "codigo": "TKA 55.900",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 55.900 (Linha Trave) foi projetado para içamento de grandes cargas com máxima estabilidade, atendendo construção civil, infraestrutura e locação. Conta com capacidade máxima de 13.700Kg, peso próprio de 5.630Kg, 6 lanças hidráulicas e 3 manuais, alcance vertical de 25,8m, alcance horizontal de 22,4m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "13.700Kg",
+      "pesoProprio": "5.630Kg",
+      "extensoesHidraulicas": 6,
+      "extensoesManuais": 3,
+      "maximoVertical": "25,8m",
+      "maximoHorizontal": "22,4m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/55.900/foto-1.jpg",
+      "assets/tka-oficial/55.900/foto-2.jpg",
+      "assets/tka-oficial/55.900/foto-3.jpg",
+      "assets/tka-oficial/55.900/foto-4.jpg"
+    ],
+    "destaque_hero": true,
+    "grafico": "assets/tka-oficial/55.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/55.900/grafico-de-carga.pdf",
+    "lancamento": true
+  },
+  {
+    "slug": "55.900-fly",
+    "codigo": "TKA 55.900 Fly Jib",
+    "linha": "Trave + Fly Jib",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 55.900 Fly Jib (Linha Trave) foi projetado para içamento de grandes cargas com máxima estabilidade, atendendo construção civil, infraestrutura e locação. Conta com capacidade máxima de 12.800Kg, peso próprio de 6.180Kg, configuração hidráulica 6h + 5h da fly, alcance vertical de 30,5m, alcance horizontal de 27,1m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "12.800Kg",
+      "pesoProprio": "6.180Kg",
+      "extensoesHidraulicas": "6h + 5h da fly",
+      "extensoesManuais": 0,
+      "maximoVertical": "30,5m",
+      "maximoHorizontal": "27,1m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/55.900-fly/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/55.900-fly/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/55.900-fly/grafico-de-carga.pdf"
+  },
+  {
+    "slug": "66.700",
+    "codigo": "TKA 66.700",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 66.700 (Linha Canivete) foi projetado para mineração e movimentação extrapesada. Conta com capacidade máxima de 30.190KG, peso próprio de 6.320KG, 7 lanças hidráulicas e 3 manuais, alcance vertical de 29,2m, alcance horizontal de 18,6m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "30.190KG",
+      "pesoProprio": "6.320KG",
+      "extensoesHidraulicas": 7,
+      "extensoesManuais": 3,
+      "maximoVertical": "29,2m",
+      "maximoHorizontal": "18,6m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "possui": true,
+          "id": "BBOvq8tPQ1QspOhkAhqK"
+        },
+        {
+          "possui": true,
+          "id": "Kq0OBDLbC6MCz3vNjSSI"
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "possui": true,
+          "id": "JkfhHpJ5SWT18fZyybW1"
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "possui": true,
+          "id": "07zbxbzcU4UAaEKs7Xxq"
+        },
+        {
+          "possui": true,
+          "id": "4FZqiCeVYzIW8imbfN0P"
+        },
+        {
+          "possui": true,
+          "id": "fx1nu3UfQkOXpWxZoJfW"
+        },
+        {
+          "id": "WduRE5Vtbgf90XojnMOF",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/66.700/foto-1.jpg",
+      "assets/tka-oficial/66.700/foto-2.jpg",
+      "assets/tka-oficial/66.700/foto-3.jpg",
+      "assets/tka-oficial/66.700/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/66.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/66.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/66.700/grafico-de-carga-libra.pdf",
+    "video": "https://www.youtube.com/watch?v=cFhq0LlesJ0",
+    "setores": [
+      "03_mineracao"
+    ]
+  },
+  {
+    "slug": "66.700-fly",
+    "codigo": "TKA 66.700 Fly Jib",
+    "linha": "Canivete + Fly Jib",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 66.700 Fly Jib (Linha Canivete) foi projetado para construção civil e infraestrutura. Conta com capacidade máxima de 28.220Kg, peso próprio de 7.040Kg, configuração hidráulica 7h + 4h da fly + 1m da fly manual(is), alcance vertical de 33,60m, alcance horizontal de 30,03m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "28.220Kg",
+      "pesoProprio": "7.040Kg",
+      "extensoesHidraulicas": "7h + 4h da fly",
+      "extensoesManuais": "1m da fly",
+      "maximoVertical": "33,60m",
+      "maximoHorizontal": "30,03m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/66.700-fly/foto-1.jpg",
+      "assets/tka-oficial/66.700-fly/foto-2.jpg",
+      "assets/tka-oficial/66.700-fly/foto-3.jpg",
+      "assets/tka-oficial/66.700-fly/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/66.700-fly/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/66.700-fly/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/66.700-fly/grafico-de-carga-libra.pdf",
+    "video": "https://www.youtube.com/watch?v=cFhq0LlesJ0",
+    "setores": [
+      "02_construcao"
+    ]
+  },
+  {
+    "slug": "72.900",
+    "codigo": "TKA 72.900",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "TKA 72.900 Trave Produzido no Brasil, o guindaste TKA 72.900, modelo trave, foi desenvolvido para oferecer desempenho, estabilidade e precisão em operações intensas de içamento. Construído com aço de ultra-alta resistência e em conformidade com as normas internacionais de segurança, o equipamento combina robustez estrutural, controle e confiabilidade operacional. Conta com sete lanças hidráulicas, garantindo maior alcance e agilidade nas manobras, o que resulta em mais eficiência no canteiro de obras ou em ambientes industriais. O modelo é equipado com sapata escamoteável e possui a maior abertura de patolas da categoria, proporcionando elevado nível de estabilidade durante as operações, especialmente em trabalhos com cargas elevadas.  Por sua versatilidade, é indicado para aplicações que exigem produtividade e precisão no manuseio de cargas. Atua com eficiência na construção civil e na indústria pesada, sendo ideal para movimentação, posicionamento, montagem e desmontagem de equipamentos, além de operações logísticas e trabalhos em locais confinados que demandam controle de alcance.",
+    "descricao_fonte": "oficial",
+    "specs": {
+      "capacidadeMaxima": "16.000Kg",
+      "pesoProprio": "5.950Kg",
+      "extensoesHidraulicas": 7,
+      "extensoesManuais": 3,
+      "maximoVertical": "27,6m",
+      "maximoHorizontal": "24,1m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "possui": true,
+          "id": "S294eP6N1clVqwBr1p6Q"
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "possui": false,
+          "id": "uS233ie0RoB0exSPqSnq"
+        },
+        {
+          "possui": true,
+          "id": "JkfhHpJ5SWT18fZyybW1"
+        },
+        {
+          "possui": true,
+          "id": "bPU3wFmkqTW5yVlhjFLF"
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "possui": true,
+          "id": "Kq0OBDLbC6MCz3vNjSSI"
+        },
+        {
+          "possui": true,
+          "id": "BBOvq8tPQ1QspOhkAhqK"
+        },
+        {
+          "possui": true,
+          "id": "Co54AFX6xCiNyltGiFQU"
+        },
+        {
+          "id": "Lc1wRvzF0kBiL4OTfdu9",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/72.900/foto-1.jpg",
+      "assets/tka-oficial/72.900/foto-2.jpg",
+      "assets/tka-oficial/72.900/foto-3.jpg",
+      "assets/tka-oficial/72.900/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/72.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/72.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/72.900/grafico-de-carga-libra.pdf",
+    "specs_tecnicas": {
+      "Momento máximo de carga": "15 ton a 4,2 m",
+      "Alcance máx. horizontal": "28,9 m",
+      "Alcance máx. vertical": "32,7 m",
+      "Abertura de patolas": "8,4 m",
+      "Peso próprio": "(7H0M + Fly Jib): 6.670 kg",
+      "Torque de giro": "5,7 tf.m",
+      "Pressão de trabalho": "320 bar",
+      "Ângulo de giro": "370°",
+      "PBT mínimo para instalação": "23.000 kg O operador encontra nesse modelo uma solução eficiente para atuar com segurança e estabilidade mesmo em terrenos e condições desafiadoras, mantendo alto desempenho operacional. O equipamento pode ser configurado com o acessório opcional Fly Jib, que amplia o alcance e expande a capacidade de operação. A possibilidade de incorporar acessórios reforça a versatilidade do equipamento e o posicionamento da TKA como fabricante preparada para oferecer soluções completas e adaptadas à realidade do cliente. Com estrutura robusta e excelente desempenho hidráulico, o Guindaste TKA 72.900 transforma operações complexas em soluções mais seguras, ágeis e produtivas."
+    },
+    "video": "https://youtu.be/pMhvpcWzOtg",
+    "setores": [
+      "02_construcao",
+      "04_locacao"
+    ]
+  },
+  {
+    "slug": "72.900-fly",
+    "codigo": "TKA 72.900 Fly Jib",
+    "linha": "Trave + Fly Jib",
+    "categoria": "guindaste",
+    "descricao": "TKA 72.900 com Fly Jib: O Maior Alcance da Categoria O Fly Jib TKA é o acessório estratégico para quem busca máxima versatilidade. Configurado no Guindaste TKA 72.900, ele eleva o equipamento a um novo patamar de performance, atingindo impressionantes 32,7 metros de alcance vertical. É a solução ideal para transpor obstáculos e realizar entregas em grandes alturas com a precisão exigida pela engenharia moderna. Destaques e Diferenciais Alcance Excepcional: Com 28,9 metros de alcance horizontal, permite cobrir áreas de trabalho extensas sem a necessidade de reposicionar o caminhão, garantindo eficiência operacional. Configuração de Lanças: Sistema robusto composto por 7 extensões hidráulicas no guindaste + 4 hidráulicas no Fly Jib, além de uma extensão manual, totalizando um envelope de trabalho superior. Capacidade de Carga: Mantém um desempenho sólido com capacidade máxima de 15.000 kg, equilibrando força e longo alcance. Durabilidade Estrutural: Construído para suportar regimes intensos de uso, preservando a integridade do conjunto e assegurando a valorização do equipamento (TKA Vale Ouro).",
+    "descricao_fonte": "oficial",
+    "specs": {
+      "capacidadeMaxima": "15.000Kg",
+      "pesoProprio": "6.670Kg",
+      "extensoesHidraulicas": "7h + 4h da fly",
+      "extensoesManuais": "1m da fly",
+      "maximoVertical": "32,7m",
+      "maximoHorizontal": "28,9m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "63u8HRdbwA0oCPZtuMld",
+          "possui": true
+        },
+        {
+          "possui": true,
+          "id": "7PavymkViKmPTY9D3PHo"
+        },
+        {
+          "possui": true,
+          "id": "BBOvq8tPQ1QspOhkAhqK"
+        },
+        {
+          "possui": true,
+          "id": "Kq0OBDLbC6MCz3vNjSSI"
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "possui": true,
+          "id": "JkfhHpJ5SWT18fZyybW1"
+        },
+        {
+          "possui": false,
+          "id": "uS233ie0RoB0exSPqSnq"
+        },
+        {
+          "possui": true,
+          "id": "07zbxbzcU4UAaEKs7Xxq"
+        },
+        {
+          "possui": true,
+          "id": "4FZqiCeVYzIW8imbfN0P"
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/72.900-fly/foto-1.jpg",
+      "assets/tka-oficial/72.900-fly/foto-2.jpg",
+      "assets/tka-oficial/72.900-fly/foto-3.jpg",
+      "assets/tka-oficial/72.900-fly/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/72.900-fly/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/72.900-fly/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/72.900-fly/grafico-de-carga-libra.pdf",
+    "video": "https://youtu.be/pMhvpcWzOtg",
+    "lancamento": true
+  },
+  {
+    "slug": "80.700",
+    "codigo": "TKA 80.700",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "Guindaste TKA 80.700 \n\n A TKA é uma empresa brasileira com presença em mais\n de 23 países, reconhecida pela engenharia robusta, tecnologia avançada e\n soluções completas em guindastes articulados e implementos hidráulicos.\n Com foco em segurança, desempenho e inovação. \n\n O Guindaste TKA 80.700 é um modelo trave\n desenvolvido para operadores que buscam alta capacidade de carga, estabilidade\n superior e precisão operacional. Sua estrutura é construída em aços\n de alta resistência, recebe tratamento anticorrosivo, pintura\n automotiva industrial e utiliza componentes hidráulicos de padrão\n internacional, garantindo durabilidade e desempenho mesmo em condições severas\n de trabalho. Priorizando a segurança, o TKA 80.700 conta com cilindros\n estabilizadores giratórios, que oferecem maior flexibilidade e eficiência\n no nivelamento, além de válvulas de segurança e sensores de proteção\n de movimento, que ampliam a confiabilidade da operação. O modelo também\n incorpora sistema automático de rebatimento, reduzindo o tempo de\n preparação e aumentando a agilidade no dia a dia. \n\n Entre os itens de série, destacam-se o sistema de\n controle hidráulico proporcional, o indicador de carga, os limitadores\n de momento, além de um conjunto de pontos de manutenção acessíveis e\n sistema de lubrificação otimizada, que facilitam o trabalho do operador\n e contribuem para a vida útil do equipamento.",
+    "descricao_fonte": "oficial",
+    "specs": {
+      "capacidadeMaxima": "17.100Kg",
+      "pesoProprio": "7.400Kg",
+      "extensoesHidraulicas": 7,
+      "extensoesManuais": 3,
+      "maximoVertical": "28,3m",
+      "maximoHorizontal": "24,6m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "cILqh806Ik9QW0u0eqkb",
+          "possui": true
+        },
+        {
+          "id": "DCBc4TTBFBdZDibGNUb6",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/80.700/foto-1.jpg",
+      "assets/tka-oficial/80.700/foto-2.jpg",
+      "assets/tka-oficial/80.700/foto-3.jpg",
+      "assets/tka-oficial/80.700/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/80.700/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/80.700/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/80.700/grafico-de-carga-libra.pdf",
+    "specs_tecnicas": {
+      "Momento máximo de carga": "17.1 ton a 4.62m",
+      "Alcance máx. vertical": "28,3m",
+      "Alcance máx. horizontal": "24,6m",
+      "Abertura de patolas": "8,4m",
+      "Peso próprio": "(7H3M) 7.400 Kg",
+      "Torque de giro": "8,19 tf.m",
+      "Pressão de trabalho": "275 bar",
+      "Ângulo de giro": "360° Espaço ocupado para operação: 1,7m",
+      "PBT mínimo para instalação": "23.000Kg O TKA 80.700 pode ser equipado com diversos opcionais que ampliam sua versatilidade, como Fly Jib, controle remoto proporcional, guincho de cabo, kit hidráulico adicional, cesto aéreo, além de acessórios como broca, porta pallet, pega bag e malhal. O modelo é ideal para operações que exigem grande alcance e alto momento de carga, sendo amplamente utilizado na construção civil, setor industrial, logística de cargas pesadas, locação, manutenção em altura e obras de infraestrutura. Sua combinação de força, estabilidade e amplitude operacional o posiciona como um dos equipamentos mais versáteis da categoria."
+    },
+    "video": "https://youtu.be/H5wB7Iuhg4o",
+    "setores": [
+      "02_construcao",
+      "03_mineracao",
+      "04_locacao",
+      "06_maritimo"
+    ]
+  },
+  {
+    "slug": "80.700-fly",
+    "codigo": "TKA 80.700 Fly Jib",
+    "linha": "Trave + Fly Jib",
+    "categoria": "guindaste",
+    "descricao": "Guindaste TKA 80.700 fly jib \n A TKA é uma empresa brasileira com presença em mais de 23 países,\n reconhecida pela engenharia robusta, tecnologia avançada e soluções completas\n em guindastes articulados e implementos hidráulicos. Com foco em\n segurança, desempenho e inovação. \n\n O Guindaste TKA 80.700 é um modelo trave\n desenvolvido para operadores que buscam alta capacidade de carga, estabilidade\n superior e precisão operacional. Sua estrutura é construída em aços\n de alta resistência, recebe tratamento anticorrosivo, pintura\n automotiva industrial e utiliza componentes hidráulicos de padrão\n internacional, garantindo durabilidade e desempenho mesmo em condições severas\n de trabalho. Priorizando a segurança, o TKA 80.700 conta com cilindros\n estabilizadores giratórios, que oferecem maior flexibilidade e eficiência\n no nivelamento, além de válvulas de segurança e sensores de proteção\n de movimento, que ampliam a confiabilidade da operação. O modelo também\n incorpora sistema automático de rebatimento, reduzindo o tempo de\n preparação e aumentando a agilidade no dia a dia. \n\n Entre os itens de série, destacam-se o sistema de\n controle hidráulico proporcional, o indicador de carga, os limitadores\n de momento, além de um conjunto de pontos de manutenção acessíveis e\n sistema de lubrificação otimizada, que facilitam o trabalho do operador\n e contribuem para a vida útil do equipamento.",
+    "descricao_fonte": "oficial",
+    "specs": {
+      "capacidadeMaxima": "16.800Kg",
+      "pesoProprio": "8.125Kg",
+      "extensoesHidraulicas": "7h + 4h da fly",
+      "extensoesManuais": "1m da fly",
+      "maximoVertical": "32,64m",
+      "maximoHorizontal": "29,07m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "d1Mod3e3t3PkEaMEsJIY",
+          "possui": true
+        },
+        {
+          "id": "j9xwYT7MxVVvRzqsHdsL",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/80.700-fly/foto-1.jpg",
+      "assets/tka-oficial/80.700-fly/foto-2.jpg",
+      "assets/tka-oficial/80.700-fly/foto-3.jpg",
+      "assets/tka-oficial/80.700-fly/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/80.700-fly/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/80.700-fly/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/80.700-fly/grafico-de-carga-libra.pdf",
+    "specs_tecnicas": {
+      "Momento máximo de carga": "16.8ton a 4.32m",
+      "Alcance máx. vertical": "32.64m",
+      "Alcance máx. horizontal": "29.07m",
+      "Abertura de patolas": "8,4m",
+      "Peso próprio": "(7H0M) + fly jib 8.125 Kg",
+      "Torque de giro": "8,19 tf.m",
+      "Pressão de trabalho": "275 bar",
+      "Ângulo de giro": "360° Espaço ocupado para operação: 1,7m",
+      "PBT mínimo para instalação": "23.000Kg A Fly Jib do TKA 80.700 é um dos opcionais mais valorizados por ampliar significativamente o alcance vertical e horizontal do guindaste, possibilitando acesso a áreas elevadas ou de difícil aproximação. Acoplada à 7ª lança, ela estende a altura máxima de trabalho e melhora a performance do equipamento em operações que exigem ultrapassar obstáculos, atingir fachadas de prédios, estruturas metálicas, telhados, silos e pontos de içamento recuados. Projetada dentro dos padrões de engenharia da TKA, a Fly Jib mantém a robustez e a segurança do conjunto, oferecendo articulação precisa, excelente estabilidade. É um recurso essencial para ampliar a versatilidade operacional do TKA 80.700, transformando-o em uma solução ainda mais completa para aplicações na construção civil, montagens industriais, manutenção em altura e operações especiais que exigem maior alcance com agilidade e segurança."
+    },
+    "video": "https://youtube.com/shorts/TZ-L-QNGAso"
+  },
+  {
+    "slug": "90.900",
+    "codigo": "TKA 90.900",
+    "linha": "Trave",
+    "categoria": "guindaste",
+    "descricao": "Guindaste TKA 90.900 \n A TKA é uma empresa brasileira com presença em mais de 23 países, reconhecida\n por sua engenharia global e soluções inovadoras em movimentação e elevação de\n cargas. \n\n O TKA 90.900, modelo Trave, é um guindaste robusto e\n tecnológico, projetado para atender às aplicações mais exigentes do mercado.\n Construído em aço de ultra-alta resistência e totalmente conforme as normas\n internacionais de segurança, o modelo oferece 3 anos de garantia estrutural,\n assegurando durabilidade, precisão e alto desempenho em qualquer tipo de\n operação. \n\n Perfeito para empresas de locação, construção civil e\n montagem industrial, o TKA 90.900 garante eficiência, estabilidade e\n confiabilidade, mesmo nas condições mais desafiadoras. O modelo pode ser configurado com Fly Jib, permitindo atuar em locais de difícil acesso, ideal para espaços confinados, e oferece uma ampla linha de acessórios opcionais, que ampliam sua versatilidade e performance.",
+    "descricao_fonte": "oficial",
+    "specs": {
+      "capacidadeMaxima": "20.300Kg",
+      "pesoProprio": "7.870Kg",
+      "extensoesHidraulicas": 8,
+      "extensoesManuais": 3,
+      "maximoVertical": "31,0m",
+      "maximoHorizontal": "26,1m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "R1bfuFic8rUGrefSnr5c",
+          "possui": true
+        },
+        {
+          "id": "VrnuQo9duhXzMP6MUl3w",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "KSNU7BUJFzyjODSNiJlH",
+          "possui": true
+        },
+        {
+          "id": "0o3DTkeekmrVvHbLbQ03",
+          "possui": true
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "luwu3wxY0TLqOSWXXYqJ",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/90.900/foto-1.jpg",
+      "assets/tka-oficial/90.900/foto-2.jpg",
+      "assets/tka-oficial/90.900/foto-3.jpg",
+      "assets/tka-oficial/90.900/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/90.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/90.900/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/90.900/grafico-de-carga-libra.pdf",
+    "specs_tecnicas": {
+      "Momento máximo de carga": "20.3ton a 4,5m",
+      "Alcance máx. horizontal": "26.1m",
+      "Alcance máx. vertical": "31m",
+      "Abertura de patolas": "8.4m",
+      "Peso próprio": "(8H3M ) 7.870 Kg",
+      "Torque de giro": "14,0 tf.m",
+      "Pressão de trabalho": "300 bar",
+      "Ângulo de giro": "contínuo",
+      "PBT mínimo para instalação": "27.000Kg"
+    },
+    "video": "https://youtu.be/7Vb3qvnCw94",
+    "setores": [
+      "04_locacao"
+    ]
+  },
+  {
+    "slug": "90.900-fly",
+    "codigo": "TKA 90.900 Fly Jib",
+    "linha": "Trave + Fly Jib",
+    "categoria": "guindaste",
+    "descricao": "Guindaste TKA 90.900 \n A TKA é uma empresa brasileira com presença em mais de 23 países, reconhecida\n por sua engenharia global e soluções inovadoras em movimentação e elevação de\n cargas. \n\n O TKA 90.900, modelo Trave, é um guindaste robusto e\n tecnológico, projetado para atender às aplicações mais exigentes do mercado.\n Construído em aço de ultra-alta resistência e totalmente conforme as normas\n internacionais de segurança, o modelo oferece 3 anos de garantia estrutural,\n assegurando durabilidade, precisão e alto desempenho em qualquer tipo de\n operação. \n\n Perfeito para empresas de locação, construção civil e\n montagem industrial, o TKA 90.900 garante eficiência, estabilidade e\n confiabilidade, mesmo nas condições mais desafiadoras. O modelo pode ser configurado com Fly Jib, permitindo atuar em locais de difícil acesso, podendo realizar trabalhos com ângulo negativo, ideal para espaços confinados, e oferece uma ampla linha de acessórios opcionais, que ampliam sua versatilidade e performance: controle remoto, pega bag, malhal, guincho de cabo, broca, porta pallet, kit de preparação hidráulica e cesto aéreo. Tudo isso faz do TKA 90.900 uma solução completa, capaz de se adaptar às mais diversas necessidades do mercado com eficiência e segurança.",
+    "descricao_fonte": "oficial",
+    "specs": {
+      "capacidadeMaxima": "19.400Kg",
+      "pesoProprio": "8.930Kg",
+      "extensoesHidraulicas": "8h + 5h da fly",
+      "extensoesManuais": "1m da fly",
+      "maximoVertical": "36.5m",
+      "maximoHorizontal": "32.8m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": [
+        {
+          "id": "BBOvq8tPQ1QspOhkAhqK",
+          "possui": true
+        },
+        {
+          "id": "gcTROlnuVYPxz7jqnFfT",
+          "possui": true
+        },
+        {
+          "id": "6eNpJ6rIDhkTKDRVUIfx",
+          "possui": true
+        },
+        {
+          "id": "Kq0OBDLbC6MCz3vNjSSI",
+          "possui": true
+        },
+        {
+          "id": "pnfrTQo5TLQQMeD6kacW",
+          "possui": true
+        },
+        {
+          "id": "bPU3wFmkqTW5yVlhjFLF",
+          "possui": true
+        },
+        {
+          "id": "JkfhHpJ5SWT18fZyybW1",
+          "possui": true
+        },
+        {
+          "id": "uS233ie0RoB0exSPqSnq",
+          "possui": false
+        },
+        {
+          "id": "07zbxbzcU4UAaEKs7Xxq",
+          "possui": true
+        },
+        {
+          "id": "4FZqiCeVYzIW8imbfN0P",
+          "possui": true
+        },
+        {
+          "id": "S294eP6N1clVqwBr1p6Q",
+          "possui": true
+        }
+      ]
+    },
+    "fotos": [
+      "assets/tka-oficial/90.900-fly/foto-1.jpg",
+      "assets/tka-oficial/90.900-fly/foto-2.jpg",
+      "assets/tka-oficial/90.900-fly/foto-3.jpg",
+      "assets/tka-oficial/90.900-fly/foto-4.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/90.900-fly/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/90.900-fly/grafico-de-carga.pdf",
+    "grafico_pdf_libra": "assets/tka-oficial/90.900-fly/grafico-de-carga-libra.pdf",
+    "specs_tecnicas": {
+      "Momento máximo de carga": "19.4ton a 4,5m",
+      "Alcance máx. horizontal": "32.8m",
+      "Alcance máx. vertical": "36.5m",
+      "Abertura de patolas": "8.4m",
+      "Peso próprio": "(8H0M)+ fly jib 8.930 Kg",
+      "Torque de giro": "14,0 tf.m",
+      "Pressão de trabalho": "300 bar",
+      "Ângulo de giro": "contínuo",
+      "PBT mínimo para instalação": "27.000Kg",
+      "Capacidade do reservatório": "hidráulico: 250L",
+      "Controle remoto": "de serie",
+      "Fly jib opcional": ""
+    },
+    "video": "https://youtu.be/7Vb3qvnCw94",
+    "setores": [
+      "02_construcao",
+      "03_mineracao",
+      "04_locacao"
+    ]
+  },
+  {
+    "slug": "100.900",
+    "codigo": "TKA 100.900",
+    "linha": "Canivete",
+    "categoria": "guindaste",
+    "descricao": "Guindaste TKA 100.900: O Maior Guindaste Canivete do Brasil O Guindaste TKA 100.900 é o maior modelo da linha canivete produzido em território nacional, projetado para entregar performance sem limites em operações de grande porte. Sua engenharia avançada foca na disponibilidade e na força, combinando robustez estrutural com sistemas inteligentes que garantem a eficiência operacional necessária para os desafios mais complexos da infraestrutura e indústria. Destaques e diferenciais Alcance e Versatilidade: Equipado com 9 lanças hidráulicas e 2 manuais, atinge 31,5 m de alcance vertical e 26,3 m horizontal, oferecendo cobertura excepcional no canteiro. Tecnologia Power Link: Utiliza biela de potência para garantir movimentos precisos e maior amplitude de operação, mesmo sob cargas elevadas. Segurança e Estabilidade: Conta com patola articulada automática com abertura total de 8,4 m, proporcionando uma base sólida e segura para o operador. Giro Contínuo: Sistema que amplia o grau de liberdade na operação, permitindo manobras ágeis e sem restrições de ângulo. Alta Performance Hidráulica: Equipado com comando PVG para precisão absoluta e sistema regenerativo, que garante velocidade extrema na abertura das lanças. Opcional Fly Jib: Compatível com tecnologia Fly Jib, permitindo configurar o equipamento para operações que exigem mobilidade e precisão extras em locais de difícil acesso.",
+    "descricao_fonte": "oficial",
+    "specs": {
+      "capacidadeMaxima": "19.000KG",
+      "pesoProprio": "10.200KG",
+      "extensoesHidraulicas": 9,
+      "extensoesManuais": 2,
+      "maximoVertical": "31,5",
+      "maximoHorizontal": "26,3",
+      "monteOSeu": true,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/100.900/foto-1.jpg",
+      "assets/tka-oficial/100.900/foto-2.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/100.900/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/100.900/grafico-de-carga.pdf",
+    "specs_tecnicas": {
+      "Ângulo de giro": "Contínuo",
+      "Torque de giro": "10,7 tf.m",
+      "Pressão de trabalho": "350 bar",
+      "PBT mínimo para instalação": "32.000 kg O Guindaste TKA 100.900 é um ativo de alto valor estratégico, desenvolvido para reduzir o tempo de máquina parada e maximizar a produtividade. Com presença global em mais de 25 países, a TKA assegura que este gigante mantenha sua valorização de mercado, reafirmando que um equipamento TKA Vale Ouro."
+    },
+    "setores": [
+      "02_construcao"
+    ],
+    "lancamento": true
+  },
+  {
+    "slug": "100.900-fly",
+    "codigo": "TKA 100.900 Fly Jib",
+    "linha": "Canivete + Fly Jib",
+    "categoria": "guindaste",
+    "descricao": "O Guindaste TKA 100.900 Fly Jib (Linha Canivete) foi projetado para construção civil e infraestrutura. Conta com capacidade máxima de 18.060Kg, peso próprio de 11.100Kg, configuração hidráulica 9h + 5h da fly, alcance vertical de 37,1m, alcance horizontal de 33,1m. Construção em aço de ultra-alta resistência com garantia estrutural de fábrica e assessoria técnica da MT Guindastes para estudo de montagem veicular.",
+    "descricao_fonte": "derivada",
+    "specs": {
+      "capacidadeMaxima": "18.060Kg",
+      "pesoProprio": "11.100Kg",
+      "extensoesHidraulicas": "9h + 5h da fly",
+      "extensoesManuais": 0,
+      "maximoVertical": "37,1m",
+      "maximoHorizontal": "33,1m",
+      "monteOSeu": true,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/100.900-fly/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/100.900-fly/grafico-de-carga.png",
+    "grafico_pdf": "assets/tka-oficial/100.900-fly/grafico-de-carga.pdf",
+    "video": "https://youtu.be/jVK_H8pH-Oo?si=8ZtCJ-9JNX5SF7DM",
+    "setores": [
+      "02_construcao"
+    ],
+    "lancamento": true
+  },
+  {
+    "slug": "cesto-13.5-ddi",
+    "codigo": "TKA 13.5 DDi",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 13.5 com 2 cestos, duplo isolado. Cesto aéreo com capacidade de 272 kg, alcance horizontal de 6,5 m, giro de 360°, PBT mínimo de 4.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "272 kg",
+      "pesoProprio": "1695 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "6,5 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-13.5-ddi/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-13.5-ddi/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "272",
+      "alcanceMaximoHorizontal": "6,5",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "2",
+      "pesoEquipamentoEstabilizadores": "1695",
+      "complementoEquipamento": "5,9",
+      "alturaEmTransporte": "2,2",
+      "pbtMinimoExigido": "4.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-13.5-di",
+    "codigo": "TKA 13.5 DI",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 13.5 Duplo Isolado. Cesto aéreo com capacidade de 272 kg, alcance horizontal de 6,5 m, giro de 360°, PBT mínimo de 4.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "272 kg",
+      "pesoProprio": "1.625 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "6,5 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-13.5-di/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-13.5-di/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "272",
+      "alcanceMaximoHorizontal": "6,5",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "04",
+      "pesoEquipamentoEstabilizadores": "1.625",
+      "complementoEquipamento": "5,9",
+      "alturaEmTransporte": "2,2",
+      "pbtMinimoExigido": "4.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-13.5-d",
+    "codigo": "TKA 13.5 D",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 13.5 Duplo. Cesto aéreo com capacidade de 272 kg, alcance horizontal de 6,5 m, giro de 360°, PBT mínimo de 4.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "272 kg",
+      "pesoProprio": "1.615 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "6,5 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-13.5-d/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-13.5-d/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "272",
+      "alcanceMaximoHorizontal": "6,5",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "04",
+      "pesoEquipamentoEstabilizadores": "1.615",
+      "complementoEquipamento": "5,9",
+      "alturaEmTransporte": "2,2",
+      "pbtMinimoExigido": "4.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-13.5-sdi",
+    "codigo": "TKA 13.5 SDi",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 13.5 com 1 cesto, duplo isolado. Cesto aéreo com capacidade de 136 kg, alcance horizontal de 6,5 m, giro de 360°, PBT mínimo de 4.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "136 kg",
+      "pesoProprio": "1.575 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "6,5 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-13.5-sdi/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-13.5-sdi/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "136",
+      "alcanceMaximoHorizontal": "6,5",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "02",
+      "pesoEquipamentoEstabilizadores": "1.575",
+      "complementoEquipamento": "5,9",
+      "alturaEmTransporte": "2,2",
+      "pbtMinimoExigido": "4.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-13.5-si",
+    "codigo": "TKA 13.5 SI",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 13.5 Simples Isolado. Cesto aéreo com capacidade de 136 kg, alcance horizontal de 6,5 m, giro de 360°, PBT mínimo de 4.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "136 kg",
+      "pesoProprio": "1.550 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "6,5 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-13.5-si/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-13.5-si/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "136",
+      "alcanceMaximoHorizontal": "6,5",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "04",
+      "pesoEquipamentoEstabilizadores": "1.550",
+      "complementoEquipamento": "5,9",
+      "alturaEmTransporte": "2,2",
+      "pbtMinimoExigido": "4.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-13.5-s",
+    "codigo": "TKA 13.5 S",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 13.5 Simples. Cesto aéreo com capacidade de 136 kg, alcance horizontal de 6,5 m, giro de 360°, PBT mínimo de 4.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "136 kg",
+      "pesoProprio": "1.540 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "6,5 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-13.5-s/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-13.5-s/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "136",
+      "alcanceMaximoHorizontal": "6,5",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "04",
+      "pesoEquipamentoEstabilizadores": "1.540",
+      "complementoEquipamento": "5,9",
+      "alturaEmTransporte": "2,2",
+      "pbtMinimoExigido": "4.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-15.5-si",
+    "codigo": "TKA 15.5 Si",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 15.5 com 1 cestos, simples isolado. Cesto aéreo com capacidade de 136 kg, alcance horizontal de 7,2 m, giro de 360°, PBT mínimo de 10.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "136 kg",
+      "pesoProprio": "2.080 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "7,2 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-15.5-si/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-15.5-si/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "136",
+      "alcanceMaximoHorizontal": "7,2",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "2",
+      "pesoEquipamentoEstabilizadores": "2.080",
+      "complementoEquipamento": "6,7",
+      "alturaEmTransporte": "2,9",
+      "pbtMinimoExigido": "10.000"
+    }
+  },
+  {
+    "slug": "cesto-15.5-sdi",
+    "codigo": "TKA 15.5 SDi",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 13.5 com 1 cestos, duplo isolado. Cesto aéreo com capacidade de 136 kg, alcance horizontal de 7,2 m, giro de 360°, PBT mínimo de 10.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "136 kg",
+      "pesoProprio": "2.079 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "7,2 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-15.5-sdi/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-15.5-sdi/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "136",
+      "alcanceMaximoHorizontal": "7,2",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "2",
+      "pesoEquipamentoEstabilizadores": "2.079",
+      "complementoEquipamento": "6,7",
+      "alturaEmTransporte": "2,9",
+      "pbtMinimoExigido": "10.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-15.5-s",
+    "codigo": "TKA 15.5 S",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 15.5 com 1 cesto, sem isolamento. Cesto aéreo com capacidade de 136 kg, alcance horizontal de 7,2 m, giro de 360°, PBT mínimo de 10.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "136 kg",
+      "pesoProprio": "2.110 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "7,2 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-15.5-s/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-15.5-s/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "136",
+      "alcanceMaximoHorizontal": "7,2",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "2",
+      "pesoEquipamentoEstabilizadores": "2.110",
+      "complementoEquipamento": "6,7",
+      "alturaEmTransporte": "2,9",
+      "pbtMinimoExigido": "10.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-15.5-di",
+    "codigo": "TKA 15.5 Di",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 15.5 com 2 cestos, simples isolado. Cesto aéreo com capacidade de 272 kg, alcance horizontal de 7,2 m, giro de 360°, PBT mínimo de 10.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "272 kg",
+      "pesoProprio": "2.155 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "7,2 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-15.5-di/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-15.5-di/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "272",
+      "alcanceMaximoHorizontal": "7,2",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "2",
+      "pesoEquipamentoEstabilizadores": "2.155",
+      "complementoEquipamento": "6,7",
+      "alturaEmTransporte": "2,9",
+      "pbtMinimoExigido": "10.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-15.5-ddi",
+    "codigo": "TKA 15.5 DDi",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 15.5 com 2 cestos, duplo isolado. Cesto aéreo com capacidade de 272 kg, alcance horizontal de 7,2 m, giro de 360°, PBT mínimo de 10.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "272 kg",
+      "pesoProprio": "2.103 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "7,2 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-15.5-ddi/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-15.5-ddi/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "272",
+      "alcanceMaximoHorizontal": "7,2",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "2",
+      "pesoEquipamentoEstabilizadores": "2.103",
+      "complementoEquipamento": "6,7",
+      "alturaEmTransporte": "2,9",
+      "pbtMinimoExigido": "10.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-15.5-d",
+    "codigo": "TKA 15.5 D",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 15.5 com 2 cestos, sem isolamento. Cesto aéreo com capacidade de 272 kg, alcance horizontal de 7,2 m, giro de 360°, PBT mínimo de 10.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "272 kg",
+      "pesoProprio": "2.180 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "7,2 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-15.5-d/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-15.5-d/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "272",
+      "alcanceMaximoHorizontal": "7,2",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "2",
+      "pesoEquipamentoEstabilizadores": "2.180",
+      "complementoEquipamento": "6,7",
+      "alturaEmTransporte": "2,9",
+      "pbtMinimoExigido": "10.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-10-si",
+    "codigo": "TKA 10 SI",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 10 Simples Isolado. Cesto aéreo com capacidade de 136 kg, alcance horizontal de 5,0 m, giro de 360°, PBT mínimo de 3.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "136 kg",
+      "pesoProprio": "910 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "5,0 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-10-si/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-10-si/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "136",
+      "alcanceMaximoHorizontal": "5,0",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "02",
+      "pesoEquipamentoEstabilizadores": "910",
+      "complementoEquipamento": "4,3",
+      "alturaEmTransporte": "2,1",
+      "pbtMinimoExigido": "3.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
+  },
+  {
+    "slug": "cesto-10-s",
+    "codigo": "TKA 10 S",
+    "linha": "Cesto Aéreo",
+    "categoria": "cesto",
+    "descricao": "Cesto Aéreo TKA 10 Simples. Cesto aéreo com capacidade de 136 kg, alcance horizontal de 5,0 m, giro de 360°, PBT mínimo de 3.000 kg. Equipamento de fábrica TKA com garantia estrutural; consulte a MT Guindastes sobre compatibilidade com seu guindaste.",
+    "descricao_fonte": "oficial+derivada",
+    "specs": {
+      "capacidadeMaxima": "136 kg",
+      "pesoProprio": "910 kg",
+      "extensoesHidraulicas": 0,
+      "extensoesManuais": 0,
+      "maximoVertical": "",
+      "maximoHorizontal": "5,0 m",
+      "monteOSeu": false,
+      "acessoriosOpcionais": []
+    },
+    "fotos": [
+      "assets/tka-oficial/cesto-10-s/foto-1.jpg"
+    ],
+    "destaque_hero": false,
+    "grafico": "assets/tka-oficial/cesto-10-s/grafico-de-carga.png",
+    "specs_tecnicas": {
+      "capacidadeCesto": "136",
+      "alcanceMaximoHorizontal": "5,0",
+      "anguloGiro": "360",
+      "estabilizadoresPadraoA": "02",
+      "pesoEquipamentoEstabilizadores": "910",
+      "complementoEquipamento": "4,3",
+      "alturaEmTransporte": "2,1",
+      "pbtMinimoExigido": "3.000"
+    },
+    "setores": [
+      "05_eletrificacao"
+    ]
   }
 ]
