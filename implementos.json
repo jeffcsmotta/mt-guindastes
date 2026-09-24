@@ -1,0 +1,363 @@
+[
+  {
+    "slug": "carreta-agricola",
+    "nome": "Carreta Agrícola Busa",
+    "marca": "Busa",
+    "categoria": "Implementos",
+    "linha": "Carreta Agrícola",
+    "descricao": "Carreta agrícola para tração por trator, voltada ao transporte e à logística no campo. Comercializada pela MT Guindastes com cotação sob consulta.",
+    "specs": [],
+    "fotos": [
+      "assets/implementos/carreta-agricola/foto-1.jpg",
+      "assets/implementos/carreta-agricola/foto-2.jpg",
+      "assets/implementos/carreta-agricola/foto-3.jpg",
+      "assets/implementos/carreta-agricola/foto-4.jpg"
+    ],
+    "video_drive": "1rK-SMyxwuE-mvXZLroxgP0zmeU_74JRG"
+  },
+  {
+    "slug": "julieta-basculante",
+    "nome": "Reboque Julieta Basculante",
+    "marca": "Busa",
+    "categoria": "Implementos",
+    "linha": "Julietas",
+    "descricao": "Reboque julieta basculante com cambão articulado de acionamento hidráulico e trava dupla de segurança. Transferência do contêiner pela dianteira.",
+    "specs": [
+      [
+        "Eixos",
+        "3 eixos (PBT 27.000 kg)"
+      ],
+      [
+        "Carga e basculamento",
+        "Até 22 toneladas"
+      ],
+      [
+        "Cilindro",
+        "Telescópico central de 7 estágios"
+      ],
+      [
+        "Suspensão",
+        "Mecânica rebaixada, molas de 15 mm"
+      ],
+      [
+        "Freio",
+        "ABS (conf. resolução 312/09)"
+      ],
+      [
+        "Eixos",
+        "Redondos 19 mm, 14.000 kg cada"
+      ],
+      [
+        "Iluminação",
+        "100% em LED"
+      ],
+      [
+        "Diferenciais",
+        "100% nacional, caixa de ferramentas 80 L, suspensor pneumático no 2º eixo"
+      ]
+    ],
+    "fotos": [
+      "assets/implementos/julieta-basculante/foto-1.jpg",
+      "assets/implementos/julieta-basculante/foto-2.jpg",
+      "assets/implementos/julieta-basculante/foto-3.jpg",
+      "assets/implementos/julieta-basculante/foto-4.jpg"
+    ],
+    "folder": "assets/implementos/docs/julieta-basculante.pdf",
+    "video_drive": "1fpeXU4sXpYw5tb2XZ87uhhvbrI8HTq0a"
+  },
+  {
+    "slug": "rollon-sb-25",
+    "nome": "Roll On/Off SB-25",
+    "marca": "Busa",
+    "categoria": "Implementos",
+    "linha": "Roll On/Off",
+    "descricao": "Equipamento roll on/off para movimentação de contêineres e plataformas, montagem em caminhão 3 eixos. Intercambiável com o padrão nacional.",
+    "specs": [
+      [
+        "Veículo indicado",
+        "3 eixos"
+      ],
+      [
+        "PBT indicado",
+        "23 t"
+      ],
+      [
+        "Capacidade de carga",
+        "25 t"
+      ],
+      [
+        "Comprimento do equipamento",
+        "6,2 m"
+      ],
+      [
+        "Peso do equipamento",
+        "2.740 kg"
+      ],
+      [
+        "Ângulo de basculamento",
+        "52°"
+      ],
+      [
+        "Pressão máxima",
+        "280 bar"
+      ],
+      [
+        "Vazão máxima",
+        "53 LPM"
+      ],
+      [
+        "Contêineres",
+        "5,5 a 6,5 m"
+      ]
+    ],
+    "fotos": [
+      "assets/implementos/rollon-sb-25/foto-1.jpg",
+      "assets/implementos/rollon-sb-25/foto-2.jpg",
+      "assets/implementos/rollon-sb-25/foto-3.jpg",
+      "assets/implementos/rollon-sb-25/foto-4.jpg"
+    ],
+    "folder": "assets/implementos/docs/rollon-sb-25.pdf"
+  },
+  {
+    "slug": "rollon-sbl-25",
+    "nome": "Roll On/Off SBL-25 (Longo)",
+    "marca": "Busa",
+    "categoria": "Implementos",
+    "linha": "Roll On/Off",
+    "descricao": "Versão longa do roll on/off Busa para contêineres de 6,0 a 7,0 m, montagem em caminhão 3 ou 4 eixos.",
+    "specs": [
+      [
+        "Veículo indicado",
+        "3 ou 4 eixos"
+      ],
+      [
+        "PBT indicado",
+        "23 ou 29 t"
+      ],
+      [
+        "Capacidade de carga",
+        "25 t"
+      ],
+      [
+        "Comprimento do equipamento",
+        "6,6 m"
+      ],
+      [
+        "Peso do equipamento",
+        "2.790 kg"
+      ],
+      [
+        "Ângulo de basculamento",
+        "47°"
+      ],
+      [
+        "Pressão máxima",
+        "310 bar"
+      ],
+      [
+        "Vazão máxima",
+        "53 LPM"
+      ],
+      [
+        "Contêineres",
+        "6,0 a 7,0 m"
+      ]
+    ],
+    "fotos": [
+      "assets/implementos/rollon-sbl-25/foto-1.jpg",
+      "assets/implementos/rollon-sbl-25/foto-2.jpg",
+      "assets/implementos/rollon-sbl-25/foto-3.jpg",
+      "assets/implementos/rollon-sbl-25/foto-4.jpg"
+    ],
+    "folder": "assets/implementos/docs/rollon-sbl-25.pdf"
+  },
+  {
+    "slug": "rollon-stb-25",
+    "nome": "Roll On/Off STB-25",
+    "marca": "Busa",
+    "categoria": "Implementos",
+    "linha": "Roll On/Off",
+    "descricao": "Equipamento roll on/off para contêineres de 5,5 a 6,5 m, montagem em caminhão 3 eixos.",
+    "specs": [
+      [
+        "Veículo indicado",
+        "3 eixos"
+      ],
+      [
+        "PBT indicado",
+        "23 t"
+      ],
+      [
+        "Capacidade de carga",
+        "25 t"
+      ],
+      [
+        "Comprimento do equipamento",
+        "6,0 m"
+      ],
+      [
+        "Peso do equipamento",
+        "2.680 kg"
+      ],
+      [
+        "Ângulo de basculamento",
+        "53°"
+      ],
+      [
+        "Pressão máxima",
+        "280 bar"
+      ],
+      [
+        "Vazão máxima",
+        "53 LPM"
+      ],
+      [
+        "Contêineres",
+        "5,5 a 6,5 m"
+      ]
+    ],
+    "fotos": [
+      "assets/implementos/rollon-stb-25/foto-1.jpg",
+      "assets/implementos/rollon-stb-25/foto-2.jpg",
+      "assets/implementos/rollon-stb-25/foto-3.jpg",
+      "assets/implementos/rollon-stb-25/foto-4.jpg"
+    ],
+    "folder": "assets/implementos/docs/rollon-stb-25.pdf"
+  },
+  {
+    "slug": "rollon-stbl-25",
+    "nome": "Roll On/Off STBL-25 (Longo)",
+    "marca": "Busa",
+    "categoria": "Implementos",
+    "linha": "Roll On/Off",
+    "descricao": "Versão longa do roll on/off Busa para contêineres de 6,0 a 7,0 m, montagem em caminhão 3 ou 4 eixos.",
+    "specs": [
+      [
+        "Veículo indicado",
+        "3 ou 4 eixos"
+      ],
+      [
+        "PBT indicado",
+        "23 ou 29 t"
+      ],
+      [
+        "Capacidade de carga",
+        "25 t"
+      ],
+      [
+        "Comprimento do equipamento",
+        "6,6 m"
+      ],
+      [
+        "Peso do equipamento",
+        "2.890 kg"
+      ],
+      [
+        "Ângulo de basculamento",
+        "48°"
+      ],
+      [
+        "Pressão máxima",
+        "310 bar"
+      ],
+      [
+        "Vazão máxima",
+        "53 LPM"
+      ],
+      [
+        "Contêineres",
+        "6,0 a 7,0 m"
+      ]
+    ],
+    "fotos": [
+      "assets/implementos/rollon-stbl-25/foto-1.jpg",
+      "assets/implementos/rollon-stbl-25/foto-2.jpg",
+      "assets/implementos/rollon-stbl-25/foto-3.jpg",
+      "assets/implementos/rollon-stbl-25/foto-4.jpg"
+    ],
+    "folder": "assets/implementos/docs/rollon-stbl-25.pdf"
+  },
+  {
+    "slug": "poliguindaste-duplo",
+    "nome": "Poliguindaste Duplo",
+    "marca": "Busa",
+    "categoria": "Implementos",
+    "linha": "Roll On/Off",
+    "descricao": "Poliguindaste duplo para movimentação de contêineres e caçambas. Comercializado pela MT Guindastes com cotação sob consulta.",
+    "specs": [],
+    "fotos": [
+      "assets/implementos/poliguindaste-duplo/foto-1.jpg",
+      "assets/implementos/poliguindaste-duplo/foto-2.jpg",
+      "assets/implementos/poliguindaste-duplo/foto-3.jpg",
+      "assets/implementos/poliguindaste-duplo/foto-4.jpg"
+    ],
+    "folder": "assets/implementos/docs/poliguindaste-duplo.pdf",
+    "video_drive": "1Pyvq8WB88AfBZpRva6r-qBP_YdUlwb5A"
+  },
+  {
+    "slug": "coletor-ambiental",
+    "nome": "Coletor de Resíduos / Ambiental",
+    "marca": "Busa",
+    "categoria": "Implementos",
+    "linha": "Ambiental",
+    "descricao": "Linha ambiental Busa: coletor lateral e contentor para coleta de resíduos. Consulte a MT Guindastes sobre modelos e capacidades.",
+    "specs": [],
+    "fotos": [
+      "assets/implementos/coletor-ambiental/foto-1.jpg",
+      "assets/implementos/coletor-ambiental/foto-2.jpg",
+      "assets/implementos/coletor-ambiental/foto-3.jpg",
+      "assets/implementos/coletor-ambiental/foto-4.jpg"
+    ],
+    "video_drive": "1nrtoCaJGVxHzhzfG8uvE7lr8R9RzfRAY"
+  },
+  {
+    "slug": "plataforma-conteiner",
+    "nome": "Plataforma e Contêiner Graneleiro",
+    "marca": "Busa",
+    "categoria": "Implementos",
+    "linha": "Plataforma e Contêiner",
+    "descricao": "Plataforma basculante e contêiner graneleiro multiuso para transporte de granéis. Consulte a MT Guindastes sobre medidas e capacidades.",
+    "specs": [],
+    "fotos": [
+      "assets/implementos/plataforma-conteiner/foto-1.jpg",
+      "assets/implementos/plataforma-conteiner/foto-2.jpg",
+      "assets/implementos/plataforma-conteiner/foto-3.jpg",
+      "assets/implementos/plataforma-conteiner/foto-4.jpg"
+    ],
+    "folder": "assets/implementos/docs/conteiner-graneleiro.pdf"
+  },
+  {
+    "slug": "davigue-basculante",
+    "nome": "Carroceria Basculante Davigue",
+    "marca": "Davigue",
+    "categoria": "Implementos",
+    "linha": "Basculantes",
+    "descricao": "Carroceria Basculante",
+    "specs": [],
+    "fotos": [
+      "assets/implementos/davigue/basculante/foto-1.png",
+      "assets/implementos/davigue/basculante/foto-2.jpg",
+      "assets/implementos/davigue/basculante/foto-3.png",
+      "assets/implementos/davigue/basculante/foto-4.jpg"
+    ],
+    "pagina": "https://davigue.com.br/basculante",
+    "oferta": "cotacao"
+  },
+  {
+    "slug": "davigue-carga-seca-classic",
+    "nome": "Carroceria Carga Seca Classic Davigue",
+    "marca": "Davigue",
+    "categoria": "Implementos",
+    "linha": "Carga Seca",
+    "descricao": "Carroceria Carga Seca Classic",
+    "specs": [],
+    "fotos": [
+      "assets/implementos/davigue/carga-seca-classic/foto-1.png",
+      "assets/implementos/davigue/carga-seca-classic/foto-2.jpg",
+      "assets/implementos/davigue/carga-seca-classic/foto-3.png",
+      "assets/implementos/davigue/carga-seca-classic/foto-4.jpg"
+    ],
+    "pagina": "https://davigue.com.br/carga-seca-classic",
+    "oferta": "cotacao"
+  }
+]

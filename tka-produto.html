@@ -39,20 +39,21 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            color: #E2E8F0;
+            color: #FFFFFF;
             text-decoration: none;
             font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-            font-weight: 700;
+            font-weight: 800;
             font-size: 0.88rem;
-            padding: 8px 14px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 18px;
+            background: #EA580C;
+            border: 1px solid #EA580C;
             border-radius: var(--radius-sm);
             transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
         }
         .btn-back-catalog:hover {
-            background: rgba(245, 81, 29, 0.1);
-            border-color: rgba(245, 81, 29, 0.4);
+            background: #C2410C;
+            border-color: #C2410C;
             color: #FFFFFF;
             transform: translateX(-2px);
         }
@@ -63,17 +64,17 @@
             width: 24px;
             height: 24px;
             border-radius: 6px;
-            background: rgba(245, 81, 29, 0.18);
-            border: 1px solid rgba(245, 81, 29, 0.45);
-            color: #F5511D;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            color: #FFFFFF;
             flex-shrink: 0;
             transition: all 0.2s ease;
         }
         .btn-back-catalog:hover .btn-back-arrow-icon {
-            background: #F5511D;
-            color: #FFFFFF;
-            border-color: #F5511D;
-            box-shadow: 0 0 10px rgba(245, 81, 29, 0.5);
+            background: #FFFFFF;
+            color: #EA580C;
+            border-color: #FFFFFF;
+            box-shadow: none;
         }
         .tka-header-badge {
             display: inline-flex;
@@ -120,7 +121,7 @@
             align-items: start;
         }
         .tka-gallery-box {
-            background: #0E141F;
+            background: linear-gradient(180deg, #FFFFFF 0%, #E6EBF2 100%);
             border: 1px solid #222C3D;
             border-radius: var(--radius-lg);
             padding: 24px;
@@ -137,7 +138,7 @@
             max-height: 100%;
             max-width: 100%;
             object-fit: contain;
-            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+            filter: drop-shadow(0 12px 20px rgba(15,23,42,0.28));
         }
         .tka-thumbs-row {
             display: flex;
@@ -149,8 +150,8 @@
             width: 80px;
             height: 64px;
             border-radius: var(--radius-sm);
-            border: 2px solid #222C3D;
-            background: #151D2A;
+            border: 2px solid #CBD5E1;
+            background: #FFFFFF;
             padding: 4px;
             cursor: pointer;
             transition: all 0.2s;
@@ -408,7 +409,7 @@
         <div class="container">
             <div class="footer-bottom">
                 <div>MT Guindastes · CNPJ 44.652.208/0001-60 · Caxias do Sul/RS — Revendedora oficial TKA Guindastes</div>
-                <div>Desenvolvido por <a href="proposta.html" style="color:var(--secondary); font-weight:700; text-decoration:none;">Onira Labs (Jeff Motta)</a></div>
+                <div>Atendimento comercial: (54) 99997-2976 · Caxias do Sul/RS</div>
             </div>
         </div>
     </footer>

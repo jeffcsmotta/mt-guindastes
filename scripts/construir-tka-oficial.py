@@ -38,7 +38,14 @@ FORCE = '--force' in sys.argv
 
 
 def precisa(dest):
+    # --skip-download nunca baixa nenhum asset; so reaproveita o que ja existe.
+    if SKIP_DOWNLOAD:
+        return False
     return FORCE or not (os.path.exists(dest) and os.path.getsize(dest) > 0)
+
+
+def eh_url_valida(url):
+    return isinstance(url, str) and url.lower().startswith(('http://', 'https://'))
 
 DESTAQUES = {'40.900', '45.700', '55.900', '8.700bx'}
 
@@ -60,6 +67,9 @@ def get_json(path):
 
 
 def download(url):
+    # A API as vezes devolve nome de arquivo em vez de URL; registra falha e segue.
+    if not eh_url_valida(url):
+        raise ValueError('URL invalida da fabrica: %r' % (url,))
     req = urllib.request.Request(url, headers=HDRS)
     return urllib.request.urlopen(req, timeout=120).read()
 
@@ -70,6 +80,24 @@ def clean_html(html):
     t = re.sub(r'[ \t]+', ' ', t)
     t = re.sub(r'\n\s*\n+', '\n\n', t).strip()
     return t
+
+
+NICHO_PAT = re.compile(
+    r'(?:^|[.\n])\s*((Perfeito|Ideal|Indicado|Recomendado)\s+para\s+'
+    r'(empresas|mineradoras|agricultores|locadoras|construtoras?|frotistas?|usinas?)\b'
+    r'|Perfeito\s+para\s+aplicaç[ãa]o\s+(na|nas?|em)\b'
+    r'|Ideal\s+para\s+operaç[ãa]o\s+(na|nas?|em)\b'
+    r'|Perfeito\s+para\s+(construç[ãa]o|mineraç[ãa]o|agro)\b).*?\.\s*',
+    re.I | re.S)
+NICHO_MID_PAT = re.compile(
+    r'(?:,\s*sendo|\s+sendo)?\s*[Pp]erfeito\s+para\s+aplicaç[ãa]o\s+na\b[^.]*\.\s*')
+
+
+def sem_nicho(texto):
+    """Remove frases que direcionam o produto a nicho especifico. Mantem o resto."""
+    t = NICHO_PAT.sub(' ', texto or '')
+    t = NICHO_MID_PAT.sub(' ', t)
+    return re.sub(r'\s+', ' ', t).strip()
 
 
 def slug_guindaste(codigo, categoria):
@@ -137,23 +165,13 @@ def parse_info_tecnica(desc_limpa):
 
 
 def descricao_derivada(p, linha, setores_txt):
+    # neutra: caracteristicas exatas do equipamento, sem direcionar a nicho
     n = titulo_guindaste(p.get('codigo'), '')
-    frases = []
-    if linha == 'Trave':
-        base = ('projetado para içamento de grandes cargas com máxima estabilidade, '
-                'atendendo construção civil, infraestrutura e locação')
-    elif linha == 'Canivete':
-        base = ('compacto e versátil, ideal para operação em espaços restritos com '
-                'variação de altura, atendendo construção, agro e locação')
-    else:
-        base = ('desenvolvido para versatilidade ágil e montagem inteligente, '
-                'ideal para logística de insumos agrícolas e materiais de construção')
-    if setores_txt:
-        base = 'projetado para %s' % setores_txt
-    frases.append('O Guindaste %s (Linha %s) foi %s.' % (n, linha, base))
+    frases = ['O Guindaste %s (Linha %s) é um equipamento articulado hidráulico '
+              'de fabricação nacional com garantia estrutural de fábrica.' % (n, linha)]
     det = []
     if p.get('capacidadeMaxima'):
-        det.append('capacidade máxima de %s' % p['capacidadeMaxima'])
+        det.append('%s de capacidade máxima' % p['capacidadeMaxima'])
     if p.get('pesoProprio'):
         det.append('peso próprio de %s' % p['pesoProprio'])
     h, man = normaliza_lancas(p.get('extensoesHidraulicas')), normaliza_lancas(p.get('extensoesManuais'))
@@ -191,9 +209,9 @@ def setores_txt(p):
 
 def otimiza_foto(data, path):
     from PIL import Image
-    im = Image.open(io.BytesIO(data)).convert('RGB')
+    im = Image.open(io.BytesIO(data))
     im.thumbnail((1600, 1600))
-    im.save(path, 'JPEG', quality=82, optimize=True)
+    im.save(path, 'WEBP', quality=82, method=6)
 
 
 def processa_produto(p, relatorio):
@@ -205,29 +223,42 @@ def processa_produto(p, relatorio):
 
     fotos = []
     for i, url in enumerate((p.get('fotos') or [])[:4], 1):
-        dest = os.path.join(pasta, 'foto-%d.jpg' % i)
-        rel = 'assets/tka-oficial/%s/foto-%d.jpg' % (slug, i)
+        dest = os.path.join(pasta, 'foto-%d.webp' % i)
+        rel = 'assets/tka-oficial/%s/foto-%d.webp' % (slug, i)
         if precisa(dest):
+            if not eh_url_valida(url):
+                relatorio['falhas'].append('%s foto-%d: URL invalida da fabrica: %r' % (slug, i, url))
+                continue
             try:
                 otimiza_foto(download(url), dest)
             except Exception as e:
                 relatorio['falhas'].append('%s foto-%d: %s' % (slug, i, e))
                 continue
-        fotos.append(rel)
+            fotos.append(rel)
+        elif os.path.exists(dest) and os.path.getsize(dest) > 0:
+            # Preserva asset ja existente (inclusive com --skip-download).
+            fotos.append(rel)
+        else:
+            relatorio['falhas'].append('%s foto-%d: asset ausente (sem download)' % (slug, i))
 
     grafico = None
     if p.get('graficoDeCarga'):
         dest = os.path.join(pasta, 'grafico-de-carga.png')
         if precisa(dest):
-            try:
-                with open(dest, 'wb') as f:
-                    f.write(download(p['graficoDeCarga']))
-            except Exception as e:
-                relatorio['falhas'].append('%s grafico: %s' % (slug, e))
+            if not eh_url_valida(p['graficoDeCarga']):
+                relatorio['falhas'].append('%s grafico: URL invalida da fabrica: %r' % (slug, p['graficoDeCarga']))
             else:
-                grafico = 'assets/tka-oficial/%s/grafico-de-carga.png' % slug
-        elif os.path.exists(dest):
+                try:
+                    with open(dest, 'wb') as f:
+                        f.write(download(p['graficoDeCarga']))
+                except Exception as e:
+                    relatorio['falhas'].append('%s grafico: %s' % (slug, e))
+                else:
+                    grafico = 'assets/tka-oficial/%s/grafico-de-carga.png' % slug
+        elif os.path.exists(dest) and os.path.getsize(dest) > 0:
             grafico = 'assets/tka-oficial/%s/grafico-de-carga.png' % slug
+        elif SKIP_DOWNLOAD:
+            relatorio['falhas'].append('%s grafico: asset ausente (sem download)' % slug)
 
     pdfs = {}
     for campo, nome in (('graficoDeCargaPdf', 'grafico-de-carga.pdf'),
@@ -235,21 +266,30 @@ def processa_produto(p, relatorio):
         if p.get(campo):
             dest = os.path.join(pasta, nome)
             if precisa(dest):
+                if not eh_url_valida(p[campo]):
+                    relatorio['falhas'].append('%s %s: URL invalida da fabrica: %r' % (slug, nome, p[campo]))
+                    continue
                 try:
                     with open(dest, 'wb') as f:
                         f.write(download(p[campo]))
                 except Exception as e:
                     relatorio['falhas'].append('%s %s: %s' % (slug, nome, e))
                     continue
-            pdfs[nome] = 'assets/tka-oficial/%s/%s' % (slug, nome)
+                pdfs[nome] = 'assets/tka-oficial/%s/%s' % (slug, nome)
+            elif os.path.exists(dest) and os.path.getsize(dest) > 0:
+                pdfs[nome] = 'assets/tka-oficial/%s/%s' % (slug, nome)
+            else:
+                relatorio['falhas'].append('%s %s: asset ausente (sem download)' % (slug, nome))
 
     bruto = clean_html(p.get('descricao') or '')
     fonte = 'oficial' if bruto else 'derivada'
     if fonte == 'derivada':
         relatorio['derivadas'].append(slug)
     extras, marketing = parse_info_tecnica(bruto) if bruto else ({}, '')
+    marketing = sem_nicho(marketing)
+    bruto_n = sem_nicho(bruto)
     descricao = marketing if marketing else (
-        bruto if bruto else descricao_derivada(p, linha, setores_txt(p)))
+        bruto_n if bruto_n else descricao_derivada(p, linha, setores_txt(p)))
 
     try:
         hidr = int(p.get('extensoesHidraulicas') or 0)
@@ -305,29 +345,42 @@ def processa_cesto(c, relatorio):
 
     fotos = []
     for i, url in enumerate((c.get('fotos') or [])[:4], 1):
-        dest = os.path.join(pasta, 'foto-%d.jpg' % i)
-        rel = 'assets/tka-oficial/%s/foto-%d.jpg' % (slug, i)
+        dest = os.path.join(pasta, 'foto-%d.webp' % i)
+        rel = 'assets/tka-oficial/%s/foto-%d.webp' % (slug, i)
         if precisa(dest):
+            if not eh_url_valida(url):
+                relatorio['falhas'].append('%s foto-%d: URL invalida da fabrica: %r' % (slug, i, url))
+                continue
             try:
                 otimiza_foto(download(url), dest)
             except Exception as e:
                 relatorio['falhas'].append('%s foto-%d: %s' % (slug, i, e))
                 continue
-        fotos.append(rel)
+            fotos.append(rel)
+        elif os.path.exists(dest) and os.path.getsize(dest) > 0:
+            # Preserva asset ja existente (inclusive com --skip-download).
+            fotos.append(rel)
+        else:
+            relatorio['falhas'].append('%s foto-%d: asset ausente (sem download)' % (slug, i))
 
     grafico = None
     if c.get('graficoDeCarga'):
         dest = os.path.join(pasta, 'grafico-de-carga.png')
         if precisa(dest):
-            try:
-                with open(dest, 'wb') as f:
-                    f.write(download(c['graficoDeCarga']))
-            except Exception as e:
-                relatorio['falhas'].append('%s grafico: %s' % (slug, e))
+            if not eh_url_valida(c['graficoDeCarga']):
+                relatorio['falhas'].append('%s grafico: URL invalida da fabrica: %r' % (slug, c['graficoDeCarga']))
             else:
-                grafico = 'assets/tka-oficial/%s/grafico-de-carga.png' % slug
-        elif os.path.exists(dest):
+                try:
+                    with open(dest, 'wb') as f:
+                        f.write(download(c['graficoDeCarga']))
+                except Exception as e:
+                    relatorio['falhas'].append('%s grafico: %s' % (slug, e))
+                else:
+                    grafico = 'assets/tka-oficial/%s/grafico-de-carga.png' % slug
+        elif os.path.exists(dest) and os.path.getsize(dest) > 0:
             grafico = 'assets/tka-oficial/%s/grafico-de-carga.png' % slug
+        elif SKIP_DOWNLOAD:
+            relatorio['falhas'].append('%s grafico: asset ausente (sem download)' % slug)
 
     base = clean_html(c.get('descricao') or '')
     det = []

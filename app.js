@@ -29,6 +29,18 @@ var PRODUCTS = [
   { id: "ralos-canaletas-tampas-grelhas", nome: "Ralos, Canaletas, Tampas e Grelhas", colecao: "peca", categoria: "Linha Comercial", codigo: "LC-MT2", specs: ["Piso Pesado", "Drenagem Pluvial"], desc: "Tampas de ferro, grelhas para pista de tráfego pesado, ralos de escoamento e canaletas de drenagem industrial.", img: "assets/pecas/angra_12.png", gallery: ["assets/pecas/angra_12.png"], preco: 0.0 },
   { id: "rebocador-e-carrinhos-especiais", nome: "Rebocador e Carrinhos Especiais", colecao: "peca", categoria: "Projetos Especiais", codigo: "PE-MT1", specs: ["Até 10 Ton", "Sob Medida"], desc: "Carrinhos para movimentação industrial interna sob medida e rebocador hidráulico de cargas pesadas em comboio.", img: "assets/pecas/angra_13.png", gallery: ["assets/pecas/angra_13.png"], preco: 0.0 },
   { id: "escada-industrial-sob-medida", nome: "Escada Industrial sob Medida", colecao: "peca", categoria: "Projetos Especiais", codigo: "PE-MT2", specs: ["Guarda-Corpo NR12", "Passarela Industrial"], desc: "Escadas industriais e passarelas de acesso metálicas fabricadas sob medida para galpões, silos e indústrias.", img: "assets/pecas/angra_14.png", gallery: ["assets/pecas/angra_14.png"], preco: 0.0 },
+    { id: "garfo-paleteiro-2500", nome: "Garfo Paleteiro 2.500 kg", colecao: "peca", categoria: "Acessórios MT", codigo: "GP-2500-MT", specs: ["Cap. 2.500 kg", "Altura 1.400–2.250 mm", "Dentes 700–900 mm"], desc: "Garfo paleteiro ajustável para muncks e guindastes, com regulagem de altura e largura, aço com pintura epóxi e ART de fabricação.", img: "assets/acessorios/garfo-paleteiro-2500/foto-1.png", gallery: ["assets/acessorios/garfo-paleteiro-2500/foto-1.png", "assets/acessorios/garfo-paleteiro-2500/foto-2.png"], preco: 3200.0, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "garfo-paleteiro-3000", nome: "Garfo Paleteiro 3.000 kg", colecao: "peca", categoria: "Acessórios MT", codigo: "GP-3000-MT", specs: ["Cap. 3.000 kg", "Aço com ART"], desc: "Garfo paleteiro reforçado para movimentação de pallets em obras, depósitos e operações industriais.", img: "assets/acessorios/garfo-paleteiro-3000/foto-1.png", gallery: ["assets/acessorios/garfo-paleteiro-3000/foto-1.png", "assets/acessorios/garfo-paleteiro-3000/foto-2.png"], preco: 3500.0, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "garfo-paleteiro-3500", nome: "Garfo Paleteiro 3.500 kg", colecao: "peca", categoria: "Acessórios MT", codigo: "GP-3500-MT", specs: ["Cap. 3.500 kg", "Aço com ART"], desc: "Garfo paleteiro de maior capacidade para içamento e transporte de cargas paletizadas com segurança.", img: "assets/acessorios/garfo-paleteiro-3500/foto-1.png", gallery: ["assets/acessorios/garfo-paleteiro-3500/foto-1.png", "assets/acessorios/garfo-paleteiro-3500/foto-2.png"], preco: 4927.912, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "cesto-fibra-simples-nr12", nome: "Cesto Aéreo Simples em Fibra NR12", colecao: "peca", categoria: "Acessórios MT", codigo: "CF-SIMPLES-NR12", specs: ["1 Operador", "Nivelamento eletrônico", "Isolamento elétrico"], desc: "Cesto aéreo simples em fibra para trabalho em altura, com nivelamento eletrônico e conformidade NR12.", img: "assets/acessorios/cesto-fibra-simples-nr12/foto-1.png", gallery: ["assets/acessorios/cesto-fibra-simples-nr12/foto-1.png", "assets/acessorios/cesto-fibra-simples-nr12/foto-2.png"], preco: 10551.992, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "cesto-fibra-duplo-nr12", nome: "Cesto Aéreo Duplo em Fibra NR12", colecao: "peca", categoria: "Acessórios MT", codigo: "CF-DUPLO-NR12", specs: ["2 Operadores", "Nivelamento eletrônico", "Conformidade NR12"], desc: "Cesto aéreo duplo em fibra para dois operadores, com nivelamento eletrônico e aplicação em guindastes veiculares.", img: "assets/acessorios/cesto-fibra-duplo-nr12/foto-1.png", gallery: ["assets/acessorios/cesto-fibra-duplo-nr12/foto-1.png", "assets/acessorios/cesto-fibra-duplo-nr12/foto-2.png"], preco: 14282.312, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "controle-tecnic-5-funcoes", nome: "Controle Tecnic 5 Funções", colecao: "peca", categoria: "Controles Tecnic", codigo: "TEC-5F", specs: ["5 funções", "Operação remota", "12 ou 24 V"], desc: "Controle remoto Tecnic para operação de guindastes, com mais segurança, praticidade e conforto na movimentação.", img: "assets/acessorios/controle-tecnic-5-funcoes/foto-1.png", gallery: ["assets/acessorios/controle-tecnic-5-funcoes/foto-1.png", "assets/acessorios/controle-tecnic-5-funcoes/foto-2.png"], preco: 18207.992, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "controle-tecnic-7-funcoes", nome: "Controle Tecnic 7 Funções", colecao: "peca", categoria: "Controles Tecnic", codigo: "TEC-7F", specs: ["7 funções", "Alcance até 100 m", "12 ou 24 V"], desc: "Controle remoto Tecnic com sete funções, bateria removível, telemetria via Wi-Fi e configuração por aplicativo Android.", img: "assets/acessorios/controle-tecnic-7-funcoes/foto-1.png", gallery: ["assets/acessorios/controle-tecnic-7-funcoes/foto-1.png", "assets/acessorios/controle-tecnic-7-funcoes/foto-2.png"], preco: 20847.992, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "controle-tecnic-nr12-5-funcoes", nome: "Controle Tecnic NR12 5 Funções", colecao: "peca", categoria: "Controles Tecnic", codigo: "TEC-NR12-5F", specs: ["NR12", "5 funções", "ART e manual"], desc: "Controle remoto Tecnic com configuração NR12 para operação segura de guindastes e implementos.", img: "assets/acessorios/controle-tecnic-nr12-5-funcoes/foto-1.png", gallery: ["assets/acessorios/controle-tecnic-nr12-5-funcoes/foto-1.png", "assets/acessorios/controle-tecnic-nr12-5-funcoes/foto-2.png"], preco: 21727.992, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "controle-tecnic-nr12-7-funcoes", nome: "Controle Tecnic NR12 7 Funções", colecao: "peca", categoria: "Controles Tecnic", codigo: "TEC-NR12-7F", specs: ["NR12", "7 funções", "ART e manual"], desc: "Controle remoto Tecnic NR12 com sete funções para operação remota e aplicação em guindastes e muncks.", img: "assets/acessorios/controle-tecnic-nr12-7-funcoes/foto-1.png", gallery: ["assets/acessorios/controle-tecnic-nr12-7-funcoes/foto-1.png", "assets/acessorios/controle-tecnic-nr12-7-funcoes/foto-2.png"], preco: 25247.992, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "calco-patola", nome: "Calço de Patola", colecao: "peca", categoria: "Acessórios MT", codigo: "CP-UNIT-MT", specs: ["Unidade", "Base para estabilizador"], desc: "Calço de patola para apoio e estabilidade de guindastes veiculares durante a operação.", img: "assets/acessorios/calco-patola/foto-1.png", gallery: ["assets/acessorios/calco-patola/foto-1.png", "assets/acessorios/calco-patola/foto-2.png"], preco: 492.712, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "par-calcos-patola", nome: "Par de Calços de Patola", colecao: "peca", categoria: "Acessórios MT", codigo: "CP-PAR-MT", specs: ["2 unidades", "Base para estabilizador"], desc: "Par de calços de patola para apoio seguro de estabilizadores em operações com guindastes.", img: "assets/acessorios/par-calcos-patola/foto-1.png", gallery: ["assets/acessorios/par-calcos-patola/foto-1.png", "assets/acessorios/par-calcos-patola/foto-2.png"], preco: 959.112, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
+    { id: "kit-calcos-patola", nome: "Kit com 4 Calços de Patola", colecao: "peca", categoria: "Acessórios MT", codigo: "CP-KIT4-MT", specs: ["4 unidades", "Kit para estabilizadores"], desc: "Kit com quatro calços de patola para equipar guindastes e muncks com apoio completo nos estabilizadores.", img: "assets/acessorios/kit-calcos-patola/foto-1.png", gallery: ["assets/acessorios/kit-calcos-patola/foto-1.png", "assets/acessorios/kit-calcos-patola/foto-2.png"], preco: 1988.712, precoFonte: "PRECO ACESSORIOS.xlsx · Precificação · Preço site" },
   { id: "usado-madal-md300", nome: "Guindauto Madal MD 30.000", colecao: "usado", categoria: "Usados", codigo: "US-MADAL30", specs: ["Ano 2018", "4 Hidráulicas + 2 Manuais", "Cap. 7.5 Ton", "Laudo NR12"], desc: "Equipamento em excelente estado de conservação, revisado recentemente no pátio MT. Acompanha sobrechassi e sapatas hidráulicas estendidas.", img: "assets/tka/tka_07.png", gallery: ["assets/tka/tka_07.png", "assets/tka/g_20_700_Rv46iU.png"], preco: 168000.0 },
   { id: "usado-tka-45700", nome: "Guindaste TKA 45.700 Trave", colecao: "usado", categoria: "Usados", codigo: "US-TKA45", specs: ["Ano 2019", "Linha Trave", "4 Hidráulicas + 3 Manuais", "Revisado Fábrica"], desc: "Guindaste TKA revisado com peças originais. Bomba hidráulica nova e comandos duplos. Pronto para trabalhar e com garantia de procedência.", img: "assets/tka/tka_11.png", gallery: ["assets/tka/tka_11.png", "assets/tka/g_45_700_56oKjJ.png"], preco: 235000.0 },
   { id: "usado-argos-agi20", nome: "Guindauto Argos AGI 20.5", colecao: "usado", categoria: "Usados", codigo: "US-ARGOS20", specs: ["Ano 2020", "Controle Remoto", "3 Hidráulicas + 1 Manual", "Único Dono"], desc: "Guindauto compacto e muito ágil para entregas e canteiro de obras. Rádio controle operacional incluso e sapatas dianteiras e traseiras.", img: "assets/tka/tka_04.png", gallery: ["assets/tka/tka_04.png", "assets/tka/g_12_700_CDxGpP.png"], preco: 182000.0 },
@@ -41,10 +53,12 @@ var PRODUCTS = [
 
 /* Ordem dos pills: Todos os implementos e usados */
 const PILL_ORDER = [
-    { id: 'todos', label: 'Todos os Implementos' },
+    { id: 'todos', label: 'Todos os Produtos' },
     { id: 'Usados', label: 'Usados & Seminovos' },
     { id: 'Garfos Paleteiros', label: 'Garfos Paleteiros' },
     { id: 'Acessórios', label: 'Acessórios Industriais' },
+    { id: 'Acessórios MT', label: 'Acessórios MT' },
+    { id: 'Controles Tecnic', label: 'Controles Tecnic' },
     { id: 'Cestos de Fibra', label: 'Cestos de Fibra' },
     { id: 'Cestos Metálicos', label: 'Cestos Metálicos' },
     { id: 'Linha Comercial', label: 'Linha Comercial' },
@@ -53,16 +67,18 @@ const PILL_ORDER = [
 
 /* Trilhos principais de streaming */
 const RAILS = [
-    { id: 'usados', title: 'Pátio de Usados & Seminovos', subtitle: 'Giro semanal com revisão e laudo. Chame o Marcelo no WhatsApp.', icon: 'badge-check', match: p => p.colecao === 'usado' },
     { id: 'garfos', title: 'Garfos Paleteiros & Elevação', subtitle: 'Para guindastes veiculares, bobcats e retroescavadeiras.', icon: 'wrench', match: p => p.categoria === 'Garfos Paleteiros' },
     { id: 'acessorios', title: 'Acessórios & Dispositivos de Carga', subtitle: 'Balancins, suportes big bag e garras para postes.', icon: 'wrench', match: p => p.categoria === 'Acessórios' },
+    { id: 'acessorios-mt', title: 'Acessórios MT com Preço', subtitle: 'Garfo paleteiro, cestos, calços e acessórios com preço de referência.', icon: 'tag', match: p => p.categoria === 'Acessórios MT' },
+    { id: 'tecnic', title: 'Controles Tecnic', subtitle: 'Controles remotos para guindastes e implementos.', icon: 'radio', match: p => p.categoria === 'Controles Tecnic' },
     { id: 'cestos', title: 'Cestos Aéreos NR12 (Fibra & Metal)', subtitle: 'Elevação com isolamento e segurança para 1 ou 2 operadores.', icon: 'arrow-up-from-line', match: p => p.categoria === 'Cestos de Fibra' || p.categoria === 'Cestos Metálicos' },
-    { id: 'comercial-especial', title: 'Linha Comercial & Projetos Especiais', subtitle: 'Goleiras de proteção, canaletas e carrinhos sob medida.', icon: 'shield-check', match: p => p.categoria === 'Linha Comercial' || p.categoria === 'Projetos Especiais' }
+    { id: 'comercial-especial', title: 'Linha Comercial & Projetos Especiais', subtitle: 'Goleiras de proteção, canaletas e carrinhos sob medida.', icon: 'shield-check', match: p => p.categoria === 'Linha Comercial' || p.categoria === 'Projetos Especiais' },
+    { id: 'usados', title: 'Pátio de Usados & Seminovos', subtitle: 'Giro semanal com revisão e laudo. Chame o Marcelo no WhatsApp.', icon: 'badge-check', match: p => p.colecao === 'usado' }
 ];
 
 function groupsFor() {
     if (activeCategory === 'todos') return RAILS;
-    if (activeCategory === 'Usados') return [RAILS[0]];
+    if (activeCategory === 'Usados') return RAILS.filter(r => r.id === 'usados');
     return [{ id: 'cat', title: activeCategory, subtitle: 'Arraste para o lado ou adicione peças à sua cotação.', icon: 'wrench', match: p => p.categoria === activeCategory }];
 }
 
@@ -308,11 +324,11 @@ window.openQuoteModal = function(id) {
 };
 
 
+// CEP opcional: nunca trava o envio; só compõe a mensagem quando preenchido
 function refreshModalConfirm() {
-    const ok = modalProduct && digits(document.getElementById('q-cep').value).length === 8;
-    const btn = document.getElementById('modal-confirm');
-    document.getElementById('modal-btn-label').textContent = ok ? 'Enviar pelo WhatsApp' : 'Informe o CEP para continuar';
-    btn.classList.toggle('btn-disabled', !ok);
+    if (!modalProduct) return;
+    document.getElementById('modal-btn-label').textContent = 'Enviar pelo WhatsApp';
+    document.getElementById('modal-confirm').classList.remove('btn-disabled');
 }
 
 function modalMessage() {
@@ -469,11 +485,6 @@ function drawerMessage() {
 
 window.sendQuote = function() {
     if (!cart.length) { showToast('Adicione ao menos uma peça na sacola.'); return; }
-    if (digits(document.getElementById('c-cep').value).length !== 8) {
-        showToast('Informe o CEP de entrega com 8 dígitos.');
-        document.getElementById('c-cep').focus();
-        return;
-    }
     window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(drawerMessage())}`, '_blank');
 };
 
@@ -559,10 +570,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.getElementById('modal-confirm').addEventListener('click', () => {
         if (!modalProduct) return;
-        if (digits(document.getElementById('q-cep').value).length !== 8) {
-            showToast('Informe o CEP de entrega com 8 dígitos.');
-            return;
-        }
         window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(modalMessage())}`, '_blank');
     });
     ['c-cep', 'c-cnpj'].forEach(id => {

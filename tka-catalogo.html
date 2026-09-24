@@ -28,6 +28,10 @@
         .tka-check input { accent-color: #EA580C; width: 16px; height: 16px; cursor: pointer; }
         .tka-check .cnt { margin-left: auto; font-family: var(--font-mono); font-size: 0.72rem; color: #64748B; background: #151D2A; padding: 1px 7px; border-radius: 99px; }
         .tka-select { width: 100%; background: #151D2A; border: 1px solid #222C3D; border-radius: var(--radius-sm); color: #F8FAFC; padding: 10px 12px; font-size: 0.88rem; font-family: var(--font-body); }
+        .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+        .chip { background: #151D2A; border: 1px solid #222C3D; color: #CBD5E1; font-size: 0.8rem; font-weight: 700; padding: 8px 13px; border-radius: 99px; cursor: pointer; transition: all 0.15s ease; font-family: var(--font-body); }
+        .chip:hover { border-color: rgba(234,88,12,0.6); color: #FFF; }
+        .chip.active { background: #EA580C; border-color: #EA580C; color: #FFF; box-shadow: 0 2px 10px rgba(234,88,12,0.35); }
         .tka-filter-toggle { display: none; width: 100%; background: #0E141F; border: 1px solid #222C3D; color: #FFF; border-radius: var(--radius-sm); padding: 13px; font-weight: 800; font-size: 0.9rem; align-items: center; justify-content: center; gap: 8px; cursor: pointer; margin-top: 20px; }
         .tka-results-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
         .tka-results-count { font-family: var(--font-mono); font-size: 0.82rem; color: #94A3B8; }
@@ -35,8 +39,8 @@
         .tka-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
         .tka-model-card { background: #0E141F; border: 1px solid #222C3D; border-radius: var(--radius-lg); overflow: hidden; text-decoration: none; color: inherit; transition: all 0.2s ease; display: flex; flex-direction: column; }
         .tka-model-card:hover { border-color: rgba(234,88,12,0.55); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.45); }
-        .tka-model-img { height: 168px; display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse at center, #1a2436 0%, #0b0f17 75%); padding: 14px; position: relative; }
-        .tka-model-img img { max-height: 100%; max-width: 100%; object-fit: contain; filter: drop-shadow(0 10px 18px rgba(0,0,0,0.6)); }
+        .tka-model-img { height: 168px; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #FFFFFF 0%, #E6EBF2 100%); padding: 14px; position: relative; }
+        .tka-model-img img { max-height: 100%; max-width: 100%; object-fit: contain; filter: drop-shadow(0 8px 14px rgba(15,23,42,0.25)); }
         .tka-model-linha { position: absolute; top: 10px; left: 10px; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(234,88,12,0.16); border: 1px solid rgba(234,88,12,0.5); color: #FDBA74; padding: 3px 9px; border-radius: 99px; }
         .tka-model-lanc { position: absolute; top: 10px; right: 10px; font-size: 0.66rem; font-weight: 800; text-transform: uppercase; background: #EA580C; color: #FFF; padding: 3px 9px; border-radius: 99px; }
         .tka-model-body { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
@@ -60,8 +64,8 @@
 
     <header class="tka-nav-bar" style="background:#0E141F;border-bottom:1px solid #222C3D;padding:14px 0;position:sticky;top:0;z-index:90;">
         <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;">
-            <a href="index.html" class="btn-back-catalog" style="display:inline-flex;align-items:center;gap:10px;color:#E2E8F0;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.88rem;padding:8px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;">
-                <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:rgba(245,81,29,0.18);border:1px solid rgba(245,81,29,0.45);color:#F5511D;"><i data-lucide="arrow-left" style="width:14px;height:14px;"></i></span>
+            <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;color:#FFFFFF;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.88rem;padding:10px 18px;background:#EA580C;border:1px solid #EA580C;border-radius:10px;box-shadow:0 4px 14px rgba(234,88,12,0.4);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.35);color:#FFFFFF;"><i data-lucide="arrow-left" style="width:14px;height:14px;"></i></span>
                 <span>Voltar ao Início</span>
             </a>
             <div style="display:inline-flex;align-items:center;gap:10px;background:#0B1019;border:1px solid rgba(234,88,12,0.35);padding:5px 14px;border-radius:99px;">
@@ -95,32 +99,16 @@
                     <div id="f-linhas"></div>
                 </div>
                 <div class="tka-filter-group">
-                    <label class="f-label" for="f-cap">Capacidade máxima</label>
-                    <select id="f-cap" class="tka-select">
-                        <option value="">Todas</option>
-                        <option value="0-5000">Até 5 t</option>
-                        <option value="5000-10000">5 a 10 t</option>
-                        <option value="10000-15000">10 a 15 t</option>
-                        <option value="15000-999999">Acima de 15 t</option>
-                    </select>
+                    <label class="f-label">Capacidade máxima</label>
+                    <div class="chip-row" id="f-cap"></div>
                 </div>
                 <div class="tka-filter-group">
-                    <label class="f-label" for="f-alc">Alcance horizontal mínimo</label>
-                    <select id="f-alc" class="tka-select">
-                        <option value="">Qualquer</option>
-                        <option value="10">A partir de 10 m</option>
-                        <option value="15">A partir de 15 m</option>
-                        <option value="20">A partir de 20 m</option>
-                        <option value="25">A partir de 25 m</option>
-                    </select>
+                    <label class="f-label">Alcance horizontal mínimo</label>
+                    <div class="chip-row" id="f-alc"></div>
                 </div>
                 <div class="tka-filter-group">
-                    <label class="f-label" for="f-ord">Ordenar por</label>
-                    <select id="f-ord" class="tka-select">
-                        <option value="cap">Capacidade</option>
-                        <option value="alc">Alcance horizontal</option>
-                        <option value="az">Nome (A–Z)</option>
-                    </select>
+                    <label class="f-label">Ordenar por</label>
+                    <div class="chip-row" id="f-ord"></div>
                 </div>
                 <div class="tka-side-cta">
                     <strong>Não sabe qual modelo?</strong>
@@ -142,13 +130,32 @@
         <div class="container">
             <div class="footer-bottom">
                 <div>MT Guindastes · CNPJ 44.652.208/0001-60 · Caxias do Sul/RS — Revendedora oficial TKA Guindastes</div>
-                <div>Desenvolvido por <a href="proposta.html" style="color:var(--secondary);font-weight:700;text-decoration:none;">Onira Labs (Jeff Motta)</a></div>
+                <div>Atendimento comercial: (54) 99997-2976 · Caxias do Sul/RS</div>
             </div>
         </div>
     </footer>
 
+    <script src="tka-modal.js?v=mt9"></script>
     <script>
-        const state = { busca: '', linhas: new Set(), cap: '', alc: '', ord: 'cap' };
+        const CAPS = [
+            { v: '0-5000', l: 'Até 5 t' },
+            { v: '5000-10000', l: '5–10 t' },
+            { v: '10000-15000', l: '10–15 t' },
+            { v: '15000-999999', l: '15 t+' }
+        ];
+        const ALCS = [
+            { v: '', l: 'Qualquer' },
+            { v: '10', l: '10 m+' },
+            { v: '15', l: '15 m+' },
+            { v: '20', l: '20 m+' },
+            { v: '25', l: '25 m+' }
+        ];
+        const ORDS = [
+            { v: 'cap', l: 'Capacidade' },
+            { v: 'alc', l: 'Alcance' },
+            { v: 'az', l: 'A–Z' }
+        ];
+        const state = { busca: '', linhas: new Set(), caps: new Set(), alc: '', ord: 'cap' };
         let ITEMS = [];
 
         function numCap(s) {
@@ -191,10 +198,13 @@
                     const hay = (it.codigo + ' ' + it.linha + ' ' + (it.descricao || '')).toLowerCase();
                     if (!hay.includes(state.busca)) return false;
                 }
-                if (state.cap) {
-                    const [a, b] = state.cap.split('-').map(Number);
+                if (state.caps.size) {
                     const v = numCap(it.specs && it.specs.capacidadeMaxima);
-                    if (v < a || v > b) return false;
+                    const ok = [...state.caps].some(r => {
+                        const [a, b] = r.split('-').map(Number);
+                        return v >= a && v <= b;
+                    });
+                    if (!ok) return false;
                 }
                 if (state.alc && numAlc(it.specs && it.specs.maximoHorizontal) < Number(state.alc)) return false;
                 return true;
@@ -215,7 +225,7 @@
             }
             grid.innerHTML = list.map(it => {
                 const img = (it.fotos && it.fotos[0]) || '';
-                return '<a class="tka-model-card" href="tka-produto.html?slug=' + encodeURIComponent(it.slug) + '">' +
+                return '<div class="tka-model-card" role="button" tabindex="0" style="cursor:pointer;" onclick="window.openTkaModal(\'' + it.slug + '\')" onkeydown="if(event.key==\'Enter\')window.openTkaModal(\'' + it.slug + '\')">' +
                     '<div class="tka-model-img">' +
                     (img ? '<img src="' + img + '" alt="' + it.codigo + '" loading="lazy">' : '') +
                     '<span class="tka-model-linha">' + it.linha + '</span>' +
@@ -225,7 +235,7 @@
                     '<div class="tka-model-name">' + it.codigo + '</div>' +
                     '<div class="tka-model-specs">' + miniSpecs(it).map(s => '<span>' + s + '</span>').join('') + '</div>' +
                     '<span class="tka-model-cta">Ver ficha técnica <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></span>' +
-                    '</div></a>';
+                    '</div></div>';
             }).join('');
             if (window.lucide) lucide.createIcons();
         }
@@ -235,7 +245,7 @@
             const box = document.getElementById('f-linhas');
             box.innerHTML = ordem.map(l => {
                 const n = ITEMS.filter(it => linhaBase(it) === l).length;
-                return '<label class="tka-check"><input type="checkbox" value="' + l + '"> ' + l + ' <span class="cnt">' + n + '</span></label>';
+                return '<label class="tka-check"><input type="checkbox" value="' + l + '"' + (state.linhas.has(l) ? ' checked' : '') + '> ' + l + ' <span class="cnt">' + n + '</span></label>';
             }).join('');
             box.querySelectorAll('input').forEach(inp => inp.addEventListener('change', () => {
                 if (inp.checked) state.linhas.add(inp.value); else state.linhas.delete(inp.value);
@@ -244,14 +254,42 @@
         }
 
         document.getElementById('f-busca').addEventListener('input', e => { state.busca = e.target.value.toLowerCase().trim(); render(); });
-        document.getElementById('f-cap').addEventListener('change', e => { state.cap = e.target.value; render(); });
-        document.getElementById('f-alc').addEventListener('change', e => { state.alc = e.target.value; render(); });
-        document.getElementById('f-ord').addEventListener('change', e => { state.ord = e.target.value; render(); });
         document.getElementById('filter-toggle').addEventListener('click', () => document.getElementById('filters-panel').classList.toggle('open'));
+
+        function chipRow(elId, opts, get, set) {
+            const box = document.getElementById(elId);
+            box.innerHTML = opts.map(o => '<button type="button" class="chip' + (get() === o.v || (get() instanceof Set && get().has(o.v)) ? ' active' : '') + '" data-v="' + o.v + '">' + o.l + '</button>').join('');
+            box.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => { set(c.dataset.v); render(); }));
+        }
+        function renderChips() {
+            chipRow('f-cap', CAPS, () => state.caps, v => {
+                if (state.caps.has(v)) state.caps.delete(v); else state.caps.add(v);
+                document.querySelectorAll('#f-cap .chip').forEach(c => c.classList.toggle('active', state.caps.has(c.dataset.v)));
+            });
+            chipRow('f-alc', ALCS, () => state.alc, v => {
+                state.alc = v;
+                document.querySelectorAll('#f-alc .chip').forEach(c => c.classList.toggle('active', c.dataset.v === v));
+            });
+            chipRow('f-ord', ORDS, () => state.ord, v => {
+                state.ord = v;
+                document.querySelectorAll('#f-ord .chip').forEach(c => c.classList.toggle('active', c.dataset.v === v));
+            });
+        }
 
         fetch('tka-catalog.json')
             .then(r => r.json())
-            .then(items => { ITEMS = items; renderLinhas(); render(); if (window.lucide) lucide.createIcons(); })
+            .then(items => {
+                ITEMS = items;
+                const params = new URLSearchParams(window.location.search);
+                const pl = params.get('linha');
+                if (pl) state.linhas.add(pl);
+                const ps = params.get('slug');
+                renderLinhas();
+                renderChips();
+                render();
+                if (ps) window.openTkaModal(ps);
+                if (window.lucide) lucide.createIcons();
+            })
             .catch(err => console.error('Erro ao carregar catálogo TKA:', err));
     </script>
 </body>

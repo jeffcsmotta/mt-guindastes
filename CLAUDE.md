@@ -15,7 +15,7 @@ Desenvolvimento e implantação da seção `/pecas` no site institucional da MT 
 ## Stack
 
 - **Site & CMS:** Framer.
-- **Conversão:** WhatsApp Click-to-Chat com CEP obrigatório + CNPJ/nome opcionais. Sem pagamento pelo site.
+- **Conversão:** WhatsApp Click-to-Chat com CEP, CNPJ e nome opcionais. Sem pagamento pelo site.
 - **Pix:** em avaliação nas peças white-label. Até decisão, `descontoPixPercent = 0` desliga todo bloco Pix da vitrine e do modal.
 
 ## Regra comercial e arquitetura (Atualizado)
@@ -27,11 +27,21 @@ Desenvolvimento e implantação da seção `/pecas` no site institucional da MT 
 - **Usados do Pátio:** Preço visível + galeria de fotos + giro semanal com WhatsApp direto com o Marcelo (sem somar na sacola).
 - **Convenção de preço:** `price > 0` = pronta entrega com referência; `price = 0` = sob consulta.
 
-## Fonte versionada
+## Fontes oficiais versionadas
 
-- `catalog_mt.json` — catálogo de peças Angra Metal e ficha de usados.
-- `tka-catalog.json` — catálogo técnico de fábrica TKA Guindastes com curvas de carga e fotos oficiais de operação.
+- `tka-catalog.json` — catálogo técnico oficial TKA Guindastes (52 itens: guindastes + cestos, com curvas de carga, fotos e PDFs de fábrica). Gerado via pipeline, não editar à mão.
+- `implementos.json` — catálogo de implementos rodoviários MT (11 itens: carretas, reboques, coletores).
+- `PRECO ACESSORIOS.xlsx` — precificação oficial de peças e acessórios. Fonte de preço; `price > 0` = pronta entrega com referência, `price = 0` = sob consulta.
 - `clientes/mt-guindastes/tka-produto.html` — template de produto TKA padrão fábrica.
+
+> `scripts/_legado/catalog_mt.json` está desativado (histórico). Não usar como fonte.
+
+## Pipeline TKA (`scripts/construir-tka-oficial.py`)
+
+- Fonte da verdade: API de fábrica `https://api-6t25iyvfaa-uc.a.run.app/api/{produtos,cestos}` (textos, specs, fotos, gráficos e PDFs).
+- Gera `tka-catalog.json` no schema aprovado (guindastes + cestos, Fly em slug separado) + assets em `assets/tka-oficial/<slug>/` (foto-1..4.webp otimizadas, grafico-de-carga.png/pdf).
+- Regras: nenhum número inventado (tudo vem da API); `descricao_fonte=oficial` quando há texto de fábrica, `derivada` quando montada só dos specs; slugs estáveis preservados (40.900, 45.700, 55.900, 8.700bx).
+- Uso: `python3 scripts/construir-tka-oficial.py [--skip-download] [--force]`.
 
 ## Status atual
 

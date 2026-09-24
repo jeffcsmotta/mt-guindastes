@@ -1,15 +1,17 @@
-const CACHE_NAME = 'mt-guindastes-v9';
+const CACHE_NAME = 'mt-guindastes-v11';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './tka-produto.html',
   './tka-catalogo.html',
-  './proposta.html',
   './style.css',
   './mt-theme.css',
   './mt-rails.css',
   './app.js',
+  './tka-modal.js',
+  './implementos.js',
   './tka-catalog.json',
+  './implementos.json',
   './manifest.json',
   './assets/jeff-avatar.webp'
 ];

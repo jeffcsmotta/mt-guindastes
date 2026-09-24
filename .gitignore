@@ -1,0 +1,16 @@
+# Material-fonte fora do git (LEIA o CLAUDE.md: planilha = fonte de preços,
+# PDFs gigantes = banco de imagens/textos p/ cards). Ficam só no disco local.
+# Motivo: estouram o limite de 100MB do GitHub e 25MB/arquivo do Cloudflare Pages.
+
+# Folders de fábrica em alta resolução (banco p/ recorte de imagens e specs)
+Folder Digital - Coletor Lateral e Contentor.pdf
+Folder Digital - Rodoviario.pdf
+CARRETA AGRÍCOLA.pdf
+
+# Precificação oficial (dado comercial sensível, não é asset do site)
+PRECO ACESSORIOS.xlsx
+
+# Sobras de importação (fotos brutas e avulsas, já derivadas p/ assets/)
+importacao-drive/
+WhatsApp Image*.jpeg
+WhatsApp Image*.jpg
