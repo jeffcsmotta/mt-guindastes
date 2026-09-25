@@ -45,16 +45,14 @@ Desenvolvimento e implantação da seção `/pecas` no site institucional da MT 
 
 ## Status atual
 
-`[deploy-pronto]` — Reposicionamento concluído com Selo Oficial TKA, Hero de Ofertas de Fábrica, páginas técnicas dedicadas, reestruturação da vitrine de usados e acessórios Angra, e barra flutuante de acúmulo deliberado.
+`[homologado-aceito]` — Proposta comercial aceita. Layout homologado com Selo Oficial TKA, Hero de Fábrica, páginas técnicas dedicadas (`tka-catalogo.html`, `tka-produto.html`), vitrine de peças e acessórios (Angra Metal), usados do pátio e cotação sem fricção no WhatsApp. Proposta comercial retirada do deploy público.
 
 ## Links publicados
 
 - **Produção (Cloudflare Pages):** https://mt-guindastes.pages.dev/
 - **Homologação (GitHub Pages):** https://jeffcsmotta.github.io/mt-guindastes/
-- **Proposta:** https://jeffcsmotta.github.io/mt-guindastes/proposta.html
 
-> Deploy Cloudflare é via `wrangler pages deploy clientes/mt-guindastes`
-> (integração GitHub ainda não vinculada no dashboard).
+> Deploy Cloudflare: `npx wrangler pages deploy clientes/mt-guindastes --project-name=mt-guindastes`
 
 ## Contatos
 

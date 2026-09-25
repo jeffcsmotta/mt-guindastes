@@ -10,8 +10,7 @@ paths = set('clientes/mt-guindastes/' + p for p in re.findall(r'img: "([^"]+)"',
 paths.update('clientes/mt-guindastes/' + p for p in re.findall(r'"(assets/tka/g_[^"]+)"', src))
 paths.update(['clientes/mt-guindastes/' + p for p in
               ['index.html', 'app.js', 'style.css', 'mt-theme.css', 'mt-rails.css', 'sw.js',
-               'manifest.json', 'proposta.html', 'proposta-config.js',
-               'style-proposta.css']])
+               'manifest.json']])
 bad = []
 for p in sorted(paths):
     if not p:
